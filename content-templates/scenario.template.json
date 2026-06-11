@@ -1,0 +1,72 @@
+{
+  "$schema": "Scenario Overview Template for DogeChat Engine",
+  "$version": "0.5",
+  "title": "",
+  "genre": "",
+  "tone": [],
+  "overall_goal": "",
+  "mission_profile": "sandbox",
+  "missions": {
+    "ambient_affection": {
+      "enabled": true,
+      "majorNpcPolicy": "initial_npcs",
+      "optionCount": 3,
+      "nextPromptWithinTurns": 3
+    },
+    "bottleneck_quests": {
+      "enabled": true,
+      "mode": "scenario_linked",
+      "optionCount": 3,
+      "directions": []
+    },
+    "story": {
+      "enabled": false,
+      "limit": 5,
+      "sequence": []
+    }
+  },
+  "adoption_rule": "",
+  "worldview": "",
+  "initial_npcs": [],
+  "npc_generation_pool": [],
+  "player_setup": {
+    "identity": "",
+    "essential_traits": [],
+    "classes": [],
+    "backstory": "",
+    "outfit": []
+  },
+  "allowSuccession": true,
+  "initial_affection": 0,
+  "initial_scene": {
+    "location": "",
+    "description": "",
+    "stalled": [],
+    "opening_context": "",
+    "starting_time": {
+      "year": 1,
+      "month": 1,
+      "day": 1,
+      "period": 2
+    }
+  },
+  "calendar_era": "",
+  "locations": [],
+  "playSetting": {
+    "socialDynamics": [],
+    "mechanicalRules": [],
+    "restrictions": []
+  },
+  "pacing_drivers": [],
+  "bottleneck_quest_directions": [],
+  "background_npcs": [],
+  "notableObjects": [],
+  "mysteries": [],
+  "ui_hints": {
+    "background_image": "",
+    "card_image": "",
+    "ambient_color": ""
+  },
+  "recommendedArcana": [],
+  "recommendedModules": []
+}

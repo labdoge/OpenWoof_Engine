@@ -1,0 +1,183 @@
+{
+  "id": "combat",
+  "name": "MODULE_COMBAT",
+  "description": "MODULE_COMBAT_DESC",
+  "version": "1.0.0",
+  "enabledByDefault": false,
+
+  "style": {
+    "narrationFocus": ["impact", "motion", "sound", "tension", "pain", "exertion"],
+    "vocabularyTier": "visceral",
+    "toneKeywords": ["martial", "tactical", "visceral", "heroic", "desperate-when-apt"],
+    "descriptionPriorities": ["action", "consequence", "positioning", "physicality"]
+  },
+
+  "prompt": {
+    "file": "prompt.md",
+    "stub": "stub.md",
+    "block": 1,
+    "alwaysLoad": false,
+    "maxAfterglow": 3
+  },
+
+  "activation": {
+    "keywords": "$COMBAT_ACTIVATION_KEYWORDS",
+    "uaFlag": "combatActive"
+  },
+
+  "resources": [
+    {
+      "id": "hp",
+      "label": "RESOURCE_HP",
+      "icon": "❤️",
+      "scope": "all",
+      "defaultMax": 30,
+      "defaultCurrent": 30,
+      "color": "#e04040",
+      "regen": {
+        "triggers": ["rest", "sleep", "item_heal", "combat_end"],
+        "description": "RESOURCE_HP_REGEN_DESC"
+      }
+    }
+  ],
+
+  "state": {
+    "sceneActive": { "type": "boolean", "default": false },
+    "enemyRoster": { "type": "object", "default": {} },
+    "combatFlags": { "type": "array", "default": [] },
+    "buffs": { "type": "object", "default": {} },
+    "defeatedCount": { "type": "number", "default": 0 }
+  },
+
+  "uaEval": [
+    { "field": "combatActive", "type": "boolean", "description": "$COMBAT_UA_COMBAT_ACTIVE_DESC", "mapsTo": "sceneActive", "readWhen": "enabled" },
+    { "field": "combatContext", "type": "string", "description": "$COMBAT_UA_COMBAT_CONTEXT_DESC", "mapsTo": null, "readWhen": "active" }
+  ],
+
+  "tokens": {
+    "inputEstimate": 600,
+    "outputRecommendation": 0,
+    "statusExtractPerNPC": 0,
+    "statusExtractBase": 0
+  },
+
+  "sceneResolution": {
+    "enabled": true,
+    "rollWorthyWhen": ["sceneActive"],
+    "effectLabel": "damage",
+    "tierEffects": {
+      "great_success": "Player faction deals devastating damage, zero cost from enemies",
+      "success": "Player faction deals damage, 1 ally takes light scratch from enemy",
+      "failure": "Player faction ineffective, enemies deal moderate damage",
+      "critical_failure": "Enemies deal heavy damage, tactical complication arises"
+    }
+  },
+
+  "diceRolls": {
+    "diceAgentInstruction": "When player or vital NPC attempts attack, use trigger 'attack'. When defending against enemy, use 'defend'. For special ability use, use 'ability_check'. Efficacy rolls follow successful attacks with trigger 'damage' or 'healing'.",
+    "successEffects": {
+      "great_success": "Critical hit — devastating blow, enemy staggers, possible follow-up advantage",
+      "success": "Solid hit — standard damage applies, combat continues",
+      "fail": "Miss or blocked — enemy may counter-attack, momentary vulnerability"
+    },
+    "efficacyMode": "both",
+    "defaultEfficacyDie": "d6",
+    "defaultEfficacyDerivation": "highest",
+    "criticalEfficacyMultiplier": 2,
+    "recognizedTriggers": ["attack", "defend", "ability_check", "damage", "healing"]
+  },
+
+  "ui": {
+    "hudPill": {
+      "label": "MODULE_COMBAT_PILL",
+      "activeClass": "active-combat",
+      "activeWhen": "sceneActive"
+    },
+    "statusItems": [
+      {
+        "target": "playerRow",
+        "key": "hp",
+        "label": "RESOURCE_HP",
+        "display": "bar",
+        "source": "hp",
+        "colors": { "default": "#e04040" },
+        "order": 1
+      },
+      {
+        "target": "npcRow",
+        "key": "npc_hp",
+        "label": "RESOURCE_HP",
+        "display": "bar",
+        "source": "hp",
+        "colors": { "default": "#e04040" },
+        "order": 1
+      }
+    ]
+  },
+
+  "memory": {
+    "criticalEventFields": ["combatActive"],
+    "compression": {
+      "includeWhen": "sceneActive",
+      "priority": "high"
+    },
+    "milestones": [
+      { "field": "combatActive", "event": "firstReach", "values": ["true"] }
+    ]
+  },
+
+  "characterExtension": {
+    "triggerFields": [
+      { "key": "combatStyle", "type": "tags", "label": "CHAR_COMBAT_STYLE" },
+      { "key": "weaponPreference", "type": "textarea", "label": "CHAR_WEAPON_PREF", "maxTokens": 50 }
+    ],
+    "profileFields": [
+      { "key": "combatTraits", "type": "textarea", "label": "CHAR_COMBAT_TRAITS" },
+      { "key": "tactics", "type": "textarea", "label": "CHAR_TACTICS" }
+    ],
+    "triggerInjectionLabel": "[Combat Triggers]",
+    "profileInjectionLabel": "[Combat Profile]"
+  },
+
+  "config": {
+    "baseDifficulty": {
+      "type": "number",
+      "default": 7,
+      "min": 5,
+      "max": 12,
+      "label": "CONFIG_BASE_DIFFICULTY",
+      "description": "CONFIG_BASE_DIFFICULTY_DESC"
+    },
+    "surroundedThreshold": {
+      "type": "number",
+      "default": 4,
+      "min": 2,
+      "max": 8,
+      "label": "CONFIG_SURROUNDED_THRESHOLD",
+      "description": "CONFIG_SURROUNDED_THRESHOLD_DESC"
+    },
+    "surroundedAdvantage": {
+      "type": "number",
+      "default": 2,
+      "min": 1,
+      "max": 4,
+      "label": "CONFIG_SURROUNDED_ADVANTAGE",
+      "description": "CONFIG_SURROUNDED_ADVANTAGE_DESC"
+    },
+    "bossHPMultiplier": {
+      "type": "number",
+      "default": 1.0,
+      "min": 0.5,
+      "max": 3.0,
+      "label": "CONFIG_BOSS_HP_MULT",
+      "description": "CONFIG_BOSS_HP_MULT_DESC"
+    }
+  },
+
+  "traitTypes": ["harm", "aid"],
+
+  "enrichmentFocus": "著重描述戰鬥風格、武器外觀、動作特徵，名稱需符合場景世界觀",
+
+  "conflicts": [],
+  "requires": []
+}

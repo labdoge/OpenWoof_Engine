@@ -1,0 +1,92 @@
+{
+  "id": "exploration",
+  "name": "MODULE_EXPLORATION",
+  "description": "MODULE_EXPLORATION_DESC",
+  "version": "1.0.0",
+  "enabledByDefault": false,
+
+  "style": {
+    "narrationFocus": ["discovery", "atmosphere", "detail", "wonder", "curiosity"],
+    "vocabularyTier": "evocative",
+    "toneKeywords": ["mysterious", "layered", "rewarding", "immersive"],
+    "descriptionPriorities": ["environment", "object-detail", "revelation", "mood"]
+  },
+
+  "prompt": {
+    "file": "prompt.md",
+    "stub": "stub.md",
+    "block": 1,
+    "alwaysLoad": true,
+    "maxAfterglow": 0
+  },
+
+  "activation": {
+    "uaFlag": "explorationActive"
+  },
+
+  "state": {
+    "mysteries": { "type": "object", "default": {} },
+    "explorationActive": { "type": "boolean", "default": true },
+    "pendingDiscoveries": { "type": "array", "default": [] }
+  },
+
+  "uaEval": [
+    {
+      "field": "mysteryProgress",
+      "type": "object",
+      "description": "$EXPLORATION_UA_MYSTERY_PROGRESS_DESC",
+      "mapsTo": null,
+      "readWhen": "enabled",
+      "perNPC": false
+    },
+    {
+      "field": "objectInteraction",
+      "type": "object",
+      "description": "$EXPLORATION_UA_OBJECT_INTERACTION_DESC",
+      "mapsTo": null,
+      "readWhen": "enabled",
+      "perNPC": false
+    }
+  ],
+
+  "tokens": {
+    "inputEstimate": 300,
+    "outputRecommendation": 0,
+    "statusExtractPerNPC": 0,
+    "statusExtractBase": 0
+  },
+
+  "ui": {
+    "hudPill": {
+      "label": "MODULE_EXPLORATION_PILL",
+      "activeClass": "active-exploration",
+      "activeWhen": "explorationActive"
+    },
+    "statusItems": []
+  },
+
+  "memory": {
+    "criticalEventFields": ["mysteryProgress"],
+    "compression": {
+      "includeWhen": "explorationActive",
+      "priority": "low"
+    },
+    "milestones": []
+  },
+
+  "config": {
+    "mysteryCount": {
+      "type": "number",
+      "default": 3,
+      "min": 1,
+      "max": 3,
+      "label": "CONFIG_MYSTERY_COUNT",
+      "description": "CONFIG_MYSTERY_COUNT_DESC"
+    }
+  },
+
+  "enrichmentFocus": "著重描述環境細節、物品外觀、發現時的氛圍感，名稱需符合場景世界觀",
+
+  "conflicts": [],
+  "requires": []
+}

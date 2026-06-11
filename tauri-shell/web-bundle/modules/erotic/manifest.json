@@ -1,0 +1,131 @@
+{
+  "id": "erotic",
+  "name": "HUD_MODULE_EROTIC",
+  "description": "MODULE_DESC_EROTIC",
+  "version": "1.0.0",
+  "enabledByDefault": true,
+
+  "style": {
+    "narrationFocus": ["texture", "impact", "sound", "physicality", "body", "genitalia", "joining", "sensation"],
+    "vocabularyTier": "raw",
+    "toneKeywords": ["degradation", "dominance", "submission", "tenderness", "suggestive", "sensual", "pornographic", "vulgar-when-apt"],
+    "descriptionPriorities": ["physicality", "sensation", "emotion", "attractive-features", "body-parts", "penetration"]
+  },
+
+  "prompt": {
+    "file": "prompt.md",
+    "stub": "stub.md",
+    "block": 1,
+    "alwaysLoad": false,
+    "maxAfterglow": 5
+  },
+
+  "activation": {
+    "lustThreshold": 2,
+    "keywords": "$EROTIC_ACTIVATION_KEYWORDS",
+    "uaFlag": "eroticScene"
+  },
+
+  "state": {
+    "sceneActive": { "type": "boolean", "default": false },
+    "npcLustTiers": { "type": "object", "default": {} }
+  },
+
+  "uaEval": [
+    { "field": "eroticScene", "type": "boolean", "description": "$EROTIC_UA_EROTIC_SCENE_DESC", "mapsTo": "sceneActive", "readWhen": "enabled" },
+    { "field": "lustTier", "type": "string", "description": "$EROTIC_UA_LUST_TIER_DESC", "mapsTo": "npcLustTiers", "readWhen": "enabled", "perNPC": true },
+    { "field": "eroticIntensity", "type": "number", "description": "$EROTIC_UA_EROTIC_INTENSITY_DESC", "mapsTo": null, "readWhen": "active", "perNPC": true }
+  ],
+
+  "tokens": {
+    "inputEstimate": 800,
+    "outputRecommendation": 0,
+    "statusExtractPerNPC": 30,
+    "statusExtractBase": 0
+  },
+
+  "ui": {
+    "hudPill": { "label": "HUD_MODULE_EROTIC", "activeClass": "active-erotic", "activeWhen": "sceneActive" },
+    "statusItems": [
+      {
+        "target": "npcRow",
+        "key": "lust",
+        "label": "STATUS_LUST",
+        "display": "tier",
+        "source": "lustTier",
+        "colors": "$EROTIC_LUST_TIER_COLORS",
+        "pulseAt": "$EROTIC_LUST_PULSE_AT",
+        "order": 10
+      }
+    ]
+  },
+
+  "memory": {
+    "criticalEventFields": ["lustTier", "sceneActive"],
+    "compression": { "includeWhen": "sceneActive", "priority": "high" },
+    "milestones": [
+      { "field": "lustTier", "event": "firstReach", "values": "$EROTIC_LUST_MILESTONE_VALUES" },
+      { "field": "lustTier", "event": "peak" }
+    ]
+  },
+
+  "characterExtension": {
+    "triggerFields": [
+      { "key": "keywords", "type": "tags", "label": "CHAR_EXT_EROTIC_TRIGGERS", "maxTokens": 24 },
+      { "key": "conditions", "type": "textarea", "label": "CHAR_EXT_EROTIC_CONDITIONS", "maxTokens": 50 }
+    ],
+    "profileFields": [
+      { "key": "preferences", "type": "textarea", "label": "CHAR_EXT_EROTIC_PREF", "maxTokens": 80 },
+      { "key": "boundaries", "type": "textarea", "label": "CHAR_EXT_EROTIC_BOUNDS", "maxTokens": 80 },
+      { "key": "physicalTraits", "type": "textarea", "label": "CHAR_EXT_EROTIC_PHYS", "maxTokens": 80 }
+    ],
+    "triggerInjectionLabel": "[Erotic Triggers]",
+    "profileInjectionLabel": "[Erotic Profile]"
+  },
+
+  "config": {
+    "lustThreshold": {
+      "type": "number",
+      "default": 2,
+      "min": 0,
+      "max": 4,
+      "label": "MODULE_CONFIG_EROTIC_LUST_THRESHOLD",
+      "description": "MODULE_CONFIG_EROTIC_LUST_THRESHOLD_DESC"
+    },
+    "escalationThreshold": {
+      "type": "number",
+      "default": 3,
+      "min": 0,
+      "max": 4,
+      "label": "MODULE_CONFIG_EROTIC_ESCALATION_THRESHOLD",
+      "description": "MODULE_CONFIG_EROTIC_ESCALATION_THRESHOLD_DESC"
+    },
+    "maxAfterglow": {
+      "type": "number",
+      "default": 5,
+      "min": 1,
+      "max": 10,
+      "label": "MODULE_CONFIG_EROTIC_MAX_AFTERGLOW",
+      "description": "MODULE_CONFIG_EROTIC_MAX_AFTERGLOW_DESC"
+    },
+    "intensityThreshold": {
+      "type": "number",
+      "default": 7,
+      "min": 3,
+      "max": 12,
+      "label": "MODULE_CONFIG_EROTIC_INTENSITY_THRESHOLD",
+      "description": "MODULE_CONFIG_EROTIC_INTENSITY_THRESHOLD_DESC"
+    },
+    "cooldownOnConflict": {
+      "type": "boolean",
+      "default": true,
+      "label": "MODULE_CONFIG_EROTIC_COOLDOWN_ON_CONFLICT",
+      "description": "MODULE_CONFIG_EROTIC_COOLDOWN_ON_CONFLICT_DESC"
+    }
+  },
+
+  "enrichmentFocus": "著重描述外貌、身體特徵、穿著細節與性感度",
+
+  "conflicts": [],
+  "requires": []
+}

@@ -1,0 +1,67 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "WoofyChatty",
+  "version": "0.1.0",
+  "identifier": "com.woofychatty.app",
+  "build": {
+    "frontendDist": "../web-bundle"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "WoofyChatty",
+        "label": "main",
+        "width": 1280,
+        "height": 800,
+        "minWidth": 900,
+        "minHeight": 600,
+        "resizable": true,
+        "fullscreen": false,
+        "decorations": true,
+        "visible": false
+      },
+      {
+        "title": "WoofyChatty",
+        "label": "splash",
+        "url": "splash.html",
+        "width": 480,
+        "height": 320,
+        "resizable": false,
+        "decorations": false,
+        "transparent": true,
+        "center": true,
+        "alwaysOnTop": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; font-src 'self'; connect-src 'self' https://api.anthropic.com https://generativelanguage.googleapis.com https://api.x.ai https://api.deepseek.com https://fonts.googleapis.com https://fonts.gstatic.com http://ipc.localhost; img-src 'self' data: blob:"
+    },
+    "trayIcon": {
+      "iconPath": "icons/icon.png",
+      "iconAsTemplate": false
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["msi", "nsis"],
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "resources": [],
+    "copyright": "WoofyChatty",
+    "category": "Game",
+    "shortDescription": "Interactive Fiction Engine",
+    "longDescription": "WoofyChatty — a locally-hosted interactive fiction platform powered by LLM APIs.",
+    "windows": {
+      "nsis": {
+        "displayLanguageSelector": false,
+        "installerIcon": "icons/icon.ico",
+        "installMode": "currentUser"
+      }
+    }
+  }
+}

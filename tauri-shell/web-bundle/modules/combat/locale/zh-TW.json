@@ -1,0 +1,41 @@
+{
+  "MODULE_COMBAT": "戰鬥",
+  "MODULE_COMBAT_DESC": "戰鬥系統模組 — 管理資源池、敵人追蹤與戰鬥敘事",
+  "MODULE_COMBAT_PILL": "戰鬥",
+
+  "RESOURCE_HP": "生命",
+  "RESOURCE_SP": "技能",
+  "RESOURCE_HP_REGEN_DESC": "休息、睡眠、治療物品或戰鬥結束時恢復",
+  "RESOURCE_SP_REGEN_DESC": "休息或恢復物品時恢復",
+
+  "COMBAT_ACTIVATION_KEYWORDS": ["戰鬥", "攻擊", "戰", "打", "殺", "斬", "劍", "刀", "弓", "魔法", "施法", "防禦", "閃避", "格擋", "衝鋒", "伏擊", "敵人", "怪物", "boss", "頭目"],
+  "COMBAT_ALLY": "同伴",
+
+  "COMBAT_UA_COMBAT_ACTIVE_DESC": "Is combat currently in progress?",
+  "COMBAT_UA_COMBAT_CONTEXT_DESC": "Brief description of the combat scenario and tactical situation.",
+
+  "CHAR_COMBAT_STYLE": "戰鬥風格",
+  "CHAR_WEAPON_PREF": "武器偏好",
+  "CHAR_COMBAT_TRAITS": "戰鬥特質",
+  "CHAR_TACTICS": "戰術傾向",
+
+  "MILESTONE_FIRST_KILL": "首次擊敗敵人",
+  "MILESTONE_BOSS_DEFEATED": "擊敗頭目",
+  "MILESTONE_SURROUNDED": "包圍戰勝利",
+
+  "CONFIG_BASE_DIFFICULTY": "基礎難度",
+  "CONFIG_BASE_DIFFICULTY_DESC": "Base difficulty class for combat test rolls.",
+  "CONFIG_SURROUNDED_THRESHOLD": "包圍門檻",
+  "CONFIG_SURROUNDED_THRESHOLD_DESC": "Minimum enemy count to trigger the surrounded flag.",
+  "CONFIG_SURROUNDED_ADVANTAGE": "包圍優勢差",
+  "CONFIG_SURROUNDED_ADVANTAGE_DESC": "Minimum number advantage enemies need over player team for surrounded flag.",
+  "CONFIG_BOSS_HP_MULT": "頭目血量倍率",
+  "CONFIG_BOSS_HP_MULT_DESC": "Multiplier applied to boss enemy HP values.",
+
+  "COG_RESOURCE_DISPLAY_GAUGE": "量條",
+  "COG_RESOURCE_DISPLAY_TEXT": "文字",
+
+  "COMBAT_PACING_NPC_INITIATIVE": "戰鬥中角色展現獨特戰鬥風格或即興戰術配合，影響戰局走向",
+  "COMBAT_PACING_ENVIRONMENTAL": "戰場環境變化（地形崩塌、火勢蔓延、增援出現）迫使重新部署",
+  "COMBAT_PACING_OPPORTUNITY": "戰鬥中出現逆轉機會（敵人露出破綻、發現弱點、獲得增援）"
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      overflow: hidden;
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    .splash {
+      background: #0a0a0f;
+      border: 1px solid #2a2a3a;
+      border-radius: 16px;
+      padding: 48px 64px;
+      text-align: center;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+      animation: fadeIn 400ms ease-out;
+    }
+    .splash-title {
+      font-size: 36px;
+      font-weight: 700;
+      color: #c9a96e;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    .splash-subtitle {
+      font-size: 14px;
+      color: #8a8694;
+      margin-bottom: 24px;
+    }
+    .splash-loader {
+      width: 48px;
+      height: 4px;
+      background: #1a1a28;
+      border-radius: 2px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+    }
+    .splash-loader::after {
+      content: '';
+      position: absolute;
+      left: -50%;
+      width: 50%;
+      height: 100%;
+      background: #c9a96e;
+      border-radius: 2px;
+      animation: slide 1.2s ease-in-out infinite;
+    }
+    @keyframes slide {
+      0% { left: -50%; }
+      100% { left: 100%; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+  </style>
+</head>
+<body>
+  <div class="splash">
+    <img src="./wooffychatty_icon.png" alt="" width="90" height="90" style="display:block;margin:0 auto 16px;width:90px;height:90px;max-width:90px;max-height:90px;object-fit:contain;border-radius:10px" />
+    <div class="splash-title">WoofyChatty</div>
+    <div class="splash-subtitle">Interactive Fiction Engine</div>
+    <div class="splash-loader"></div>
+  </div>
+</body>
+</html>

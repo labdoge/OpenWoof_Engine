@@ -1,0 +1,31 @@
+{
+  "MODULE_EXPLORATION": "探索與謎團",
+  "MODULE_EXPLORATION_DESC": "為場景增添可探索的物件與待解之謎，帶來發現與揭示的沉浸體驗。",
+  "MODULE_EXPLORATION_PILL": "探索",
+
+  "EXPLORATION_UA_MYSTERY_PROGRESS_DESC": "檢查玩家是否與當前謎團的待解步驟互動。若玩家在正確地點並以任何方式接觸了目標物件（寬鬆判定——意圖即可），回傳 {\"mysteryId\": \"<id>\", \"stepped\": true}。若無互動或玩家不在相關地點，回傳 {\"stepped\": false}。",
+  "EXPLORATION_UA_OBJECT_INTERACTION_DESC": "檢查玩家是否撿起了可攜帶的重要物件。若玩家在正確地點與可攜帶物件互動（寬鬆判定），回傳 {\"objectId\": \"<id>\", \"collected\": true}。否則回傳 {\"collected\": false}。",
+
+  "CONFIG_MYSTERY_COUNT": "謎團數量上限",
+  "CONFIG_MYSTERY_COUNT_DESC": "本場景最多可同時啟用的謎團數量（1-3）。",
+
+  "CHAIN_PATTERN_LABEL": "連鎖模式",
+  "CHAIN_PATTERN_NONE": "自訂（不使用模式）",
+  "CHAIN_FETCH_ACTIVATE": "尋找啟動",
+  "CHAIN_FETCH_REPAIR": "修復解鎖",
+  "CHAIN_DESTROY_REVEAL": "破除障礙",
+  "CHAIN_THREE_CLUES": "三線匯聚",
+  "CHAIN_SINGLE_DISCOVERY": "直接發現",
+
+  "WORKSHOP_OBJECTS_DESC": "場景中可供玩家發現的重要物件",
+  "WORKSHOP_MYSTERIES_DESC": "場景中的待解之謎（最多3個）",
+  "WORKSHOP_MYSTERY_STEPS": "謎團步驟",
+  "WORKSHOP_MYSTERY_STEP_LOCATION": "所在地點",
+  "WORKSHOP_MYSTERY_STEP_OBJECT": "物件名稱",
+  "WORKSHOP_MYSTERY_STEP_DESC": "物件描述",
+  "WORKSHOP_MYSTERY_STEP_HINT": "提示文字",
+  "WORKSHOP_MYSTERY_PUZZLE_AT": "進入解謎階段的步驟",
+  "WORKSHOP_MYSTERY_RELATED_NPCS": "相關NPC",
+  "WORKSHOP_MYSTERY_TRAIT_PLAYER": "玩家獎勵特質類型",
+  "WORKSHOP_MYSTERY_TRAIT_NPC": "NPC獎勵特質類型"
+}

@@ -1,0 +1,48 @@
+{
+  "HUD_MODULE_EROTIC": "Erotic",
+  "MODULE_DESC_EROTIC": "情色內容模組 — 管理親密場景與角色慾望層級",
+  "STATUS_LUST": "欲望",
+  "CHAR_EXT_EROTIC_TRIGGERS": "情色觸發關鍵詞",
+  "CHAR_EXT_EROTIC_CONDITIONS": "情色觸發條件",
+  "CHAR_EXT_EROTIC_PREF": "偏好",
+  "CHAR_EXT_EROTIC_BOUNDS": "底線",
+  "CHAR_EXT_EROTIC_PHYS": "身體特徵",
+
+  "EROTIC_ACTIVATION_KEYWORDS": ["親", "吻", "抱", "摸", "脫", "插入", "口交", "指交", "性交", "肛交", "裸"],
+  "EROTIC_LUST_TIERS": ["休眠", "萌芽", "悶燒", "燃燒", "貪婪"],
+  "EROTIC_LUST_TIER_COLORS": {
+    "休眠": "#4a4a5a",
+    "萌芽": "#c47090",
+    "悶燒": "#d05080",
+    "燃燒": "#e03060",
+    "貪婪": "#ff2060"
+  },
+  "EROTIC_LUST_PULSE_AT": ["貪婪"],
+  "EROTIC_LUST_MILESTONE_VALUES": ["悶燒", "燃燒", "貪婪"],
+
+  "EROTIC_UA_EROTIC_SCENE_DESC": "True only when the current turn has explicit erotic contact or narration.",
+  "EROTIC_UA_LUST_TIER_DESC": "欲望層級：休眠/萌芽/悶燒/燃燒/貪婪。依浪漫、挑逗、身體接觸與情緒張力判斷；每回合最多升降一階。無親密能量則在一回合餘韻後冷卻；衝突、場景切換、明顯疏離可立即降溫。輸出精確層級字串。",
+  "EROTIC_UA_EROTIC_INTENSITY_DESC": "Active erotic turns only. Integer 0-4: higher for explicit touching, oral/manual/intercourse, climax, or multiple involved NPCs.",
+  "EROTIC_DICE_UA_INSTRUCTION": "When an erotic encounter involves uncertainty (seduction attempt, resistance, escalation), request a d20 roll with DC based on difficulty (easy=8, medium=12, hard=16).",
+
+  "MODULE_CONFIG_EROTIC_LUST_THRESHOLD": "慾望啟動門檻",
+  "MODULE_CONFIG_EROTIC_LUST_THRESHOLD_DESC": "Lust tier index (0=休眠..4=貪婪) at which the erotic module prompt is injected.",
+  "MODULE_CONFIG_EROTIC_ESCALATION_THRESHOLD": "升級門檻",
+  "MODULE_CONFIG_EROTIC_ESCALATION_THRESHOLD_DESC": "Lust tier index at which intensity score increases for model escalation.",
+  "MODULE_CONFIG_EROTIC_DEFAULT_DC": "預設難度等級",
+  "MODULE_CONFIG_EROTIC_DEFAULT_DC_DESC": "Default difficulty class for erotic dice rolls when UA doesn't specify.",
+  "MODULE_CONFIG_EROTIC_MAX_AFTERGLOW": "餘韻上限",
+  "MODULE_CONFIG_EROTIC_MAX_AFTERGLOW_DESC": "Maximum turns the erotic prompt persists after deactivation.",
+  "MODULE_CONFIG_EROTIC_INTENSITY_THRESHOLD": "情色升級強度門檻",
+  "MODULE_CONFIG_EROTIC_INTENSITY_THRESHOLD_DESC": "eroticIntensity score at or above which the erotic module triggers model escalation. Default 6.",
+  "MODULE_CONFIG_EROTIC_COOLDOWN_ON_CONFLICT": "衝突時冷卻",
+  "MODULE_CONFIG_EROTIC_COOLDOWN_ON_CONFLICT_DESC": "Whether lust cools down when emotional conflict is detected.",
+
+  "EROTIC_PACING_NPC_INITIATIVE": "角色主動展現身體語言暗示或肢體接觸升級，測試玩家反應",
+  "EROTIC_PACING_ENVIRONMENTAL": "環境因素迫使角色與玩家身體接近（狹窄空間、跌倒、躲藏）",
+  "EROTIC_PACING_OPPORTUNITY": "私密獨處的機會出現，角色的態度根據好感度變化",
+  "EROTIC_QUEST_50": "角色需要在私密或脆弱的情境中信任玩家——涉及身體界線的考驗",
+  "EROTIC_QUEST_70A": "共同面對一個涉及親密與慾望的抉擇——角色的內心掙扎需要玩家的理解",
+  "EROTIC_QUEST_70B": "玩家必須主動接近角色，以言語或行動坦白自己對角色的渴望——角色需要感受到玩家真實的慾望而非曖昧試探",
+  "EROTIC_QUEST_90": "玩家詢問角色心目中理想的高潮體驗，並協助角色達到那樣的巔峰——這是雙方最深層的身體信任"
+}

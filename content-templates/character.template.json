@@ -1,0 +1,26 @@
+{
+  "npcId": "",
+  "name": "",
+  "role": "",
+  "personality": [],
+  "appearance": [],
+  "outfit": [],
+  "coreBackstory": "",
+  "lifeStage": "",
+  "defaultOutfit": [],
+  "behaviorTendency": "",
+  "likes": [],
+  "dislikes": [],
+  "npcTraits": [],
+  "dialogueExamples": {
+    "greeting": "",
+    "excited": "",
+    "pleading": "",
+    "angered": "",
+    "working": "",
+    "affectionate": ""
+  },
+  "milestoneDirectives": {},
+  "portraitId": null,
+  "recommendedArcana": []
+}

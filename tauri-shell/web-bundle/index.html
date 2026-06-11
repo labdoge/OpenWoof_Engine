@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WoofyChatty</title>
+    <script type="module" crossorigin src="./assets/index-DLPn0DIz.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/vendor-DICsj_8Q.js">
+    <link rel="modulepreload" crossorigin href="./assets/modules-BuuNPs4Y.js">
+    <link rel="modulepreload" crossorigin href="./assets/agents-bRChlnHw.js">
+    <link rel="modulepreload" crossorigin href="./assets/workshop-JqOIu9pE.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-DVofMxHv.css">
+  </head>
+  <body>
+    <div id="app">
+      <!-- System Cog: fixed top-left -->
+      <button id="cog-btn" class="cog-btn" aria-label="設定">⚙</button>
+      <div id="cog-menu" class="cog-menu hidden"></div>
+
+      <!-- Main grid layout: chat + npc-cards + bottom-strip -->
+      <div id="layout" class="layout">
+        <!-- Chat column (left, main area) -->
+        <div id="chat-column" class="chat-column">
+          <div id="chat-messages" class="chat-messages"></div>
+        </div>
+
+        <!-- NPC Sidebar (right, portrait cards) -->
+        <aside id="npc-sidebar" class="npc-sidebar"></aside>
+
+        <!-- Bottom control strip (full width, row 2) -->
+        <div id="bottom-strip" class="bottom-strip hidden"></div>
+      </div>
+
+      <!-- Input area: reparented into bottom-strip by JS at runtime -->
+      <div id="input-area" class="input-area">
+        <div class="input-field-wrap">
+          <textarea
+            id="player-input"
+            class="player-input"
+            placeholder=""
+            rows="1"
+          ></textarea>
+          <div id="cmd-preview" class="cmd-preview"></div>
+          <div class="continue-buttons">
+            <button class="cmd-btn cmd-continue" id="continue-btn" title="">▶</button>
+            <button class="cmd-btn cmd-auto-continue" id="auto-continue-btn" title="">▶▶</button>
+          </div>
+        </div>
+        <div class="input-commands-right">
+          <button class="cmd-btn cmd-target" id="target-btn" title="">@</button>
+          <button class="cmd-btn cmd-summon" id="summon-btn" title="">📢</button>
+          <div class="provider-toggle" id="provider-toggle" title="">
+            <button class="provider-seg" data-provider="claude">C</button>
+            <button class="provider-seg" data-provider="gemini">G</button>
+            <button class="provider-seg" data-provider="xai">X</button>
+            <button class="provider-seg" data-provider="deepseek">D</button>
+          </div>
+          <button id="dynamic-toggle" class="dynamic-toggle" title="">⚡</button>
+          <button id="model-btn" class="model-btn" title="">Sonnet</button>
+          <button id="send-btn" class="send-btn" aria-label="送出訊息">▶</button>
+        </div>
+      </div>
+
+      <!-- Portal page (landing, hidden when in-session) -->
+      <div id="portal-page" class="portal-page hidden"></div>
+
+      <!-- Workshop panel (full layout swap, hidden by default) -->
+      <div id="workshop-panel" class="workshop-panel hidden"></div>
+
+      <!-- Dev panel (right side, toggled via Ctrl+Shift+D) -->
+      <div id="dev-panel" class="dev-panel"></div>
+
+      <!-- Overlay + Modal mount points (populated dynamically) -->
+      <div id="overlay-root"></div>
+      <div id="modal-root"></div>
+
+      <!-- Small-screen warning (shown via CSS at <1024px) -->
+      <div class="small-screen-warning" aria-hidden="true">
+        <!-- Text set from locale by JS -->
+      </div>
+    </div>
+
+  </body>
+</html>
