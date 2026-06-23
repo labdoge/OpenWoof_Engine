@@ -1,0 +1,33 @@
+{
+  "loreId": "bundled_lore_fantasy_dimension_mortal_realms",
+  "title": "凡人諸國",
+  "type": "faction",
+  "category": "幻想維度",
+  "keywords": [
+    "凡人諸國",
+    "王國",
+    "法師塔",
+    "公會長"
+  ],
+  "alias": [
+    "凡人諸國",
+    "諸王同盟"
+  ],
+  "content": "幻想維度由多個凡人王國、自治城邦、法師塔與冒險者公會共同支撐。國王想保住邊界，法師守著知識，公會長計算委託與補給。面對黑暗部落，它們不得不締結脆弱同盟；會議桌上滿是誓言，桌底則仍有舊仇與利益交換。",
+  "priority": 84,
+  "tokenEstimate": 124,
+  "promoted": true,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_dark_horde",
+      "label": "共同抵禦敵軍"
+    },
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_adventurer_guilds",
+      "label": "依賴公會解決危機"
+    }
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

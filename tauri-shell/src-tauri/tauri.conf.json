@@ -4,7 +4,10 @@
   "version": "0.1.0",
   "identifier": "com.woofychatty.app",
   "build": {
-    "frontendDist": "../web-bundle"
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:5173",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
   },
   "app": {
     "windows": [
@@ -43,10 +46,7 @@
   },
   "bundle": {
     "active": true,
-    "targets": [
-      "msi",
-      "nsis"
-    ],
+    "targets": ["msi", "nsis"],
     "icon": [
       "icons/32x32.png",
       "icons/128x128.png",
@@ -58,7 +58,7 @@
     "copyright": "WoofyChatty",
     "category": "Game",
     "shortDescription": "Interactive Fiction Engine",
-    "longDescription": "WoofyChatty ??a locally-hosted interactive fiction platform powered by LLM APIs.",
+    "longDescription": "WoofyChatty — a locally-hosted interactive fiction platform powered by LLM APIs.",
     "windows": {
       "nsis": {
         "displayLanguageSelector": false,

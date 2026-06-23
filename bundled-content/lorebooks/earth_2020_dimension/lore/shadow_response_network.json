@@ -1,0 +1,33 @@
+{
+  "loreId": "bundled_lore_earth_2020_dimension_shadow_response_network",
+  "title": "影子應變網",
+  "type": "faction",
+  "category": "地球2020",
+  "keywords": [
+    "影子應變網",
+    "維度旅人",
+    "英雄",
+    "秘密協力"
+  ],
+  "alias": [
+    "暗影應變網",
+    "暗線守護者"
+  ],
+  "content": "影子應變網不是正式機構，而是由少數本地英雄、維度旅人、善意駭客、醫護線人與知情偵探組成的鬆散聯絡。汪醬提供座標與奇怪工具，卡洛威 指揮高風險突入，昆恩．沃維克 追查線索，凱菈 判斷哪些門必須立刻封死。",
+  "priority": 78,
+  "tokenEstimate": 128,
+  "promoted": true,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_visitor_cover_identities",
+      "label": "依靠掩護身份行動"
+    },
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_calloway_cases",
+      "label": "承接具體案件"
+    }
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

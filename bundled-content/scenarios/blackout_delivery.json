@@ -1,0 +1,247 @@
+{
+  "$schema": "Scenario Overview Template for DogeChat Engine",
+  "$version": "0.7",
+  "title": "停電包裹",
+  "genre": "都市怪談",
+  "tone": ["懸疑", "封閉", "低光", "守護"],
+  "overall_goal": "把神祕包裹交給住戶，並在大停電中與對方撐過公寓裡徘徊的異常存在。",
+  "playMode": "standard",
+  "mission_profile": "hybrid",
+  "missions": {
+    "ambient_affection": {
+      "enabled": true,
+      "majorNpcPolicy": "initial_npcs",
+      "optionCount": 3,
+      "nextPromptWithinTurns": 3
+    },
+    "bottleneck_quests": {
+      "enabled": true,
+      "mode": "scenario_linked",
+      "optionCount": 3,
+      "directions": [
+        {
+          "npcSlotId": "remote-resident",
+          "affectionGate": 30,
+          "storyAxis": "停電讓公寓封閉，玩家要證明自己不是威脅。",
+          "relationshipAxis": "住戶必須決定是否讓陌生配送員留下避難。",
+          "suggestedAction": "TELL",
+          "suggestedHooks": ["VULNERABILITY"]
+        },
+        {
+          "npcSlotId": "remote-resident",
+          "affectionGate": 50,
+          "storyAxis": "怪聲逼近門外，兩人要合作封住入口。",
+          "relationshipAxis": "住戶需要玩家聽從她的恐懼與經驗。",
+          "suggestedAction": "DO",
+          "suggestedHooks": ["DEPENDENCE"]
+        },
+        {
+          "npcSlotId": "remote-resident",
+          "affectionGate": 70,
+          "storyAxis": "包裹內容可能是裂隙錨點，必須共同檢查。",
+          "relationshipAxis": "玩家要把選擇權交還給住戶，而非替她決定。",
+          "suggestedAction": "GIVE",
+          "suggestedHooks": ["EXCLUSIVITY"]
+        },
+        {
+          "npcSlotId": "remote-resident",
+          "affectionGate": 90,
+          "storyAxis": "天亮前必須引開暗隙生物或關閉裂縫。",
+          "relationshipAxis": "住戶想知道玩家會不會在能逃時仍回頭。",
+          "suggestedAction": "DO",
+          "suggestedHooks": ["DEPENDENCE", "CONTINUITY"]
+        }
+      ]
+    },
+    "story": {
+      "enabled": true,
+      "limit": 5,
+      "sequence": [
+        {
+          "id": "S1",
+          "goal": "完成包裹交付並確認收件人狀況。",
+          "fixed": "包裹被匿名寄出，內部物品會干擾附近電力。",
+          "signal": "玩家把包裹交到住戶手中。"
+        },
+        {
+          "id": "S2",
+          "goal": "在大停電後封住公寓門口。",
+          "fixed": "走廊裡的存在會被恐懼與聲音吸引。",
+          "signal": "玩家與住戶完成門口防護。"
+        },
+        {
+          "id": "S3",
+          "goal": "找出包裹與停電的關聯。",
+          "fixed": "包裹內有裂隙殘留物，不一定是惡意寄送。",
+          "signal": "玩家檢查包裹並理解其異常作用。"
+        }
+      ]
+    }
+  },
+  "adoption_rule": "角色須改編為地球2020遠端公寓住戶，表面普通但能自然承受低調超自然事件。",
+  "worldview": "平行地球2020的城市因封閉與焦慮而脆弱。普通公寓裡的停電、雜訊與怪聲可能只是事故，也可能是裂隙正在學會敲門。",
+  "initial_npcs": [
+    {
+      "slotId": "remote-resident",
+      "identity": "獨居公寓住戶",
+      "required": true
+    }
+  ],
+  "npc_generation_pool": [
+    {
+      "slotId": "remote-resident",
+      "role": "獨居住戶",
+      "personality": ["警戒", "孤僻", "溫柔"],
+      "appearance_guide": ["疲憊眼神", "居家髮束"],
+      "outfit_guide": ["寬鬆毛衣", "室內拖鞋"],
+      "wardrobe_rules": "以居家衣物為主，可隨避難加披外套與手電。",
+      "stance_toward_player": "起初只想收包裹關門，停電後被迫判斷玩家是否可信。",
+      "personal_goal": "熬過停電夜晚"
+    }
+  ],
+  "player_setup": {
+    "identity": "臨時配送員",
+    "initial_traits": [
+      { "name": "方向感", "traitType": "utility", "description": "熟悉樓層與路線" },
+      { "name": "耐心", "traitType": "aid", "description": "能安撫焦慮住戶" },
+      { "name": "機警", "traitType": "utility", "description": "察覺停電異常" },
+      { "name": "體力", "traitType": "harm", "description": "能搬動障礙物" },
+      { "name": "守密", "traitType": "narrative", "description": "不輕易外傳怪事" }
+    ],
+    "backstory": "你接到一筆深夜加急配送，地址在遠離市中心的老公寓。備註只有一句：務必本人簽收。",
+    "outfit": ["雨衣", "配送包", "口罩"]
+  },
+  "allowSuccession": true,
+  "initial_affection": 5,
+  "initial_scene": {
+    "location": "六樓走廊",
+    "description": "老公寓燈管閃爍，你按下門鈴時，整棟樓突然陷入黑暗。",
+    "stalled": [],
+    "opening_context": "你把神祕包裹抱到六樓。門剛打開，走廊燈全數熄滅，手機訊號像沉進水底，樓下傳來不該屬於人類的拖行聲。",
+    "starting_time": {
+      "year": 2020,
+      "month": 11,
+      "day": 7,
+      "period": 3
+    }
+  },
+  "locations": [
+    {
+      "name": "六樓走廊",
+      "description": "安全門半開，黑暗中傳來電梯顯示跳動的聲音。",
+      "threat_level": "medium",
+      "connections": ["住戶房間", "安全梯"]
+    },
+    {
+      "name": "住戶房間",
+      "description": "小而乾淨的房間堆著罐頭、書與一盞快沒電的檯燈。",
+      "threat_level": "low",
+      "connections": ["六樓走廊", "陽台"]
+    },
+    {
+      "name": "安全梯",
+      "description": "樓梯間比走廊更黑，牆上有像潮濕羽毛的刮痕。",
+      "threat_level": "high",
+      "connections": ["六樓走廊"]
+    },
+    {
+      "name": "陽台",
+      "description": "雨聲與遠方警笛混在一起，對面窗戶一盞也沒亮。",
+      "threat_level": "medium",
+      "connections": ["住戶房間"]
+    }
+  ],
+  "playSetting": {
+    "socialDynamics": ["兩人是陌生人，信任必須靠具體行動建立。", "住戶家是避難所，不是玩家可任意支配的空間。"],
+    "mechanicalRules": ["怪物會被噪音、恐懼與開門動作吸引。", "探索時優先保護普通住戶與證據。"],
+    "restrictions": ["不要讓事件變成公開超自然災難。", "避免現實疫情醫療考據。"]
+  },
+  "combat": {
+    "partyKnockout": "rescue_twist"
+  },
+  "pacing_drivers": [
+    {
+      "triggerType": "environmental",
+      "affectionGate": null,
+      "direction": "電梯顯示不存在的樓層，走廊傳來拖行聲。"
+    },
+    {
+      "triggerType": "npc_initiative",
+      "affectionGate": 50,
+      "direction": "住戶請玩家幫忙把門口重新封住。"
+    }
+  ],
+  "bottleneck_quest_directions": [
+    {
+      "affectionGate": 30,
+      "direction": "玩家用真誠說明自己身份，讓住戶願意讓他避難。"
+    },
+    {
+      "affectionGate": 50,
+      "direction": "玩家尊重住戶安排，合作加固門窗。"
+    },
+    {
+      "affectionGate": 70,
+      "direction": "玩家把包裹真相交給住戶共同判斷。"
+    },
+    {
+      "affectionGate": 90,
+      "direction": "玩家在可逃離時回頭，協助封住裂隙。"
+    }
+  ],
+  "background_npcs": [
+    {
+      "name": "鄰居",
+      "role": "失聯住戶",
+      "description": "門縫下有光，卻沒有人回答敲門。"
+    },
+    {
+      "name": "管理員",
+      "role": "大樓人員",
+      "description": "對講機只剩雜訊，偶爾傳來喘息。"
+    }
+  ],
+  "notableObjects": [
+    {
+      "name": "神祕包裹",
+      "location": "住戶房間",
+      "description": "紙箱冰冷，封條沒有寄件人姓名。",
+      "portable": true
+    }
+  ],
+  "mysteries": [
+    {
+      "title": "包裹低鳴",
+      "rumorText": "停電後，包裹深處傳出像遠方電流的低鳴。",
+      "puzzleText": "低鳴會在怪物靠近時變快，像粗糙的警報器。",
+      "steps": [
+        {
+          "location": "住戶房間",
+          "objectName": "神祕包裹",
+          "objectDescription": "封條下方有細小水痕，摸起來卻像冷灰。",
+          "hint": "靠近門口時聽低鳴節奏。",
+          "portable": true,
+          "hidden": false
+        },
+        {
+          "location": "陽台",
+          "objectName": "裂隙冷風",
+          "objectDescription": "雨幕裡有一線不自然的黑色空隙。",
+          "hint": "用包裹靠近冷風，觀察低鳴變化。",
+          "portable": false,
+          "hidden": true
+        }
+      ],
+      "puzzleStartsAtStep": 1,
+      "relatedNpcs": ["remote-resident"],
+      "traitHints": { "player": "utility", "npc": "aid" }
+    }
+  ],
+  "ui_hints": {
+    "background_image": "",
+    "card_image": "",
+    "ambient_color": "#24333a"
+  },
+  "recommendedArcana": ["bundled_arcanum_earth_2020_dimension"],
+  "recommendedModules": ["exploration"]
+}

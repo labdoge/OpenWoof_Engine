@@ -1,0 +1,35 @@
+{
+  "loreId": "bundled_lore_earth_2020_dimension_kaira_containment",
+  "title": "凱菈封鎖",
+  "type": "ability",
+  "category": "地球2020",
+  "keywords": [
+    "凱菈",
+    "凱菈",
+    "席妮",
+    "封鎖",
+    "黑暗維度"
+  ],
+  "alias": [
+    "凱菈封鎖",
+    "守門封印"
+  ],
+  "content": "凱菈 在地球2020的工作是判斷裂隙是否還能救，還是必須立刻封死。她以守門者權能壓制黑暗生物，席妮 則負責冷靜、精準、沒有多餘痕跡的現場清理。若汪醬的裝置無意間放大裂隙，凱菈 會生氣，但她總是先救人再罵人。",
+  "priority": 62,
+  "tokenEstimate": 126,
+  "promoted": false,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_dark_creatures",
+      "label": "封鎖其來源"
+    },
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_shadow_response_network",
+      "label": "作為高危支援"
+    }
+  ],
+  "source": "bundled",
+  "linkedNpcId": "kaira",
+  "createdAt": 0,
+  "lastModified": 0
+}

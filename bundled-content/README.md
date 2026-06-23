@@ -1,23 +1,16 @@
-# Bundled Content
+# 內建內容
 
-## 繁體中文
+這裡存放隨桌面版一起發布的劇本、角色、世界書與壓縮後立繪。這些檔案是從主工作區的 `scenarios/`、`characters/`、`arcana/` 與 `portraits-optimized/` 鏡像而來，供 release source 與 GitHub 發布包留存。
 
-這裡是新 release repo 的內建內容起點。目前故意保持空白，方便你重新規劃第一批隨 app 發布的 scenarios、characters、lorebooks 與 portraits。
+## 資料夾
 
-### 資料夾
+- `scenarios/`：內建劇本 JSON。
+- `characters/`：可重用的內建角色 JSON。
+- `lorebooks/`：世界書與知識條目，每本世界書使用 `{id}/arcanum.json` 與 `{id}/lore/*.json`。
+- `portraits/`：已最佳化的 WebP 角色立繪，命名為 `{npcId}/{npcId}_0.webp`、`{npcId}_1.webp` 等。
 
-- `scenarios/`：scenario JSON。
-- `characters/`：可重用角色 JSON。
-- `lorebooks/`：世界觀與 lore entries。建議每本 lorebook 使用 `{id}/arcanum.json` 與 `{id}/lore/*.json`。
-- `portraits/`：角色立繪。建議使用 `{npcId}/{npcId}_0.png`、`{npcId}_1.png` 等命名。
+## 注意
 
-## English
-
-This is the clean bundled content starting point for the new release repo. It is intentionally empty so the first shipped scenarios, characters, lorebooks, and portraits can be planned from scratch.
-
-### Folders
-
-- `scenarios/`: scenario JSON files.
-- `characters/`: reusable character JSON files.
-- `lorebooks/`: world frameworks and lore entries. Recommended shape: `{id}/arcanum.json` and `{id}/lore/*.json`.
-- `portraits/`: character portraits. Recommended naming: `{npcId}/{npcId}_0.png`, `{npcId}_1.png`, and so on.
+- 顯示文字與敘事內容以繁體中文為主。
+- `scenarioId`、`npcId`、`loreId`、`slotId`、enum 值與檔名是資料結構，不做中文化。
+- 原始 PNG 立繪保留在主工作區作為素材來源，不放入 portable release。

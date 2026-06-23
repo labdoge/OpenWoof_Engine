@@ -1,0 +1,33 @@
+{
+  "loreId": "bundled_lore_fantasy_dimension_adventurer_guilds",
+  "title": "冒險公會",
+  "type": "faction",
+  "category": "幻想維度",
+  "keywords": [
+    "冒險者公會",
+    "委託",
+    "冒險者",
+    "公會長"
+  ],
+  "alias": [
+    "冒險者公會",
+    "任務櫃台"
+  ],
+  "content": "冒險者公會把危險變成委託，把無名勇氣變成可計價的報酬。公會長負責分級、仲裁、補給與收屍名冊，酒館牆上貼滿尋寶、護送、討伐與調查任務。英雄故事常從櫃台開始，但資深冒險者知道，最貴的報酬往往藏著最不完整的情報。",
+  "priority": 78,
+  "tokenEstimate": 126,
+  "promoted": true,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_mortal_realms",
+      "label": "服務各地王國城鎮"
+    },
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_dungeons_lairs",
+      "label": "發布探索委託"
+    }
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

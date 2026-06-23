@@ -229,6 +229,7 @@ JSON 必須放在 ```json 代碼塊中，完整結構如下：
 - `playMode: "standard"` keeps the existing player-protagonist runtime.
 - `playMode: "storyteller"` starts sessions with `NarrativePerspective = "third-storyteller"`, `MetaState.storytellerViewpoint`, and `MetaState.protagonistNpcIds`.
 - The storyteller config keeps slot-level authoring data only. Runtime protagonist NPC IDs are resolved after character setup from `initial_npcs[].slotId -> ProfileRecord.slotId -> NPCState.npcId`.
+- `initial_npcs[].preselectedWorkshopNpcId` is an optional soft default for an existing Workshop NPC. Preserve it during edits and do not invent Workshop NPC IDs unless the user explicitly supplies one.
 - `PlayerState` remains a mechanical shell and is not repurposed as protagonist identity.
 - Input router accepts protagonist directives such as `[Ari] SPEAK:[...]` and `[Ari] DO:[...]`. A single-protagonist session may omit the prefix.
 - Module participation is session state:

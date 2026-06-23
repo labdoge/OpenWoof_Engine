@@ -1,0 +1,33 @@
+{
+  "loreId": "bundled_lore_earth_2020_dimension_earth_2020_rifts",
+  "title": "2020裂隙",
+  "type": "event",
+  "category": "地球2020",
+  "keywords": [
+    "2020裂隙",
+    "疫情",
+    "平行地球",
+    "維度裂隙"
+  ],
+  "alias": [
+    "地球2020裂隙",
+    "微裂縫"
+  ],
+  "content": "地球2020維度的裂隙不是巨大天災，而是在人心長期緊繃、孤立與恐懼中被撐開的細小傷口。它們出現在空病房、封閉車站、深夜公寓與無人的商場角落。大多裂隙只維持數分鐘，卻足以讓某些黑暗生物鑽入人間。",
+  "priority": 84,
+  "tokenEstimate": 124,
+  "promoted": true,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_dark_creatures",
+      "label": "讓黑暗生物滲入"
+    },
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_rift_signs",
+      "label": "留下異常徵兆"
+    }
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

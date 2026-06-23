@@ -1,0 +1,35 @@
+{
+  "loreId": "bundled_lore_fantasy_dimension_lumiel_saint_tale",
+  "title": "無首聖女",
+  "type": "character",
+  "category": "幻想維度",
+  "keywords": [
+    "露米耶",
+    "露米耶",
+    "聖女",
+    "無首亡靈",
+    "亡靈"
+  ],
+  "alias": [
+    "無首聖女",
+    "復生聖女"
+  ],
+  "content": "露米耶在幻想維度像一首被唱錯又仍然美麗的聖歌。人們記得她曾為人民而死，也害怕她以 無首亡靈 之姿復生。真正見過她的人知道，她是溫柔盡責的大姊，只是在戰鬥之外笨拙得驚人。昆恩．沃維克 對她的敬慕常被寫進酒館玩笑，只有本人裝作沒聽見。",
+  "priority": 58,
+  "tokenEstimate": 130,
+  "promoted": false,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_kazimir_shelter_legend",
+      "label": "受其庇護傳說延伸"
+    },
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_sovereign",
+      "label": "象徵對黑暗的反證"
+    }
+  ],
+  "source": "bundled",
+  "linkedNpcId": "lumiel",
+  "createdAt": 0,
+  "lastModified": 0
+}

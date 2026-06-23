@@ -1,0 +1,34 @@
+{
+  "loreId": "bundled_lore_master_dimension_woofy_laboratory",
+  "title": "汪醬實驗室",
+  "type": "location",
+  "category": "主維度",
+  "keywords": [
+    "汪醬實驗室",
+    "汪醬",
+    "實驗",
+    "傳送門"
+  ],
+  "alias": [
+    "小狗實驗室",
+    "傳送門實驗室"
+  ],
+  "content": "汪醬的實驗室像糖果盒、軍火庫與魔法工坊的混合體：下午茶杯旁邊可能放著維度穩定核心，白板上畫滿連卡茲米爾都得沉默三秒的公式。安妮塔 常來哄她休息，紅角哈羅德 會修裝置骨架，卡洛威 與 昆恩．沃維克 則把這裡當成前往麻煩現場的出入口。",
+  "priority": 66,
+  "tokenEstimate": 132,
+  "promoted": false,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_master_dimension_multi_dimensional_portal",
+      "label": "存放主要裝置"
+    },
+    {
+      "targetLoreId": "bundled_lore_master_dimension_bundle_cast_master",
+      "label": "角色交會中心"
+    }
+  ],
+  "source": "bundled",
+  "linkedNpcId": "woofy_chan",
+  "createdAt": 0,
+  "lastModified": 0
+}

@@ -1,0 +1,33 @@
+{
+  "loreId": "bundled_lore_fantasy_dimension_sovereign",
+  "title": "魔王索維林",
+  "type": "character",
+  "category": "幻想維度",
+  "keywords": [
+    "索維林",
+    "魔王",
+    "黑暗部落",
+    "黑暗王座"
+  ],
+  "alias": [
+    "至高魔王",
+    "黑冠之主"
+  ],
+  "content": "索維林是幻想維度的魔王，名字像頭銜也像詛咒。沒有人確定其真貌：有人說他是墮落神子，有人說她是王權本身的黑影，也有人說索維林只是被歷代魔王繼承的意志。確定的是，黑暗部落聽從黑冠召喚，凡人諸國因此不得不聯手。",
+  "priority": 86,
+  "tokenEstimate": 130,
+  "promoted": true,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_dark_horde",
+      "label": "統御軍勢"
+    },
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_lumiel_saint_tale",
+      "label": "與聖女傳說相互映照"
+    }
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

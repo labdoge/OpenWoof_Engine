@@ -1,0 +1,33 @@
+{
+  "loreId": "bundled_lore_fantasy_dimension_dark_horde",
+  "title": "黑暗部落",
+  "type": "faction",
+  "category": "幻想維度",
+  "keywords": [
+    "黑暗部落",
+    "魔王軍",
+    "魔物",
+    "污染"
+  ],
+  "alias": [
+    "魔王軍",
+    "黑潮"
+  ],
+  "content": "黑暗部落是魔王索維林旗下的怪物、墮落騎士、咒術師與被污染獸群。它們不像單純軍隊，更像會沿著恐懼蔓延的黑潮：先腐蝕邊境村落，再切斷商路，最後讓王國彼此猜疑。每一次勝利都需要付出補給、信念與人命。",
+  "priority": 82,
+  "tokenEstimate": 124,
+  "promoted": true,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_sovereign",
+      "label": "受魔王統御"
+    },
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_mortal_realms",
+      "label": "威脅凡人諸國"
+    }
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

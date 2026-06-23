@@ -1,0 +1,35 @@
+{
+  "loreId": "bundled_lore_fantasy_dimension_magic_and_runes",
+  "title": "魔法與符文",
+  "type": "ability",
+  "category": "幻想維度",
+  "keywords": [
+    "魔法",
+    "符文",
+    "紅角哈羅德",
+    "工匠",
+    "法師"
+  ],
+  "alias": [
+    "魔法與符文",
+    "符文工藝"
+  ],
+  "content": "幻想維度的魔法不只屬於法師塔，也藏在鐵匠敲下的符文、祭司唱出的古語與吟遊詩人的副歌裡。紅角哈羅德 對此世界格外自在：他相信符文、神話與好酒都是真理的一部分，並能把汪醬難以穩定的裝置框架敲到願意聽話。",
+  "priority": 58,
+  "tokenEstimate": 128,
+  "promoted": false,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_portal_shrines",
+      "label": "協助穩定傳送祠堂"
+    },
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_dungeons_lairs",
+      "label": "常見於遺跡機關"
+    }
+  ],
+  "source": "bundled",
+  "linkedNpcId": "harald_red_horns",
+  "createdAt": 0,
+  "lastModified": 0
+}

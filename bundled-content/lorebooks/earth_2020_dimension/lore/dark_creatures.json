@@ -1,0 +1,33 @@
+{
+  "loreId": "bundled_lore_earth_2020_dimension_dark_creatures",
+  "title": "暗隙生物",
+  "type": "race",
+  "category": "地球2020",
+  "keywords": [
+    "暗隙生物",
+    "黑暗生物",
+    "恐懼",
+    "裂隙"
+  ],
+  "alias": [
+    "黑暗生物",
+    "裂隙怪物"
+  ],
+  "content": "暗隙生物從裂隙另一端爬來，形體常像影子、濕羽、碎面具或沒有聲音的野獸。它們不一定追求殺戮，更常寄生於恐懼、猜疑與絕望，誘使人們彼此疏離。強大的個體能偽裝成夢魘、網路謠言或街角一瞬間不該存在的人影。",
+  "priority": 82,
+  "tokenEstimate": 128,
+  "promoted": true,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_earth_2020_rifts",
+      "label": "經由裂隙出現"
+    },
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_kaira_containment",
+      "label": "需由守門者處理"
+    }
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

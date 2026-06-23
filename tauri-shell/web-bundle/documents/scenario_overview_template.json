@@ -1,6 +1,6 @@
 {
   "$schema": "Scenario Overview Template for DogeChat Engine",
-  "$version": "0.6",
+  "$version": "0.7",
 
   "title": "",
   "genre": "",
@@ -59,7 +59,8 @@
     {
       "slotId": "slot-0",
       "identity": "",
-      "required": true
+      "required": true,
+      "preselectedWorkshopNpcId": ""
     }
   ],
 

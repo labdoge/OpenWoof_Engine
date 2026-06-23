@@ -1,0 +1,35 @@
+{
+  "loreId": "bundled_lore_earth_2020_dimension_calloway_cases",
+  "title": "卡洛威案件",
+  "type": "event",
+  "category": "地球2020",
+  "keywords": [
+    "卡洛威",
+    "卡洛威",
+    "昆恩．沃維克",
+    "案件",
+    "特勤"
+  ],
+  "alias": [
+    "卡洛威案件",
+    "危機偵查"
+  ],
+  "content": "卡洛威 在地球2020接手的案件通常又快又危險：封鎖地下站、救出被影子盯上的家庭、在警報響起前摧毀裂隙核心。昆恩．沃維克 會用更慢的方式補上真相，從發票、門禁紀錄與人們說漏嘴的細節裡找出幕後黑手。兩人的方法不同，目標一致。",
+  "priority": 60,
+  "tokenEstimate": 128,
+  "promoted": false,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_rift_signs",
+      "label": "由徵兆引出案件"
+    },
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_shadow_response_network",
+      "label": "由網路提供支援"
+    }
+  ],
+  "source": "bundled",
+  "linkedNpcId": "calloway",
+  "createdAt": 0,
+  "lastModified": 0
+}

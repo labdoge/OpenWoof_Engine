@@ -1,0 +1,65 @@
+{
+  "arcanumId": "bundled_arcanum_earth_2020_dimension",
+  "title": "地球2020維度",
+  "genrePrimary": "現代都市奇幻",
+  "genreSecondary": "祕密守護",
+  "era": "平行地球2020",
+  "metaphysicsEnabled": true,
+  "metaphysics": [
+    "此地球與現實世界相似，但集體不安會讓細小維度裂隙短暫開啟。",
+    "黑暗生物能透過裂隙滲入城市陰影，通常避開大眾視線並寄生於恐懼。",
+    "普通人多半不知真相，會把異常解釋成壓力、都市傳說或設備故障。",
+    "維度旅人能以臨時身份介入，但必須避免公開暴露跨維技術。",
+    "音樂、信任與微小希望可以穩定人心，也能削弱以絕望為食的存在。"
+  ],
+  "iconicFeatures": [
+    "平行地球的 2020 疫病時期讓城市封閉、情緒緊繃，裂隙因此變得活躍。",
+    "英雄、偵探、守門者與維度旅人在暗處保護不知情平民。",
+    "現代科技大多正常運作，但監視器、訊號與醫療儀器會在裂隙附近出現異常。",
+    "卡洛威 與 昆恩．沃維克 常把事件包裝成犯罪調查或失蹤案。",
+    "凱菈 與 席妮 負責處理太危險、不能留下證據的威脅。",
+    "安妮塔 與 疾克 的音樂能成為疫情陰霾中的人心錨點。"
+  ],
+  "tone": [
+    "現代",
+    "低調超自然",
+    "懸疑",
+    "溫柔守護",
+    "夜間行動"
+  ],
+  "xCards": [],
+  "rules": [
+    {
+      "text": "地球2020維度應避免現實醫療考據，疫情只作為平行世界的情緒與社會背景。",
+      "priority": "global"
+    },
+    {
+      "text": "普通民眾大多不知黑暗生物與維度旅人存在，真相通常被掩蓋成都市傳說或事故。",
+      "priority": "global"
+    },
+    {
+      "text": "行動場景應重視保護、調查、撤離與封鎖，而不只是正面戰鬥。",
+      "priority": "scenario"
+    },
+    {
+      "text": "內建角色群進入此維度時應使用低調掩護，避免破壞現代地球的表面秩序。",
+      "priority": "global"
+    }
+  ],
+  "moduleOverrides": {},
+  "linkedLore": [
+    "bundled_lore_earth_2020_dimension_earth_2020_rifts",
+    "bundled_lore_earth_2020_dimension_unseen_civilians",
+    "bundled_lore_earth_2020_dimension_dark_creatures",
+    "bundled_lore_earth_2020_dimension_shadow_response_network",
+    "bundled_lore_earth_2020_dimension_quarantine_nights",
+    "bundled_lore_earth_2020_dimension_rift_signs",
+    "bundled_lore_earth_2020_dimension_visitor_cover_identities",
+    "bundled_lore_earth_2020_dimension_calloway_cases",
+    "bundled_lore_earth_2020_dimension_kaira_containment",
+    "bundled_lore_earth_2020_dimension_hope_music"
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

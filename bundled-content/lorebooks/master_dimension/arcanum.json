@@ -1,0 +1,65 @@
+{
+  "arcanumId": "bundled_arcanum_master_dimension",
+  "title": "主維度",
+  "genrePrimary": "近未來奇幻",
+  "genreSecondary": "企業陰謀",
+  "era": "近未來",
+  "metaphysicsEnabled": true,
+  "metaphysics": [
+    "多維裂隙真實存在，但大多被政府、企業或守門者封鎖消息。",
+    "魔法、神祕血脈、符文工藝與仿生人技術可以共存，卻遵守不同學派的限制。",
+    "汪醬的多維傳送門能讓不同維度的訪客短暫交會，但錯誤校準會吸引黑暗存在。",
+    "凱菈掌管黑暗維度邊界，能感知危險裂縫與不該被開啟的門。",
+    "卡茲米爾研究魔法與形上學，常把不可能的課題交給汪醬實驗。"
+  ],
+  "iconicFeatures": [
+    "統合政府維持宏觀秩序，實際行政由巨型企業依區域合約執行。",
+    "人類、獸人、神祕種族、仿生人共同生活，繁榮之下仍有階級與偏見。",
+    "企業暗鬥、黑幫協商、情報交易與跨維事故構成日常張力。",
+    "汪醬的實驗室是多維冒險的起點，也是各路奇人固定拜訪的地方。",
+    "金魚茶館是黑幫、企業與情報商談判時最常選擇的中立場所。",
+    "主維度表面明亮熱鬧，暗處卻有守門者、特勤、偵探與殺手機體維持平衡。"
+  ],
+  "tone": [
+    "熱鬧",
+    "近未來",
+    "奇幻都市",
+    "暗潮洶湧",
+    "角色群像"
+  ],
+  "xCards": [],
+  "rules": [
+    {
+      "text": "主維度場景應呈現繁榮都市與隱性危機並存，避免把社會寫成單純烏托邦。",
+      "priority": "global"
+    },
+    {
+      "text": "汪醬的發明可以推動跨維冒險，但傳送門問題應帶來可被調查或修復的後果。",
+      "priority": "global"
+    },
+    {
+      "text": "企業、黑幫、政府與守門者的衝突以陰謀、談判、委託與秘密行動呈現。",
+      "priority": "scenario"
+    },
+    {
+      "text": "引用內建角色群時應尊重各自角色設定，不把角色關係硬改成只屬於單一劇本的設定。",
+      "priority": "global"
+    }
+  ],
+  "moduleOverrides": {},
+  "linkedLore": [
+    "bundled_lore_master_dimension_united_government",
+    "bundled_lore_master_dimension_corporate_regions",
+    "bundled_lore_master_dimension_species_citizenship",
+    "bundled_lore_master_dimension_multi_dimensional_portal",
+    "bundled_lore_master_dimension_woofy_laboratory",
+    "bundled_lore_master_dimension_goldfish_teahouse",
+    "bundled_lore_master_dimension_ashenberg_circle",
+    "bundled_lore_master_dimension_shadow_contracts",
+    "bundled_lore_master_dimension_gatekeeper_protocol",
+    "bundled_lore_master_dimension_bundle_cast_master"
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

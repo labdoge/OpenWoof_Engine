@@ -1,0 +1,33 @@
+{
+  "loreId": "bundled_lore_earth_2020_dimension_visitor_cover_identities",
+  "title": "訪客掩護",
+  "type": "concept",
+  "category": "地球2020",
+  "keywords": [
+    "掩護身份",
+    "訪客",
+    "維度旅人",
+    "現代地球"
+  ],
+  "alias": [
+    "掩護身份",
+    "臨時身份"
+  ],
+  "content": "維度旅人在地球2020必須低調。卡洛威常被登記成跨國安全顧問，昆恩．沃維克是私家偵探，席德妮是清潔與派遣服務仿生人的本地化偽裝，安妮塔和疾克則能以線上音樂活動出現。汪醬的犬耳與尾巴需要更誇張的帽子、外套和一點點投影遮蔽。",
+  "priority": 54,
+  "tokenEstimate": 128,
+  "promoted": false,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_shadow_response_network",
+      "label": "支持秘密行動"
+    },
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_unseen_civilians",
+      "label": "避免驚動平民"
+    }
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

@@ -1,0 +1,294 @@
+{
+  "$schema": "Scenario Overview Template for DogeChat Engine",
+  "$version": "0.7",
+  "title": "菜鳥地城",
+  "genre": "奇幻冒險",
+  "tone": ["輕快", "冒險", "教學", "危機"],
+  "overall_goal": "帶兩名剛畢業的菜鳥冒險者完成第一座地城，讓他們學會活著回來。",
+  "playMode": "standard",
+  "mission_profile": "hybrid",
+  "missions": {
+    "ambient_affection": {
+      "enabled": true,
+      "majorNpcPolicy": "initial_npcs",
+      "optionCount": 3,
+      "nextPromptWithinTurns": 3
+    },
+    "bottleneck_quests": {
+      "enabled": true,
+      "mode": "scenario_linked",
+      "optionCount": 3,
+      "directions": [
+        {
+          "npcSlotId": "rookie-a",
+          "affectionGate": 30,
+          "storyAxis": "第一個陷阱暴露菜鳥不成熟，玩家要教而不是羞辱。",
+          "relationshipAxis": "菜鳥需要知道前輩嚴格是為了讓人活下來。",
+          "suggestedAction": "TELL",
+          "suggestedHooks": ["VULNERABILITY"]
+        },
+        {
+          "npcSlotId": "rookie-a",
+          "affectionGate": 50,
+          "storyAxis": "怪物群逼近，菜鳥必須第一次獨自完成分工。",
+          "relationshipAxis": "菜鳥想被信任，而不是永遠被護在身後。",
+          "suggestedAction": "DO",
+          "suggestedHooks": ["DEPENDENCE"]
+        },
+        {
+          "npcSlotId": "rookie-b",
+          "affectionGate": 30,
+          "storyAxis": "第二名菜鳥的畢業訓練不足以應付真地城。",
+          "relationshipAxis": "菜鳥需要玩家看見自己的努力，而非只看失誤。",
+          "suggestedAction": "TELL",
+          "suggestedHooks": ["VULNERABILITY"]
+        },
+        {
+          "npcSlotId": "rookie-b",
+          "affectionGate": 50,
+          "storyAxis": "兩名菜鳥意見相左，玩家必須引導他們合作。",
+          "relationshipAxis": "菜鳥想知道玩家是否會公平聽完雙方。",
+          "suggestedAction": "DO",
+          "suggestedHooks": ["CONTINUITY"]
+        },
+        {
+          "npcSlotId": "rookie-a",
+          "affectionGate": 70,
+          "storyAxis": "地城核心失控，菜鳥甲要承擔一次關鍵判斷。",
+          "relationshipAxis": "玩家必須讓出主導權，接受菜鳥可能犯錯。",
+          "suggestedAction": "GIVE",
+          "suggestedHooks": ["EXCLUSIVITY"]
+        },
+        {
+          "npcSlotId": "rookie-b",
+          "affectionGate": 70,
+          "storyAxis": "菜鳥乙發現撤退路線，卻害怕提出不同意見。",
+          "relationshipAxis": "玩家要讓她知道質疑前輩也可以是勇氣。",
+          "suggestedAction": "TELL",
+          "suggestedHooks": ["EXCLUSIVITY"]
+        },
+        {
+          "npcSlotId": "rookie-a",
+          "affectionGate": 90,
+          "storyAxis": "最終撤離時，菜鳥甲必須選擇保護同伴或搶功。",
+          "relationshipAxis": "玩家要求她把冒險者誓言活出來。",
+          "suggestedAction": "DO",
+          "suggestedHooks": ["CONTINUITY"]
+        },
+        {
+          "npcSlotId": "rookie-b",
+          "affectionGate": 90,
+          "storyAxis": "菜鳥乙面對恐懼仍回頭完成最後支援。",
+          "relationshipAxis": "玩家用承諾確認她已不只是被保護的人。",
+          "suggestedAction": "GIVE",
+          "suggestedHooks": ["VULNERABILITY", "CONTINUITY"]
+        }
+      ]
+    },
+    "story": {
+      "enabled": true,
+      "limit": 5,
+      "sequence": [
+        {
+          "id": "S1",
+          "goal": "在公會口確認菜鳥裝備與委託內容。",
+          "fixed": "委託被標成新手級，但資料少得不合理。",
+          "signal": "玩家檢查裝備或指出委託疑點。"
+        },
+        {
+          "id": "S2",
+          "goal": "穿過地城前段陷阱，讓菜鳥學會分工。",
+          "fixed": "陷阱不是致命設計，但最近被怪物改動過。",
+          "signal": "隊伍通過第一段陷阱。"
+        },
+        {
+          "id": "S3",
+          "goal": "處理失控地城核心並安全撤離。",
+          "fixed": "地城核心被黑暗軍勢污染了一角。",
+          "signal": "核心被穩定或隊伍安全撤出。"
+        }
+      ]
+    }
+  },
+  "adoption_rule": "角色須改編為幻想維度的新手冒險者，保留核心性格但換成戰鬥、探索或支援職能。",
+  "worldview": "幻想維度的冒險公會把危險分級成委託。菜鳥剛拿到徽章，卻還不知道地城會把課本上每條規則都弄髒。",
+  "initial_npcs": [
+    {
+      "slotId": "rookie-a",
+      "identity": "剛畢業的菜鳥冒險者甲",
+      "required": true
+    },
+    {
+      "slotId": "rookie-b",
+      "identity": "剛畢業的菜鳥冒險者乙",
+      "required": false
+    }
+  ],
+  "npc_generation_pool": [
+    {
+      "slotId": "rookie-a",
+      "role": "菜鳥前衛",
+      "personality": ["逞強", "熱血", "怕丟臉"],
+      "appearance_guide": ["新徽章", "緊握武器"],
+      "outfit_guide": ["新皮甲", "訓練披風"],
+      "wardrobe_rules": "裝備乾淨嶄新，進地城後逐步磨損。",
+      "stance_toward_player": "崇拜玩家資歷，卻害怕被當成累贅。",
+      "personal_goal": "證明自己合格"
+    },
+    {
+      "slotId": "rookie-b",
+      "role": "菜鳥支援",
+      "personality": ["細心", "緊張", "好學"],
+      "appearance_guide": ["筆記本", "護符袋"],
+      "outfit_guide": ["短斗篷", "工具腰包"],
+      "wardrobe_rules": "隨探索打開更多工具袋，衣物帶有學院痕跡。",
+      "stance_toward_player": "禮貌求助，常在關鍵細節上提出疑問。",
+      "personal_goal": "平安完成首戰"
+    }
+  ],
+  "player_setup": {
+    "identity": "經驗老到的冒險者",
+    "initial_traits": [
+      { "name": "老練", "traitType": "utility", "description": "熟悉地城風險" },
+      { "name": "教導", "traitType": "aid", "description": "能把經驗說清楚" },
+      { "name": "威嚴", "traitType": "narrative", "description": "讓菜鳥願意聽話" },
+      { "name": "武藝", "traitType": "harm", "description": "能壓制低階魔物" },
+      { "name": "警覺", "traitType": "utility", "description": "察覺陷阱改動" }
+    ],
+    "backstory": "你原本只想在公會接一份輕鬆委託，卻被兩名剛畢業的菜鳥攔住。他們需要一位真正見過血的前輩帶路。",
+    "outfit": ["舊披風", "磨損甲", "地圖筒"]
+  },
+  "allowSuccession": true,
+  "initial_affection": 20,
+  "initial_scene": {
+    "location": "公會門口",
+    "description": "清晨的委託板前，兩名菜鳥緊張地捧著第一張地城委託，向你鞠躬求助。",
+    "stalled": [],
+    "opening_context": "你正準備離開公會，兩名剛畢業的冒險者追上來，問你是否願意陪他們走完附近那座新手地城。他們的徽章太新，委託單卻太安靜。",
+    "starting_time": {
+      "year": 742,
+      "month": 3,
+      "day": 18,
+      "period": 1
+    }
+  },
+  "locations": [
+    {
+      "name": "公會門口",
+      "description": "委託板與補給攤擠滿新人，老手們只看一眼就能分辨真假好差事。",
+      "threat_level": "safe",
+      "connections": ["林邊小徑"]
+    },
+    {
+      "name": "林邊小徑",
+      "description": "通往地城的林道看似平靜，路標卻被新刮痕覆蓋。",
+      "threat_level": "low",
+      "connections": ["公會門口", "訓練地城"]
+    },
+    {
+      "name": "訓練地城",
+      "description": "舊礦坑改成的新手地城，牆上仍留著學院警告標記。",
+      "threat_level": "medium",
+      "connections": ["林邊小徑", "核心洞室"]
+    },
+    {
+      "name": "核心洞室",
+      "description": "微光水晶被黑斑侵蝕，地面符文斷斷續續發亮。",
+      "threat_level": "high",
+      "connections": ["訓練地城"]
+    }
+  ],
+  "playSetting": {
+    "socialDynamics": ["玩家是前輩，但不能把菜鳥當行李。", "兩名菜鳥會因恐懼與求勝心產生摩擦。"],
+    "mechanicalRules": ["教學、偵查與撤退判斷和戰鬥同等重要。", "菜鳥需要有機會做出有效行動。"],
+    "restrictions": ["不要讓玩家單刷整座地城。", "菜鳥可以犯錯但不該被羞辱。"]
+  },
+  "combat": {
+    "partyKnockout": "rescue_twist"
+  },
+  "pacing_drivers": [
+    {
+      "triggerType": "environmental",
+      "affectionGate": null,
+      "direction": "原本簡單的訓練陷阱出現新改動。"
+    },
+    {
+      "triggerType": "npc_initiative",
+      "affectionGate": 50,
+      "direction": "菜鳥主動請求嘗試一次真正分工。"
+    }
+  ],
+  "bottleneck_quest_directions": [
+    {
+      "affectionGate": 30,
+      "direction": "玩家用嚴格但尊重的方式糾正菜鳥錯誤。"
+    },
+    {
+      "affectionGate": 50,
+      "direction": "玩家讓菜鳥完成一次有風險的分工。"
+    },
+    {
+      "affectionGate": 70,
+      "direction": "玩家接受菜鳥提出的不同判斷。"
+    },
+    {
+      "affectionGate": 90,
+      "direction": "玩家承認菜鳥已能以冒險者身分並肩。"
+    }
+  ],
+  "background_npcs": [
+    {
+      "name": "櫃台",
+      "role": "公會職員",
+      "description": "提醒委託等級不一定等於安全。"
+    },
+    {
+      "name": "礦妖",
+      "role": "地城魔物",
+      "description": "比訓練教材記載得更狡猾。"
+    }
+  ],
+  "notableObjects": [
+    {
+      "name": "舊委託單",
+      "location": "公會門口",
+      "description": "委託等級被蓋成新手級，原字跡隱約較深。",
+      "portable": true
+    }
+  ],
+  "mysteries": [
+    {
+      "title": "錯級委託",
+      "rumorText": "這座新手地城最近讓幾隊新人灰頭土臉地回來。",
+      "puzzleText": "委託等級被人降低，核心污染才是異常來源。",
+      "steps": [
+        {
+          "location": "公會門口",
+          "objectName": "舊委託單",
+          "objectDescription": "墨水蓋痕下可見原本較高的風險標記。",
+          "hint": "把委託單對著晨光看。",
+          "portable": true,
+          "hidden": false
+        },
+        {
+          "location": "核心洞室",
+          "objectName": "污染水晶",
+          "objectDescription": "水晶黑斑像活物般緩慢擴散。",
+          "hint": "比對黑斑與委託單上的舊符號。",
+          "portable": false,
+          "hidden": true
+        }
+      ],
+      "puzzleStartsAtStep": 1,
+      "relatedNpcs": ["rookie-a", "rookie-b"],
+      "traitHints": { "player": "utility", "npc": "aid" }
+    }
+  ],
+  "ui_hints": {
+    "background_image": "",
+    "card_image": "",
+    "ambient_color": "#31523b"
+  },
+  "recommendedArcana": ["bundled_arcanum_fantasy_dimension"],
+  "recommendedModules": ["exploration", "combat"]
+}

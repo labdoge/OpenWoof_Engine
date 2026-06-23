@@ -1,0 +1,247 @@
+{
+  "$schema": "Scenario Overview Template for DogeChat Engine",
+  "$version": "0.7",
+  "title": "夜城嚮導",
+  "genre": "都市曖昧",
+  "tone": ["華麗", "曖昧", "神祕", "夜遊"],
+  "overall_goal": "接受或拒絕在地陪伴，透過夜城導覽理解這座城市的美麗與危險。",
+  "playMode": "standard",
+  "mission_profile": "hybrid",
+  "missions": {
+    "ambient_affection": {
+      "enabled": true,
+      "majorNpcPolicy": "initial_npcs",
+      "optionCount": 3,
+      "nextPromptWithinTurns": 3
+    },
+    "bottleneck_quests": {
+      "enabled": true,
+      "mode": "scenario_linked",
+      "optionCount": 3,
+      "directions": [
+        {
+          "npcSlotId": "local-escort",
+          "affectionGate": 30,
+          "storyAxis": "玩家第一次穿過城市夜生活，必須表明自己的界線。",
+          "relationshipAxis": "嚮導要知道玩家把她當人，而不是當服務。",
+          "suggestedAction": "TELL",
+          "suggestedHooks": ["VULNERABILITY"]
+        },
+        {
+          "npcSlotId": "local-escort",
+          "affectionGate": 50,
+          "storyAxis": "夜市與高塔之間出現一條不該被新人看見的路。",
+          "relationshipAxis": "嚮導需要玩家尊重她保留祕密的理由。",
+          "suggestedAction": "DO",
+          "suggestedHooks": ["DEPENDENCE"]
+        },
+        {
+          "npcSlotId": "local-escort",
+          "affectionGate": 70,
+          "storyAxis": "企業巡查逼近，兩人要共同即興演出一段關係。",
+          "relationshipAxis": "嚮導想確認玩家願意站在她這邊。",
+          "suggestedAction": "DO",
+          "suggestedHooks": ["EXCLUSIVITY"]
+        },
+        {
+          "npcSlotId": "local-escort",
+          "affectionGate": 90,
+          "storyAxis": "晚城最美的景點也是她最不想提起的傷口。",
+          "relationshipAxis": "玩家必須回應她把真名交出的信任。",
+          "suggestedAction": "GIVE",
+          "suggestedHooks": ["VULNERABILITY", "CONTINUITY"]
+        }
+      ]
+    },
+    "story": {
+      "enabled": true,
+      "limit": 5,
+      "sequence": [
+        {
+          "id": "S1",
+          "goal": "決定是否接受在地嚮導的夜間邀請。",
+          "fixed": "嚮導知道玩家是初來者，並刻意挑選安全但有張力的路線。",
+          "signal": "玩家接受、拒絕或重訂導覽條件。"
+        },
+        {
+          "id": "S2",
+          "goal": "在霓虹市場找出她提到的第一個城市祕密。",
+          "fixed": "市場攤主用價格與暗語辨識外地人。",
+          "signal": "玩家理解或使用一個本地暗語。"
+        },
+        {
+          "id": "S3",
+          "goal": "抵達高塔天台，選擇這晚如何收束。",
+          "fixed": "天台能看見企業區與地下街的邊界。",
+          "signal": "玩家在天台說出對嚮導或城市的選擇。"
+        }
+      ]
+    }
+  },
+  "adoption_rule": "角色須改編為主維度大城的在地陪伴者、嚮導或夜生活工作者，保留性格核心但避免固定原職。",
+  "worldview": "主維度大城由企業區域、地下街、娛樂區與中立店家拼成。對新人而言，霓虹像歡迎；對熟門熟路的人而言，每盞燈都標著價碼。",
+  "initial_npcs": [
+    {
+      "slotId": "local-escort",
+      "identity": "願意帶路的在地陪伴者",
+      "required": true
+    }
+  ],
+  "npc_generation_pool": [
+    {
+      "slotId": "local-escort",
+      "role": "在地陪伴者",
+      "personality": ["迷人", "警覺", "幽默"],
+      "appearance_guide": ["夜色眼妝", "步伐輕快"],
+      "outfit_guide": ["亮面外套", "貼身長靴"],
+      "wardrobe_rules": "穿著適合夜遊與快速轉場，配件可暗示城市階層。",
+      "stance_toward_player": "熱情招呼玩家，但每次靠近都保留一點距離。",
+      "personal_goal": "判斷新人是否可信"
+    }
+  ],
+  "player_setup": {
+    "identity": "初到大城的外地新人",
+    "initial_traits": [
+      { "name": "陌生", "traitType": "narrative", "description": "不熟悉本地規矩" },
+      { "name": "好奇", "traitType": "utility", "description": "願意追問細節" },
+      { "name": "禮貌", "traitType": "aid", "description": "能降低初見戒心" },
+      { "name": "直覺", "traitType": "utility", "description": "察覺路線異常" },
+      { "name": "膽量", "traitType": "narrative", "description": "敢看夜城暗面" }
+    ],
+    "backstory": "你剛搬到主維度大城，身上只有臨時住址與陌生交通卡。夜晚降臨時，一位在地陪伴者主動提出帶你認識城市。",
+    "outfit": ["旅行外套", "簡便鞋", "背包"]
+  },
+  "allowSuccession": true,
+  "initial_affection": 18,
+  "initial_scene": {
+    "location": "霓虹轉運站",
+    "description": "廣告光雨落在玻璃穹頂上，旅客散去後，只剩一位在地人向你伸出邀請。",
+    "stalled": [],
+    "opening_context": "你站在霓虹轉運站，還沒弄懂城市地圖。對方笑著說，若你願意相信一次陌生人，今晚可以看見這座城真正漂亮的地方。",
+    "starting_time": {
+      "year": 2140,
+      "month": 6,
+      "day": 3,
+      "period": 3
+    }
+  },
+  "locations": [
+    {
+      "name": "霓虹轉運站",
+      "description": "巨型玻璃站體連接各企業區，深夜仍亮得像白晝。",
+      "threat_level": "safe",
+      "connections": ["夜市場", "高塔天台"]
+    },
+    {
+      "name": "夜市場",
+      "description": "攤販、酒吧與情報小販擠在同一條閃爍巷道。",
+      "threat_level": "low",
+      "connections": ["霓虹轉運站", "地下街口"]
+    },
+    {
+      "name": "地下街口",
+      "description": "電扶梯往下延伸，保全攝影機卻故意偏開。",
+      "threat_level": "medium",
+      "connections": ["夜市場"]
+    },
+    {
+      "name": "高塔天台",
+      "description": "能俯看整座城市的風景，欄杆上留著舊刮痕。",
+      "threat_level": "low",
+      "connections": ["霓虹轉運站"]
+    }
+  ],
+  "playSetting": {
+    "socialDynamics": ["陪伴服務可曖昧，但尊重與同意是核心。", "本地人用玩笑測試外地人的禮貌。"],
+    "mechanicalRules": ["探索城市時可發現暗語、路線與小物線索。", "玩家可重新協商導覽邊界。"],
+    "restrictions": ["不要把嚮導寫成沒有自主權的服務工具。", "夜遊可危險但不強迫親密。"]
+  },
+  "combat": {
+    "partyKnockout": "rescue_twist"
+  },
+  "pacing_drivers": [
+    {
+      "triggerType": "opportunity",
+      "affectionGate": null,
+      "direction": "城市角落出現只有在地人才懂的暗號。"
+    },
+    {
+      "triggerType": "npc_initiative",
+      "affectionGate": 50,
+      "direction": "嚮導邀玩家走一條不在觀光圖上的捷徑。"
+    }
+  ],
+  "bottleneck_quest_directions": [
+    {
+      "affectionGate": 30,
+      "direction": "玩家清楚說出界線，也承認自己需要她帶路。"
+    },
+    {
+      "affectionGate": 50,
+      "direction": "玩家保護她的一個小祕密，不把它當籌碼。"
+    },
+    {
+      "affectionGate": 70,
+      "direction": "玩家與她共同避開企業巡查，完成默契演出。"
+    },
+    {
+      "affectionGate": 90,
+      "direction": "玩家用承諾或信物回應她交出的真名。"
+    }
+  ],
+  "background_npcs": [
+    {
+      "name": "攤主",
+      "role": "夜市商人",
+      "description": "用價格測試客人是否懂本地暗語。"
+    },
+    {
+      "name": "巡查員",
+      "role": "企業保全",
+      "description": "表面維持秩序，實際盤查可疑外地人。"
+    }
+  ],
+  "notableObjects": [
+    {
+      "name": "夜城卡",
+      "location": "霓虹轉運站",
+      "description": "臨時交通卡背面印著一串不明折扣碼。",
+      "portable": true
+    }
+  ],
+  "mysteries": [
+    {
+      "title": "折扣碼",
+      "rumorText": "某些折扣碼不是折扣，而是地下店家的通行語。",
+      "puzzleText": "把折扣碼念給正確攤主，能換到隱藏路線。",
+      "steps": [
+        {
+          "location": "霓虹轉運站",
+          "objectName": "夜城卡",
+          "objectDescription": "卡面乾淨，背面折扣碼卻不像普通印刷。",
+          "hint": "注意折扣碼與站內廣告的重複字。",
+          "portable": true,
+          "hidden": false
+        },
+        {
+          "location": "夜市場",
+          "objectName": "暗號菜牌",
+          "objectDescription": "價格欄有幾個數字被刻意刮花。",
+          "hint": "把卡背字母對應到被刮花的價格。",
+          "portable": false,
+          "hidden": true
+        }
+      ],
+      "puzzleStartsAtStep": 1,
+      "relatedNpcs": ["local-escort"],
+      "traitHints": { "player": "utility", "npc": "narrative" }
+    }
+  ],
+  "ui_hints": {
+    "background_image": "",
+    "card_image": "",
+    "ambient_color": "#27405f"
+  },
+  "recommendedArcana": ["bundled_arcanum_master_dimension"],
+  "recommendedModules": ["exploration"]
+}

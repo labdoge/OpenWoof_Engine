@@ -1,0 +1,269 @@
+{
+  "$schema": "Scenario Overview Template for DogeChat Engine",
+  "$version": "0.7",
+  "title": "血月舊宅",
+  "genre": "哥德探索",
+  "tone": ["陰鬱", "神祕", "魔法", "試煉"],
+  "overall_goal": "受教會委託探索卡茲米爾舊宅，與另一位受邀客查明邀請背後的理由。",
+  "playMode": "standard",
+  "mission_profile": "hybrid",
+  "missions": {
+    "ambient_affection": {
+      "enabled": true,
+      "majorNpcPolicy": "initial_npcs",
+      "optionCount": 3,
+      "nextPromptWithinTurns": 3
+    },
+    "bottleneck_quests": {
+      "enabled": true,
+      "mode": "scenario_linked",
+      "optionCount": 3,
+      "directions": [
+        {
+          "npcSlotId": "invited-guest",
+          "affectionGate": 30,
+          "storyAxis": "兩名受不同理由而來的人必須先分清彼此不是陷阱。",
+          "relationshipAxis": "受邀客需要玩家尊重她也有被邀請的權利。",
+          "suggestedAction": "TELL",
+          "suggestedHooks": ["VULNERABILITY"]
+        },
+        {
+          "npcSlotId": "invited-guest",
+          "affectionGate": 50,
+          "storyAxis": "宅邸第一道血月封印要求共享一段真相。",
+          "relationshipAxis": "受邀客想知道玩家是教會工具還是同伴。",
+          "suggestedAction": "GIVE",
+          "suggestedHooks": ["DEPENDENCE"]
+        },
+        {
+          "npcSlotId": "invited-guest",
+          "affectionGate": 70,
+          "storyAxis": "教會委託與卡茲米爾留言互相矛盾。",
+          "relationshipAxis": "玩家必須承認她的判斷可能比委託更可靠。",
+          "suggestedAction": "DO",
+          "suggestedHooks": ["EXCLUSIVITY"]
+        },
+        {
+          "npcSlotId": "invited-guest",
+          "affectionGate": 90,
+          "storyAxis": "舊宅真正試煉要兩人選擇揭露或保護庇護真相。",
+          "relationshipAxis": "受邀客要求玩家與她共同承擔祕密後果。",
+          "suggestedAction": "TELL",
+          "suggestedHooks": ["VULNERABILITY", "CONTINUITY"]
+        }
+      ]
+    },
+    "story": {
+      "enabled": true,
+      "limit": 5,
+      "sequence": [
+        {
+          "id": "S1",
+          "goal": "進入舊宅並確認另一位受邀客的身份。",
+          "fixed": "卡茲米爾確實寄出邀請，但沒有說明理由。",
+          "signal": "玩家與受邀客交換來意。"
+        },
+        {
+          "id": "S2",
+          "goal": "解開大廳血月封印，取得第一封留言。",
+          "fixed": "封印只回應願意共享真相的兩人。",
+          "signal": "血月封印被啟動或解除。"
+        },
+        {
+          "id": "S3",
+          "goal": "抵達隱翼書房，理解卡茲米爾留下的試煉。",
+          "fixed": "書房保存著舊日庇護名冊，不是危險武器。",
+          "signal": "玩家發現庇護名冊或卡茲米爾留言。"
+        }
+      ]
+    }
+  },
+  "adoption_rule": "角色須改編為幻想維度中被卡茲米爾邀請的客人，可是旅人、騎士、學者或受詛者。",
+  "worldview": "幻想維度的卡茲米爾舊宅被教會視為危險遺產，也被許多逃亡者視為庇護傳說。宅邸會用優雅而殘酷的方式測試來客。",
+  "initial_npcs": [
+    {
+      "slotId": "invited-guest",
+      "identity": "同樣受邀的神祕客",
+      "required": true
+    },
+    {
+      "slotId": "kazimir-inviter",
+      "identity": "留下邀請的卡茲米爾",
+      "required": false,
+      "preselectedWorkshopNpcId": "kazimir_von_ashenberg"
+    }
+  ],
+  "npc_generation_pool": [
+    {
+      "slotId": "invited-guest",
+      "role": "受邀客",
+      "personality": ["戒備", "優雅", "執著"],
+      "appearance_guide": ["旅塵披肩", "舊信封"],
+      "outfit_guide": ["長斗篷", "禮裝殘痕"],
+      "wardrobe_rules": "衣著帶有旅行磨損與神祕邀請物，探索中可逐步露出來歷。",
+      "stance_toward_player": "起初懷疑玩家代表教會，會要求交換情報。",
+      "personal_goal": "查明被邀原因"
+    },
+    {
+      "slotId": "kazimir-inviter",
+      "role": "舊宅主人",
+      "personality": ["優雅", "冷靜", "嚴格"],
+      "appearance_guide": ["血紅眼眸", "貴族氣質"],
+      "outfit_guide": ["古典禮服", "黑色手套"],
+      "wardrobe_rules": "即使只以留言或幻影登場，也保持整潔威嚴。",
+      "stance_toward_player": "不直接解答，只用試煉引導玩家選擇。",
+      "personal_goal": "守住庇護真相"
+    }
+  ],
+  "player_setup": {
+    "identity": "受教會雇用的冒險者",
+    "initial_traits": [
+      { "name": "驅邪", "traitType": "harm", "description": "懂基礎聖符戰法" },
+      { "name": "調查", "traitType": "utility", "description": "能整理宅邸線索" },
+      { "name": "謹慎", "traitType": "narrative", "description": "不輕信單方說法" },
+      { "name": "共感", "traitType": "aid", "description": "能理解受邀者恐懼" },
+      { "name": "膽識", "traitType": "narrative", "description": "敢進入血月舊宅" }
+    ],
+    "backstory": "教會雇你進入卡茲米爾舊宅，確認其中是否藏有危險遺產。抵達時，你發現還有另一位客人也拿著他的邀請函。",
+    "outfit": ["旅行甲", "聖符袋", "斗篷"]
+  },
+  "allowSuccession": true,
+  "initial_affection": 8,
+  "initial_scene": {
+    "location": "舊宅門廳",
+    "description": "血月光穿過破窗照在大理石地上，另一位客人站在門邊，手裡也握著卡茲米爾的邀請函。",
+    "stalled": [
+      {
+        "slotId": "kazimir-inviter",
+        "location": "隱翼書房",
+        "reason": "卡茲米爾不在開場現身，只以留言、封印與可能的幻影推動試煉。"
+      }
+    ],
+    "opening_context": "你受教會雇用抵達血月下的舊宅，卻看見另一位受邀客已在門廳等候。你們都不知道卡茲米爾為何把兩封邀請送到此地。",
+    "starting_time": {
+      "year": 742,
+      "month": 10,
+      "day": 31,
+      "period": 3
+    }
+  },
+  "locations": [
+    {
+      "name": "舊宅門廳",
+      "description": "破窗、舊畫與血月光讓每一步都像踩進禮儀與審判。",
+      "threat_level": "low",
+      "connections": ["血月大廳", "荒廢庭園"]
+    },
+    {
+      "name": "血月大廳",
+      "description": "大廳中央有封印圓環，牆上掛著被擦去名字的肖像。",
+      "threat_level": "medium",
+      "connections": ["舊宅門廳", "隱翼書房"]
+    },
+    {
+      "name": "荒廢庭園",
+      "description": "玫瑰早已枯死，石像卻像仍在守夜。",
+      "threat_level": "medium",
+      "connections": ["舊宅門廳"]
+    },
+    {
+      "name": "隱翼書房",
+      "description": "書架自動移開後露出密室，桌上留著未冷的茶。",
+      "threat_level": "high",
+      "connections": ["血月大廳"]
+    }
+  ],
+  "playSetting": {
+    "socialDynamics": ["教會委託不等於真相。", "受邀客與玩家必須互相驗證而非互相支配。"],
+    "mechanicalRules": ["宅邸封印回應誓言、血月光與舊名冊。", "戰鬥多為守護機關或受污染殘影。"],
+    "restrictions": ["卡茲米爾不在開場直接解釋一切。", "不要把舊宅寫成單純邪惡巢穴。"]
+  },
+  "combat": {
+    "partyKnockout": "rescue_twist"
+  },
+  "pacing_drivers": [
+    {
+      "triggerType": "environmental",
+      "affectionGate": null,
+      "direction": "血月光移動，某道封印忽然顯形。"
+    },
+    {
+      "triggerType": "opportunity",
+      "affectionGate": 50,
+      "direction": "卡茲米爾的留言要求兩人交換一段真相。"
+    }
+  ],
+  "bottleneck_quest_directions": [
+    {
+      "affectionGate": 30,
+      "direction": "玩家證明自己不是盲從教會命令的監視者。"
+    },
+    {
+      "affectionGate": 50,
+      "direction": "玩家與受邀客交換一段真相以解開封印。"
+    },
+    {
+      "affectionGate": 70,
+      "direction": "玩家選擇相信受邀客，而非只聽委託說法。"
+    },
+    {
+      "affectionGate": 90,
+      "direction": "玩家共同承擔是否揭露舊宅庇護真相。"
+    }
+  ],
+  "background_npcs": [
+    {
+      "name": "卡茲米爾",
+      "role": "舊宅主人",
+      "description": "以邀請函與留言佈下試煉，開場不現身。"
+    },
+    {
+      "name": "修士",
+      "role": "教會委託人",
+      "description": "要求確認危險遺產，卻隱瞞舊宅庇護史。"
+    }
+  ],
+  "notableObjects": [
+    {
+      "name": "血月邀請函",
+      "location": "舊宅門廳",
+      "description": "署名優雅，墨跡在血月光下浮出第二行字。",
+      "portable": true
+    }
+  ],
+  "mysteries": [
+    {
+      "title": "第二行字",
+      "rumorText": "邀請函在月光下似乎還藏著一段話。",
+      "puzzleText": "第二行字不是威脅，而是打開庇護名冊的提示。",
+      "steps": [
+        {
+          "location": "舊宅門廳",
+          "objectName": "血月邀請函",
+          "objectDescription": "紙面冰涼，血月光照下浮出細字。",
+          "hint": "把邀請函放到月光最亮處。",
+          "portable": true,
+          "hidden": false
+        },
+        {
+          "location": "隱翼書房",
+          "objectName": "庇護名冊",
+          "objectDescription": "名冊裡記著被世界拒絕的人，而非禁忌武器。",
+          "hint": "用邀請函上的第二行字找對頁碼。",
+          "portable": false,
+          "hidden": true
+        }
+      ],
+      "puzzleStartsAtStep": 1,
+      "relatedNpcs": ["invited-guest", "kazimir-inviter"],
+      "traitHints": { "player": "utility", "npc": "narrative" }
+    }
+  ],
+  "ui_hints": {
+    "background_image": "",
+    "card_image": "",
+    "ambient_color": "#38293d"
+  },
+  "recommendedArcana": ["bundled_arcanum_fantasy_dimension"],
+  "recommendedModules": ["exploration", "combat"]
+}

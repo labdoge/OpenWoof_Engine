@@ -1,0 +1,65 @@
+{
+  "arcanumId": "bundled_arcanum_fantasy_dimension",
+  "title": "幻想維度",
+  "genrePrimary": "劍與魔法",
+  "genreSecondary": "英雄冒險",
+  "era": "中世幻想",
+  "metaphysicsEnabled": true,
+  "metaphysics": [
+    "魔法由法師塔、古老血脈、神蹟、符文工藝與地城核心等不同源流構成。",
+    "魔王索維林能以黑暗部落污染土地、怪物巢穴與人心誓約。",
+    "古代傳送祠堂能回應汪醬的多維裝置，但必須用本地魔力重新校準。",
+    "聖女、亡靈、吸血鬼與守門者的力量都被視為危險而值得敬畏的傳說。",
+    "歌謠、史詩與工匠銘文可以保存真實力量，並影響人們面對黑暗的勇氣。"
+  ],
+  "iconicFeatures": [
+    "王國、法師塔與公會長分享權力，彼此猜忌卻不得不合作。",
+    "冒險者進入地城、巢穴與古代遺跡尋寶，也替城鎮解決怪物威脅。",
+    "凡人諸國勉強組成同盟，抵抗魔王索維林率領的黑暗部落。",
+    "紅角哈羅德 的符文工藝在此維度特別受尊重，常被當成古代智慧的延續。",
+    "卡茲米爾 與 露米耶 的名字流傳成半真半假的庇護傳說。",
+    "安妮塔 與 疾克 的音樂競演能在酒館、戰場與王庭掀起故事。"
+  ],
+  "tone": [
+    "壯闊",
+    "冒險",
+    "史詩",
+    "魔法",
+    "熱血"
+  ],
+  "xCards": [],
+  "rules": [
+    {
+      "text": "幻想維度應以劍與魔法、冒險者委託、王國同盟與黑暗軍勢壓力作為主要舞台。",
+      "priority": "global"
+    },
+    {
+      "text": "魔王索維林應保持威脅感與神祕感，不需在每個故事中直接登場。",
+      "priority": "global"
+    },
+    {
+      "text": "地城與巢穴應提供探索、寶藏、怪物、生還代價與地方傳說，而非只有戰鬥房間。",
+      "priority": "scenario"
+    },
+    {
+      "text": "內建角色群進入幻想維度時可被當成異鄉英雄、怪客或傳說人物，但仍遵守原角色設定。",
+      "priority": "global"
+    }
+  ],
+  "moduleOverrides": {},
+  "linkedLore": [
+    "bundled_lore_fantasy_dimension_mortal_realms",
+    "bundled_lore_fantasy_dimension_dark_horde",
+    "bundled_lore_fantasy_dimension_sovereign",
+    "bundled_lore_fantasy_dimension_adventurer_guilds",
+    "bundled_lore_fantasy_dimension_dungeons_lairs",
+    "bundled_lore_fantasy_dimension_magic_and_runes",
+    "bundled_lore_fantasy_dimension_portal_shrines",
+    "bundled_lore_fantasy_dimension_kazimir_shelter_legend",
+    "bundled_lore_fantasy_dimension_lumiel_saint_tale",
+    "bundled_lore_fantasy_dimension_traveling_bards_and_rockstar"
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

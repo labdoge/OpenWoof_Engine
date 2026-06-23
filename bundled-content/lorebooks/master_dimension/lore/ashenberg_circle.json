@@ -1,0 +1,34 @@
+{
+  "loreId": "bundled_lore_master_dimension_ashenberg_circle",
+  "title": "艾森柏格圈",
+  "type": "faction",
+  "category": "主維度",
+  "keywords": [
+    "艾森柏格",
+    "卡茲米爾",
+    "露米耶",
+    "魔法導師"
+  ],
+  "alias": [
+    "阿申伯格圈",
+    "吸血鬼庇護圈"
+  ],
+  "content": "艾森柏格圈不是正式組織，而是卡茲米爾長年累積的人脈、庇護所、古老契約與學生關係。露米耶在他庇護下重新學會與世界相處，汪醬則被他視為最珍貴也最難預測的徒弟。圈內談話通常優雅安靜，直到汪醬把新裝置推進門。",
+  "priority": 60,
+  "tokenEstimate": 124,
+  "promoted": false,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_master_dimension_multi_dimensional_portal",
+      "label": "提供形上學挑戰"
+    },
+    {
+      "targetLoreId": "bundled_lore_master_dimension_bundle_cast_master",
+      "label": "串連師徒與家人般關係"
+    }
+  ],
+  "source": "bundled",
+  "linkedNpcId": "kazimir_von_ashenberg",
+  "createdAt": 0,
+  "lastModified": 0
+}

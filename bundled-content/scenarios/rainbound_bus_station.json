@@ -1,0 +1,195 @@
+{
+  "$schema": "Scenario Overview Template for DogeChat Engine",
+  "$version": "0.7",
+  "title": "雨站歸城",
+  "genre": "雨夜邂逅",
+  "tone": ["安靜", "潮濕", "曖昧", "鄉間"],
+  "overall_goal": "在暴雨封路的偏鄉巴士站等待回城機會，與同樣受困的陌生人度過一夜。",
+  "playMode": "standard",
+  "mission_profile": "sandbox",
+  "missions": {
+    "ambient_affection": {
+      "enabled": true,
+      "majorNpcPolicy": "initial_npcs",
+      "optionCount": 3,
+      "nextPromptWithinTurns": 3
+    },
+    "bottleneck_quests": {
+      "enabled": true,
+      "mode": "scenario_linked",
+      "optionCount": 3,
+      "directions": [
+        {
+          "npcSlotId": "stranded-traveler",
+          "affectionGate": 30,
+          "storyAxis": "暴雨封住歸路，兩名陌生人要建立基本信任。",
+          "relationshipAxis": "對方需要知道玩家不是會趁困境越界的人。",
+          "suggestedAction": "TELL",
+          "suggestedHooks": ["VULNERABILITY"]
+        },
+        {
+          "npcSlotId": "stranded-traveler",
+          "affectionGate": 50,
+          "storyAxis": "車站設備失靈，兩人要合作撐過最冷的一段時間。",
+          "relationshipAxis": "對方想確認玩家願意分擔現實麻煩。",
+          "suggestedAction": "DO",
+          "suggestedHooks": ["DEPENDENCE"]
+        },
+        {
+          "npcSlotId": "stranded-traveler",
+          "affectionGate": 70,
+          "storyAxis": "雨夜讓一段私人祕密浮上檯面。",
+          "relationshipAxis": "玩家必須接住對方的坦白而不急著評判。",
+          "suggestedAction": "TELL",
+          "suggestedHooks": ["EXCLUSIVITY"]
+        },
+        {
+          "npcSlotId": "stranded-traveler",
+          "affectionGate": 90,
+          "storyAxis": "清晨第一班車前，兩人要決定是否一起回城。",
+          "relationshipAxis": "對方需要一個不被暴雨沖淡的承諾。",
+          "suggestedAction": "GIVE",
+          "suggestedHooks": ["CONTINUITY"]
+        }
+      ]
+    },
+    "story": {
+      "enabled": false,
+      "limit": 5,
+      "sequence": []
+    }
+  },
+  "adoption_rule": "角色須改編為普通現代旅人、鄉間居民或返城者，不使用固定世界書世界觀。",
+  "worldview": "沒有超自然背景。偏遠鄉間的末班巴士因暴雨停駛，手機訊號不穩，車站成了兩個陌生人暫時共用的避雨處。",
+  "initial_npcs": [
+    {
+      "slotId": "stranded-traveler",
+      "identity": "同樣被雨困住的旅人",
+      "required": true
+    }
+  ],
+  "npc_generation_pool": [
+    {
+      "slotId": "stranded-traveler",
+      "role": "受困旅人",
+      "personality": ["克制", "敏感", "溫和"],
+      "appearance_guide": ["雨水髮梢", "濕外套"],
+      "outfit_guide": ["薄外套", "旅行鞋"],
+      "wardrobe_rules": "衣物因暴雨逐漸潮濕，可用披肩、外套或熱飲取得溫度。",
+      "stance_toward_player": "一開始保持距離，因現實麻煩逐漸願意求助。",
+      "personal_goal": "平安回到城市"
+    }
+  ],
+  "player_setup": {
+    "identity": "準備返城的旅人",
+    "initial_traits": [
+      { "name": "耐寒", "traitType": "aid", "description": "能撐過低溫雨夜" },
+      { "name": "細心", "traitType": "utility", "description": "注意車站小線索" },
+      { "name": "界線", "traitType": "narrative", "description": "懂得尊重距離" },
+      { "name": "手巧", "traitType": "utility", "description": "能修簡單設備" },
+      { "name": "坦率", "traitType": "narrative", "description": "能在沉默中開口" }
+    ],
+    "backstory": "你結束偏鄉行程，準備搭末班車回城。暴雨忽然封住道路，巴士站裡只剩你和另一位同樣錯過歸路的人。",
+    "outfit": ["防雨衣", "背包", "舊鞋"]
+  },
+  "allowSuccession": true,
+  "initial_affection": 15,
+  "initial_scene": {
+    "location": "偏鄉巴士站",
+    "description": "鐵皮屋簷被雨打得發響，末班車公告停駛，候車椅另一端坐著同樣濕透的陌生人。",
+    "stalled": [],
+    "opening_context": "你原本只差一班車就能回城。現在道路被暴雨沖斷，站牌燈忽明忽暗，另一位旅人抬頭看向你，像在判斷是否該先開口。",
+    "starting_time": {
+      "year": 2026,
+      "month": 6,
+      "day": 23,
+      "period": 3
+    }
+  },
+  "locations": [
+    {
+      "name": "偏鄉巴士站",
+      "description": "小站只有兩排椅子、售票窗與一台快沒熱水的飲水機。",
+      "threat_level": "safe",
+      "connections": ["泥濘路口", "售票小屋"]
+    },
+    {
+      "name": "泥濘路口",
+      "description": "道路被雨水切開，遠處車燈偶爾被霧吞沒。",
+      "threat_level": "medium",
+      "connections": ["偏鄉巴士站"]
+    },
+    {
+      "name": "售票小屋",
+      "description": "木門沒鎖，裡面有舊班表、毯子與積灰收音機。",
+      "threat_level": "low",
+      "connections": ["偏鄉巴士站"]
+    }
+  ],
+  "playSetting": {
+    "socialDynamics": ["親近必須來自互相照顧與自願分享。", "陌生人關係以現實困境慢慢推進。"],
+    "mechanicalRules": ["主要挑戰是保暖、聯絡、等待與修復小設備。", "沒有超自然或跨維設定。"],
+    "restrictions": ["不要加入世界書專有名詞。", "不要讓暴雨困境強迫親密。"]
+  },
+  "combat": {
+    "partyKnockout": "rescue_twist"
+  },
+  "pacing_drivers": [
+    {
+      "triggerType": "environmental",
+      "affectionGate": null,
+      "direction": "雨勢忽然變大，車站一角開始漏水。"
+    },
+    {
+      "triggerType": "npc_initiative",
+      "affectionGate": 50,
+      "direction": "對方請玩家一起找毯子或熱水。"
+    }
+  ],
+  "bottleneck_quest_directions": [
+    {
+      "affectionGate": 30,
+      "direction": "玩家用尊重距離的方式建立雨夜基本信任。"
+    },
+    {
+      "affectionGate": 50,
+      "direction": "玩家分擔保暖或聯絡問題，讓對方願意依靠。"
+    },
+    {
+      "affectionGate": 70,
+      "direction": "玩家接住對方私密坦白，不急著評判。"
+    },
+    {
+      "affectionGate": 90,
+      "direction": "玩家在第一班車前給出清楚但不逼迫的約定。"
+    }
+  ],
+  "background_npcs": [
+    {
+      "name": "司機",
+      "role": "停駛司機",
+      "description": "透過收音機通知道路封閉與清晨評估。"
+    },
+    {
+      "name": "站務",
+      "role": "不在現場",
+      "description": "留下舊毯子與手寫班表，今晚沒有回來。"
+    }
+  ],
+  "notableObjects": [
+    {
+      "name": "舊收音機",
+      "location": "售票小屋",
+      "description": "旋鈕鬆動，仍可能收到道路廣播。",
+      "portable": true
+    }
+  ],
+  "mysteries": [],
+  "ui_hints": {
+    "background_image": "",
+    "card_image": "",
+    "ambient_color": "#3d4650"
+  },
+  "recommendedArcana": [],
+  "recommendedModules": []
+}

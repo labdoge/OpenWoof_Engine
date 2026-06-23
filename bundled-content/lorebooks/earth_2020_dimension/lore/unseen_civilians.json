@@ -1,0 +1,33 @@
+{
+  "loreId": "bundled_lore_earth_2020_dimension_unseen_civilians",
+  "title": "不知情平民",
+  "type": "concept",
+  "category": "地球2020",
+  "keywords": [
+    "平民",
+    "不知情",
+    "日常",
+    "保護"
+  ],
+  "alias": [
+    "不知情平民",
+    "被保護的人"
+  ],
+  "content": "多數平民不知道裂隙、黑暗生物與維度旅人存在。他們只看見工作中斷、社交距離、失眠新聞與被拉長的孤獨。守護者們的任務不是讓每個人相信超自然，而是讓他們明天仍能起床、吃早餐、抱怨生活，並以為昨夜的怪聲只是壞掉的管線。",
+  "priority": 80,
+  "tokenEstimate": 132,
+  "promoted": true,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_shadow_response_network",
+      "label": "受秘密網路保護"
+    },
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_hope_music",
+      "label": "能被音樂安定"
+    }
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

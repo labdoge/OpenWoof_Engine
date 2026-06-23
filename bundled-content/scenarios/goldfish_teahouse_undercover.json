@@ -1,0 +1,257 @@
+{
+  "$schema": "Scenario Overview Template for DogeChat Engine",
+  "$version": "0.7",
+  "title": "茶館臥底",
+  "genre": "都市懸疑",
+  "tone": ["曖昧", "優雅", "危險", "偵探"],
+  "overall_goal": "以臥底刑警身份在金魚茶館取得交易線索，同時守住偽裝與人情界線。",
+  "playMode": "standard",
+  "mission_profile": "hybrid",
+  "missions": {
+    "ambient_affection": {
+      "enabled": true,
+      "majorNpcPolicy": "initial_npcs",
+      "optionCount": 3,
+      "nextPromptWithinTurns": 3
+    },
+    "bottleneck_quests": {
+      "enabled": true,
+      "mode": "scenario_linked",
+      "optionCount": 3,
+      "directions": [
+        {
+          "npcSlotId": "teahouse-host",
+          "affectionGate": 30,
+          "storyAxis": "玩家必須在茶館禮節與臥底任務間守住破綻。",
+          "relationshipAxis": "主人需要確認玩家不是粗暴辦案的闖入者。",
+          "suggestedAction": "TELL",
+          "suggestedHooks": ["VULNERABILITY"]
+        },
+        {
+          "npcSlotId": "teahouse-host",
+          "affectionGate": 50,
+          "storyAxis": "茶席上出現交易暗號，玩家要選擇是否共享部分真相。",
+          "relationshipAxis": "主人想知道玩家是否會尊重茶館中立規矩。",
+          "suggestedAction": "DO",
+          "suggestedHooks": ["DEPENDENCE", "CONTINUITY"]
+        },
+        {
+          "npcSlotId": "teahouse-host",
+          "affectionGate": 70,
+          "storyAxis": "牡丹的試探逼近，玩家與主人必須合演一場。",
+          "relationshipAxis": "主人需要玩家把信任交給她的節奏與判斷。",
+          "suggestedAction": "DO",
+          "suggestedHooks": ["EXCLUSIVITY"]
+        },
+        {
+          "npcSlotId": "teahouse-host",
+          "affectionGate": 90,
+          "storyAxis": "收網前夜，玩家要決定保護茶館或完成逮捕。",
+          "relationshipAxis": "主人要求玩家承認她已不只是線人。",
+          "suggestedAction": "TELL",
+          "suggestedHooks": ["VULNERABILITY", "CONTINUITY"]
+        }
+      ]
+    },
+    "story": {
+      "enabled": true,
+      "limit": 5,
+      "sequence": [
+        {
+          "id": "S1",
+          "goal": "在第一輪茶席中取得接頭暗號。",
+          "fixed": "茶館主人知道有人用茶單傳訊，但不知玩家是警察。",
+          "signal": "玩家辨認或取得茶單暗號。"
+        },
+        {
+          "id": "S2",
+          "goal": "避開牡丹的玩笑試探，保住臥底身份。",
+          "fixed": "牡丹故意坐在附近觀察玩家反應。",
+          "signal": "玩家用合理偽裝回應牡丹試探。"
+        },
+        {
+          "id": "S3",
+          "goal": "找出今晚真正的交易席位。",
+          "fixed": "交易者不在最顯眼的包廂，而在水廊另一側。",
+          "signal": "玩家鎖定或靠近正確席位。"
+        }
+      ]
+    }
+  },
+  "adoption_rule": "角色須改編為主維度金魚茶館相關人物，保留核心性格但換成茶館、情報或地下秩序身分。",
+  "worldview": "主維度近未來都市。金魚茶館是黑幫、企業代理與情報商願意守規矩的中立場所；茶香與屏風遮住殺氣，牡丹則看見太多不能上報的祕密。",
+  "initial_npcs": [
+    {
+      "slotId": "teahouse-host",
+      "identity": "接待玩家的茶館主人",
+      "required": true
+    },
+    {
+      "slotId": "peony-observer",
+      "identity": "旁觀並試探的牡丹",
+      "required": false,
+      "preselectedWorkshopNpcId": "peony"
+    }
+  ],
+  "npc_generation_pool": [
+    {
+      "slotId": "teahouse-host",
+      "role": "茶館主人",
+      "personality": ["從容", "敏銳", "誘導"],
+      "appearance_guide": ["含笑眼神", "香氣纏身"],
+      "outfit_guide": ["絲質旗袍", "暗紋披肩"],
+      "wardrobe_rules": "衣著華美但便於行動，配件可藏小型錄音器。",
+      "stance_toward_player": "以禮貌款待玩家，同時像品茶般試探每句話。",
+      "personal_goal": "守住茶館規矩"
+    },
+    {
+      "slotId": "peony-observer",
+      "role": "茶館女主人",
+      "personality": ["自信", "神祕", "護短"],
+      "appearance_guide": ["華麗髮飾", "含笑眼眸"],
+      "outfit_guide": ["牡丹髮簪", "深色華服"],
+      "wardrobe_rules": "永遠優雅，首飾常藏象徵性的警告。",
+      "stance_toward_player": "旁觀多於介入，用玩笑測量玩家膽量。",
+      "personal_goal": "看清玩家底牌"
+    }
+  ],
+  "player_setup": {
+    "identity": "假扮掮客的臥底刑警",
+    "initial_traits": [
+      { "name": "偽裝", "traitType": "narrative", "description": "能維持可信身分" },
+      { "name": "察言", "traitType": "utility", "description": "讀懂話外暗示" },
+      { "name": "守法", "traitType": "narrative", "description": "不輕易越界辦案" },
+      { "name": "鎮定", "traitType": "aid", "description": "壓住危險場面" },
+      { "name": "近戰", "traitType": "harm", "description": "受過警用制伏訓練" }
+    ],
+    "backstory": "你追查企業區域的走私案，線索指向金魚茶館。今晚你以外地掮客身份入席，必須取得暗號而不暴露警察身分。",
+    "outfit": ["深色西裝", "薄手套", "暗錄器"]
+  },
+  "allowSuccession": true,
+  "initial_affection": 12,
+  "initial_scene": {
+    "location": "金魚茶館正廳",
+    "description": "水光映在屏風上，茶香壓低談判聲。主人替你斟茶，牡丹坐在不遠處含笑旁觀。",
+    "stalled": [],
+    "opening_context": "你帶著假名走進金魚茶館。接待你的主人彷彿早知道你會來，牡丹則在近旁慢慢品茶，偶爾用一句玩笑戳向你的偽裝。",
+    "starting_time": {
+      "year": 2140,
+      "month": 4,
+      "day": 12,
+      "period": 3
+    }
+  },
+  "locations": [
+    {
+      "name": "金魚茶館正廳",
+      "description": "茶客低聲交談，水池與屏風讓每個角落都像藏著耳朵。",
+      "threat_level": "low",
+      "connections": ["水廊包廂", "後廚小門"]
+    },
+    {
+      "name": "水廊包廂",
+      "description": "半透明簾幕隔開席位，水聲掩住交易暗語。",
+      "threat_level": "medium",
+      "connections": ["金魚茶館正廳"]
+    },
+    {
+      "name": "後廚小門",
+      "description": "員工通道通往巷弄，監視器角度刻意留下死角。",
+      "threat_level": "medium",
+      "connections": ["金魚茶館正廳"]
+    }
+  ],
+  "playSetting": {
+    "socialDynamics": ["茶館中立規矩高於幫派面子。", "牡丹能插話，但不替玩家做決定。"],
+    "mechanicalRules": ["調查需靠對話、觀察與物件線索。", "暴力會立刻破壞臥底身份。"],
+    "restrictions": ["不要讓牡丹取代茶館主人主線。", "玩家警察身分不可開場公開。"]
+  },
+  "combat": {
+    "partyKnockout": "rescue_twist"
+  },
+  "pacing_drivers": [
+    {
+      "triggerType": "environmental",
+      "affectionGate": null,
+      "direction": "茶單、屏風或水聲露出一個新暗號。"
+    },
+    {
+      "triggerType": "npc_initiative",
+      "affectionGate": 50,
+      "direction": "主人請玩家替她圓過一場危險茶席。"
+    }
+  ],
+  "bottleneck_quest_directions": [
+    {
+      "affectionGate": 30,
+      "direction": "玩家以不暴露身分的方式證明自己尊重茶館規矩。"
+    },
+    {
+      "affectionGate": 50,
+      "direction": "玩家與主人共享有限真相，共同避開牡丹的試探。"
+    },
+    {
+      "affectionGate": 70,
+      "direction": "玩家讓主人主導一次偽裝，承擔被她看穿的風險。"
+    },
+    {
+      "affectionGate": 90,
+      "direction": "玩家在逮捕與保護茶館間做出清楚承諾。"
+    }
+  ],
+  "background_npcs": [
+    {
+      "name": "牡丹",
+      "role": "女主人",
+      "description": "坐在近旁觀察局勢，偶爾以甜笑試探玩家。"
+    },
+    {
+      "name": "掮客",
+      "role": "可疑茶客",
+      "description": "以茶單交換暗號，避開所有明白的字。"
+    }
+  ],
+  "notableObjects": [
+    {
+      "name": "暗號茶單",
+      "location": "金魚茶館正廳",
+      "description": "茶名排序像普通菜單，邊角卻有細小壓痕。",
+      "portable": true
+    }
+  ],
+  "mysteries": [
+    {
+      "title": "茶單暗碼",
+      "rumorText": "今晚的茶單比平常多了一行冷門花茶。",
+      "puzzleText": "茶名首字與桌號構成交易座標。",
+      "steps": [
+        {
+          "location": "金魚茶館正廳",
+          "objectName": "暗號茶單",
+          "objectDescription": "紙面帶著淡香，壓痕只在側光下可見。",
+          "hint": "把茶名順序與桌號對照。",
+          "portable": true,
+          "hidden": false
+        },
+        {
+          "location": "水廊包廂",
+          "objectName": "錯位屏風",
+          "objectDescription": "屏風花紋缺一角，像故意留下視線通道。",
+          "hint": "站在缺口處看向水面倒影。",
+          "portable": false,
+          "hidden": true
+        }
+      ],
+      "puzzleStartsAtStep": 1,
+      "relatedNpcs": ["teahouse-host"],
+      "traitHints": { "player": "utility", "npc": "narrative" }
+    }
+  ],
+  "ui_hints": {
+    "background_image": "",
+    "card_image": "",
+    "ambient_color": "#40304d"
+  },
+  "recommendedArcana": ["bundled_arcanum_master_dimension"],
+  "recommendedModules": ["exploration"]
+}

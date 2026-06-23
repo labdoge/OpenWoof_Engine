@@ -1,0 +1,995 @@
+{
+  "version": 1,
+  "generatedAt": "2026-06-23T12:53:34.818Z",
+  "sourceDir": "portraits",
+  "outputDir": "portraits-optimized",
+  "format": "webp",
+  "thresholdBytes": 41943040,
+  "resize": {
+    "maxWidth": 768,
+    "maxHeight": 1152,
+    "withoutEnlargement": true
+  },
+  "webp": {
+    "quality": 82,
+    "alphaQuality": 90,
+    "effort": 6
+  },
+  "totalBytes": 8551148,
+  "characters": {
+    "anneta": {
+      "count": 7,
+      "bytes": 766790
+    },
+    "calloway": {
+      "count": 7,
+      "bytes": 604396
+    },
+    "harald_red_horns": {
+      "count": 7,
+      "bytes": 769452
+    },
+    "kaira": {
+      "count": 7,
+      "bytes": 573410
+    },
+    "kazimir_von_ashenberg": {
+      "count": 7,
+      "bytes": 653972
+    },
+    "knox": {
+      "count": 7,
+      "bytes": 659270
+    },
+    "lumiel": {
+      "count": 7,
+      "bytes": 755954
+    },
+    "peony": {
+      "count": 7,
+      "bytes": 842938
+    },
+    "quinn_warwick": {
+      "count": 7,
+      "bytes": 747282
+    },
+    "sydney": {
+      "count": 7,
+      "bytes": 673834
+    },
+    "woofy_chan": {
+      "count": 7,
+      "bytes": 746018
+    },
+    "zeke": {
+      "count": 7,
+      "bytes": 757832
+    }
+  },
+  "files": [
+    {
+      "npcId": "anneta",
+      "suffix": 0,
+      "source": "portraits/anneta/anneta_0.png",
+      "output": "portraits-optimized/anneta/anneta_0.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 109422,
+      "sourceSha256": "F17ADF732711AF51A761898F97B57A2367CD837829D3466415CE0A81254E7C90",
+      "outputSha256": "3B0AC8E61B4DE4E1161CA7A7E8F5D808BA2D4EBF97C8A6E0609600C6DBC3E94A"
+    },
+    {
+      "npcId": "anneta",
+      "suffix": 1,
+      "source": "portraits/anneta/anneta_1.png",
+      "output": "portraits-optimized/anneta/anneta_1.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 109570,
+      "sourceSha256": "AF935A83851F48C9FC7BB3A3AFF7D177BEECEBC95D73B67A6EB78A066D3AC8A3",
+      "outputSha256": "C61E3587BECF08472865DE4F39C3EE554670D562D958210950AE0289677855B5"
+    },
+    {
+      "npcId": "anneta",
+      "suffix": 2,
+      "source": "portraits/anneta/anneta_2.png",
+      "output": "portraits-optimized/anneta/anneta_2.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 109696,
+      "sourceSha256": "646C4F567B56DDF1D4731A631BBCFB47DA8FCA041725CD6EFFEB4218383C8613",
+      "outputSha256": "D4058793BA1384A472433E168721046ED155E9C6C102A70F3B2CDC4DDB53C133"
+    },
+    {
+      "npcId": "anneta",
+      "suffix": 3,
+      "source": "portraits/anneta/anneta_3.png",
+      "output": "portraits-optimized/anneta/anneta_3.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 109464,
+      "sourceSha256": "0451A3508D8396CF65C90900CA06201A94320C2E64B7555D247A25B9A1E8D161",
+      "outputSha256": "CF4E3BA6F036B9BEF6FF7C639875E6FEFAC88A8C38C6824644CDEACE5869A094"
+    },
+    {
+      "npcId": "anneta",
+      "suffix": 4,
+      "source": "portraits/anneta/anneta_4.png",
+      "output": "portraits-optimized/anneta/anneta_4.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 109736,
+      "sourceSha256": "083906399E545217BB3077FD20983D75D390A7B4FEE56E1B8F411E68F81BFA42",
+      "outputSha256": "C5B70FE98C086D617AB433095EAD338BD8966991096B1E66E9A2374064A71223"
+    },
+    {
+      "npcId": "anneta",
+      "suffix": 5,
+      "source": "portraits/anneta/anneta_5.png",
+      "output": "portraits-optimized/anneta/anneta_5.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 109322,
+      "sourceSha256": "A58653F3E7F688F4901C3EAEAB2C1DDB0A8AFF16A68DD5251854187D0150C525",
+      "outputSha256": "92D856220F6661DF764846F1B0A318380457AC44EA7BD18206D5528AB80820EA"
+    },
+    {
+      "npcId": "anneta",
+      "suffix": 6,
+      "source": "portraits/anneta/anneta_6.png",
+      "output": "portraits-optimized/anneta/anneta_6.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 109580,
+      "sourceSha256": "6CE862FB0ADA25E89D7BE5BF4DB4538312F17DE7B6899BE6C036C837C4A7CCEF",
+      "outputSha256": "0CD4D3C183D226F849EAB5C3BB784A7F117D3A50004FAD7151BEA515480C46E7"
+    },
+    {
+      "npcId": "calloway",
+      "suffix": 0,
+      "source": "portraits/calloway/calloway_0.png",
+      "output": "portraits-optimized/calloway/calloway_0.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 86158,
+      "sourceSha256": "50E7BFA731FE32CBCE1E04F89392DDB9B97478A01743D081F26F6B5486EB2C4F",
+      "outputSha256": "1814A780335BC32BB920759DA2EFDC51103AA8B3B50FD368333845BE1C12480A"
+    },
+    {
+      "npcId": "calloway",
+      "suffix": 1,
+      "source": "portraits/calloway/calloway_1.png",
+      "output": "portraits-optimized/calloway/calloway_1.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 86602,
+      "sourceSha256": "93F9F25503D02BE0A6734D95D14D9DA4B13464198DA9B79D5A5DE8DEE42E90F7",
+      "outputSha256": "E17F627592027C2B1CCE6E919E559FAD9A3D8DC48CF9505F7B72D4066A88B38D"
+    },
+    {
+      "npcId": "calloway",
+      "suffix": 2,
+      "source": "portraits/calloway/calloway_2.png",
+      "output": "portraits-optimized/calloway/calloway_2.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 86302,
+      "sourceSha256": "E15E0CF299A5F48B5EE315CC5CED1A186D230B87C4D9CECEF1B611E349BAB839",
+      "outputSha256": "93D02C5C8BC45B5A59370D74CACEBFD4B510FE06CC0BD9D31495C9D903523674"
+    },
+    {
+      "npcId": "calloway",
+      "suffix": 3,
+      "source": "portraits/calloway/calloway_3.png",
+      "output": "portraits-optimized/calloway/calloway_3.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 86252,
+      "sourceSha256": "5AFF44389DF397BC91C7BF83059FF315E290E1BE4A9B052DDD958AAE65B0FA3F",
+      "outputSha256": "57B04A56901029E78B5DFB6C9B57C3B4BED7956405D637B0EECF5C6E9E64D183"
+    },
+    {
+      "npcId": "calloway",
+      "suffix": 4,
+      "source": "portraits/calloway/calloway_4.png",
+      "output": "portraits-optimized/calloway/calloway_4.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 86198,
+      "sourceSha256": "63193088E59BB70429CF3BD0906E4F6ACEDAA86C75B03E35B569DF0BC9E23219",
+      "outputSha256": "ED45150AF0A0793AD0394EADAB8D6BA4333ED36C34C11CA5DCC1F223797CD962"
+    },
+    {
+      "npcId": "calloway",
+      "suffix": 5,
+      "source": "portraits/calloway/calloway_5.png",
+      "output": "portraits-optimized/calloway/calloway_5.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 86674,
+      "sourceSha256": "C670C76AA7F70AB2221DD1EFCBE3A6336D4ACF3EBDA8F0A8D733D07AE13458B6",
+      "outputSha256": "93DF97A14F95A3362FDB4D42459D52F4F748AC1DDF856410E2D99B68BB6ECC6B"
+    },
+    {
+      "npcId": "calloway",
+      "suffix": 6,
+      "source": "portraits/calloway/calloway_6.png",
+      "output": "portraits-optimized/calloway/calloway_6.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 86210,
+      "sourceSha256": "84A0645F4EE76EB08939B18025683253899B0E47DCA8DF8B1C2FBC9A96424EB1",
+      "outputSha256": "AA7C2C80546D76FA3EE206D05696D1D026D5A76A531B72770C399ECCC4FC6373"
+    },
+    {
+      "npcId": "harald_red_horns",
+      "suffix": 0,
+      "source": "portraits/harald_red_horns/harald_red_horns_0.png",
+      "output": "portraits-optimized/harald_red_horns/harald_red_horns_0.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 109802,
+      "sourceSha256": "429C80A362EBA243131C271714FB245A5DEAC2D58F5A002BD715A7B25D9C3955",
+      "outputSha256": "163880145EDB539BC92BFBF978A9369AA91F50850E91768791D27E22C887110B"
+    },
+    {
+      "npcId": "harald_red_horns",
+      "suffix": 1,
+      "source": "portraits/harald_red_horns/harald_red_horns_1.png",
+      "output": "portraits-optimized/harald_red_horns/harald_red_horns_1.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 109984,
+      "sourceSha256": "7543150DD16A8785B3FE6EBDCA4D5A839DE5BB5859A782DAC2785FF468A34EF5",
+      "outputSha256": "1C47559900C53891609663A966C60FB41720B47D37AB94B3ABFF07E5E708BB19"
+    },
+    {
+      "npcId": "harald_red_horns",
+      "suffix": 2,
+      "source": "portraits/harald_red_horns/harald_red_horns_2.png",
+      "output": "portraits-optimized/harald_red_horns/harald_red_horns_2.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 109862,
+      "sourceSha256": "F387076E47F3AD423F1A9C83715DF801E20FD8B6924446F1FC8D400BACB55BC0",
+      "outputSha256": "84A20B645E54BFDF2DF968F3A207A0E77A151878ED101239A5E7FACFAD222B75"
+    },
+    {
+      "npcId": "harald_red_horns",
+      "suffix": 3,
+      "source": "portraits/harald_red_horns/harald_red_horns_3.png",
+      "output": "portraits-optimized/harald_red_horns/harald_red_horns_3.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 110032,
+      "sourceSha256": "387804C7864672442C735CC4BB12F7D694DF74172CF3163B187E7CB4AA373D7A",
+      "outputSha256": "9CF4EFA11F2B1FF9D5DCDE4D02B6BA5ED4140C9C88069CF97C1A951F003FCFC2"
+    },
+    {
+      "npcId": "harald_red_horns",
+      "suffix": 4,
+      "source": "portraits/harald_red_horns/harald_red_horns_4.png",
+      "output": "portraits-optimized/harald_red_horns/harald_red_horns_4.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 109954,
+      "sourceSha256": "9D7012E769A9306C1C952D85D9F7A2268CE1419FB7A1A6DE16CE79637FEDEDC8",
+      "outputSha256": "879F2761BEE59CE14FDEC5AD979A44A08354F79AEFAC9D8A388F50E91C9F390B"
+    },
+    {
+      "npcId": "harald_red_horns",
+      "suffix": 5,
+      "source": "portraits/harald_red_horns/harald_red_horns_5.png",
+      "output": "portraits-optimized/harald_red_horns/harald_red_horns_5.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 109972,
+      "sourceSha256": "D521BBB7C33FF612612722E9B7419ABD1C715E577FA4D7B653AA681644C793A6",
+      "outputSha256": "2A9A0247865131995D1B898D376A5BE008E157F25EBFAE7F9B0FDF752DEE2DF1"
+    },
+    {
+      "npcId": "harald_red_horns",
+      "suffix": 6,
+      "source": "portraits/harald_red_horns/harald_red_horns_6.png",
+      "output": "portraits-optimized/harald_red_horns/harald_red_horns_6.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 109846,
+      "sourceSha256": "0D0576EDB94485A55546291AC647ECCA72923B1627D5CA319E55308123E86E75",
+      "outputSha256": "25EAC1F12C763A98295F4027C5C3BCFB2442C11556FCD9F162E48A538F100275"
+    },
+    {
+      "npcId": "kaira",
+      "suffix": 0,
+      "source": "portraits/kaira/kaira_0.png",
+      "output": "portraits-optimized/kaira/kaira_0.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 81668,
+      "sourceSha256": "5F0F3EEC5429E1309FFBDEC51882766D5E450AF17AF96B6F9D71BF14CC002F38",
+      "outputSha256": "215B8508F5D07E5466A4ADE3FE89C43D7526B0845473A551A748D3EDE2A0309E"
+    },
+    {
+      "npcId": "kaira",
+      "suffix": 1,
+      "source": "portraits/kaira/kaira_1.png",
+      "output": "portraits-optimized/kaira/kaira_1.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 81798,
+      "sourceSha256": "93BCCDBDF5FE5D9EA600E9542CF325EE9C4ADD90088E76CF67DCB95933E5E673",
+      "outputSha256": "451E9DFC61391DE4C8DF376B8C4C69D714FB5EA19371C4D34CBE434861300974"
+    },
+    {
+      "npcId": "kaira",
+      "suffix": 2,
+      "source": "portraits/kaira/kaira_2.png",
+      "output": "portraits-optimized/kaira/kaira_2.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 82258,
+      "sourceSha256": "281486707FFE11EA143E335A55B6C14B55C0A224B24E0F4F0D6864288253D997",
+      "outputSha256": "F385851C8171393C772339C73025CB02F6F9A5FAEC04F58CECE4D8BCC3D2B810"
+    },
+    {
+      "npcId": "kaira",
+      "suffix": 3,
+      "source": "portraits/kaira/kaira_3.png",
+      "output": "portraits-optimized/kaira/kaira_3.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 82012,
+      "sourceSha256": "AD7EF4AF0D20E58DB221962049F2523A2BF82E5401EE8C890246AE7C95035A85",
+      "outputSha256": "AAEA3B96C36C5E95E1A69BC5A206D58B914F213F37509CCBDAD924F85713215B"
+    },
+    {
+      "npcId": "kaira",
+      "suffix": 4,
+      "source": "portraits/kaira/kaira_4.png",
+      "output": "portraits-optimized/kaira/kaira_4.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 81960,
+      "sourceSha256": "7AD0852F1204C80EBDF40A727D2D6CBD6DE5737D55C2ECE6FF0F43B2F14A1029",
+      "outputSha256": "A82F4324BE4A7DF99280D1574C50C4DF5EFBA1788EC5225A7079BEB821B3918A"
+    },
+    {
+      "npcId": "kaira",
+      "suffix": 5,
+      "source": "portraits/kaira/kaira_5.png",
+      "output": "portraits-optimized/kaira/kaira_5.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 81886,
+      "sourceSha256": "6DEF53C8DE47232B632D26F5561FFC37BF46C1F851371E2D3F4467A5800EFCD7",
+      "outputSha256": "154CCE8C80DB0958573903CD01E7F1E253BCCA9473EAAD5E2B0CF59501F9FFDD"
+    },
+    {
+      "npcId": "kaira",
+      "suffix": 6,
+      "source": "portraits/kaira/kaira_6.png",
+      "output": "portraits-optimized/kaira/kaira_6.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 81828,
+      "sourceSha256": "8E2ECD52C52EB10698E3915CCC1EECD33668E0DFFA16BADE2CD8214FB396E018",
+      "outputSha256": "5675B41C8D7C0D37A036710CB85C572517F1347F5E3E461579CDCEFC3F2C67BE"
+    },
+    {
+      "npcId": "kazimir_von_ashenberg",
+      "suffix": 0,
+      "source": "portraits/kazimir_von_ashenberg/kazimir_von_ashenberg_0.png",
+      "output": "portraits-optimized/kazimir_von_ashenberg/kazimir_von_ashenberg_0.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 93404,
+      "sourceSha256": "A197406EBEDA1F200F9A69E61BBD876DE6AB06AE4E6E16467D50B3148DA55ECA",
+      "outputSha256": "1A56FCD5A1B0D689E7159932F7365E749942D5B673AAA1047BACB5A535BD55D0"
+    },
+    {
+      "npcId": "kazimir_von_ashenberg",
+      "suffix": 1,
+      "source": "portraits/kazimir_von_ashenberg/kazimir_von_ashenberg_1.png",
+      "output": "portraits-optimized/kazimir_von_ashenberg/kazimir_von_ashenberg_1.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 93536,
+      "sourceSha256": "D86967C5613206FD3EE2C61F3719186A51626B637B2F67625BA208B0D20CD979",
+      "outputSha256": "D78EAACE4A2DAE9D9B0B76D045374F9359DDB3CAB79AB5902AE4CEEEFB2A5433"
+    },
+    {
+      "npcId": "kazimir_von_ashenberg",
+      "suffix": 2,
+      "source": "portraits/kazimir_von_ashenberg/kazimir_von_ashenberg_2.png",
+      "output": "portraits-optimized/kazimir_von_ashenberg/kazimir_von_ashenberg_2.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 93664,
+      "sourceSha256": "0C1C23623AD8FC0D9CBAEDD8271DB473C29261EEE0CC06CA3E3B354050736ED9",
+      "outputSha256": "9A1FD9165D5B4DD0750DA5DD337682DB913EF9E50148A2A7B850080BFFEA1BDB"
+    },
+    {
+      "npcId": "kazimir_von_ashenberg",
+      "suffix": 3,
+      "source": "portraits/kazimir_von_ashenberg/kazimir_von_ashenberg_3.png",
+      "output": "portraits-optimized/kazimir_von_ashenberg/kazimir_von_ashenberg_3.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 93474,
+      "sourceSha256": "D70D89D668D73FFA6375F5A83F0DCDCBB7C60FD761F42751D8DF48BD32F12B64",
+      "outputSha256": "635914D74460B6FF2A866233A6732BEEB99147839110A1DB764D650FC4D54320"
+    },
+    {
+      "npcId": "kazimir_von_ashenberg",
+      "suffix": 4,
+      "source": "portraits/kazimir_von_ashenberg/kazimir_von_ashenberg_4.png",
+      "output": "portraits-optimized/kazimir_von_ashenberg/kazimir_von_ashenberg_4.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 93392,
+      "sourceSha256": "2124113008E5CEBE285DB9AD5A1F44C32748DB32DB408345C0671788F5774DE0",
+      "outputSha256": "6B814E2D785F41D1985FBB03B6D8E2F5EC3F780A1EFD50F968B8D560EDD86664"
+    },
+    {
+      "npcId": "kazimir_von_ashenberg",
+      "suffix": 5,
+      "source": "portraits/kazimir_von_ashenberg/kazimir_von_ashenberg_5.png",
+      "output": "portraits-optimized/kazimir_von_ashenberg/kazimir_von_ashenberg_5.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 93190,
+      "sourceSha256": "53DAE94C5216014655C7C8647BB71300339F4DAD8C94F19BED065477340EF4A2",
+      "outputSha256": "E6D88DB7E19DD24675EE4E77031CF6121F469B4C35F63635265E0C34D651B5EA"
+    },
+    {
+      "npcId": "kazimir_von_ashenberg",
+      "suffix": 6,
+      "source": "portraits/kazimir_von_ashenberg/kazimir_von_ashenberg_6.png",
+      "output": "portraits-optimized/kazimir_von_ashenberg/kazimir_von_ashenberg_6.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 93312,
+      "sourceSha256": "940EABF36BB70054FCF27894B87A6F297A391A87FE1C062A2325B48FE36D636E",
+      "outputSha256": "134D2D96BE11EA6AEC9F01CA22392858464AEB672C3D5BEE3D7F0DFCC49EB7C2"
+    },
+    {
+      "npcId": "knox",
+      "suffix": 0,
+      "source": "portraits/knox/knox_0.png",
+      "output": "portraits-optimized/knox/knox_0.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 94110,
+      "sourceSha256": "2F4E594213CD9ED1CCA6206CE55CFC310D5753D65945F8757CC12FE8219EA624",
+      "outputSha256": "6849FE38D4E940335CA7CFF45626E5F8ED787C90ECE7A363B63A000E468323D1"
+    },
+    {
+      "npcId": "knox",
+      "suffix": 1,
+      "source": "portraits/knox/knox_1.png",
+      "output": "portraits-optimized/knox/knox_1.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 94440,
+      "sourceSha256": "78A09D7D2687E1505AE2783FD7A2D4DC604912EF4B28DD20D9338E960AF684A3",
+      "outputSha256": "358912D7BD569B353FD1011CEFBBDE14FCEC1B83D605F6008725DD85BE5DBAE0"
+    },
+    {
+      "npcId": "knox",
+      "suffix": 2,
+      "source": "portraits/knox/knox_2.png",
+      "output": "portraits-optimized/knox/knox_2.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 94072,
+      "sourceSha256": "EFE9A440C79C803342ADCDDFD3332AD91F87451EC567DEC2D405D70F5B4BCBE2",
+      "outputSha256": "54716C66D7F93B3E4EDE021F1EF3F4D590CD3519915E81AB155B5A5E2CB78DC9"
+    },
+    {
+      "npcId": "knox",
+      "suffix": 3,
+      "source": "portraits/knox/knox_3.png",
+      "output": "portraits-optimized/knox/knox_3.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 94206,
+      "sourceSha256": "6549E86DA3B04EA5EFACA55C028617FC1D8FDAE8197FF46B89DB8DBFE459FF63",
+      "outputSha256": "5E2AC8E6F97F7AA1BEE142940EFA833E427408424E7D79E3EEBBCE0607E2CCFF"
+    },
+    {
+      "npcId": "knox",
+      "suffix": 4,
+      "source": "portraits/knox/knox_4.png",
+      "output": "portraits-optimized/knox/knox_4.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 94424,
+      "sourceSha256": "83D9451024350F1F4497D9087AF4F85808E563C2400C9D52E9D4CFBDF7454F1E",
+      "outputSha256": "1B99521E85C0611C0D6277C34C4D90C9529C3664665DEE8749563CB4F2915BF4"
+    },
+    {
+      "npcId": "knox",
+      "suffix": 5,
+      "source": "portraits/knox/knox_5.png",
+      "output": "portraits-optimized/knox/knox_5.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 93998,
+      "sourceSha256": "FF63616F02D4E0430037ECC574939229475722315EF940800B915F64AE8E8E09",
+      "outputSha256": "1852DA678030D22D21C8417D1CE80C70CF128EB2F7C5560D6F9BBA905DFE79AE"
+    },
+    {
+      "npcId": "knox",
+      "suffix": 6,
+      "source": "portraits/knox/knox_6.png",
+      "output": "portraits-optimized/knox/knox_6.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 94020,
+      "sourceSha256": "0B0303E8CC0D033CCAF5C9913DA74D3A7FFB64D268B1981F69BCED3862B99BA1",
+      "outputSha256": "DABB1500F396AC84D3C52377003BEFBCF694062FC367A7126DB3E0CEC453F6DD"
+    },
+    {
+      "npcId": "lumiel",
+      "suffix": 0,
+      "source": "portraits/lumiel/lumiel_0.png",
+      "output": "portraits-optimized/lumiel/lumiel_0.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 107792,
+      "sourceSha256": "11CCBBE88FD5C81AA017B7D62A8034B6F2BF8F3F3F54EE98C6107D040B1E3D47",
+      "outputSha256": "1456115887511AB09527018B906D3A1142F0ABE3CECC542347E4FC38DA33092C"
+    },
+    {
+      "npcId": "lumiel",
+      "suffix": 1,
+      "source": "portraits/lumiel/lumiel_1.png",
+      "output": "portraits-optimized/lumiel/lumiel_1.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 107786,
+      "sourceSha256": "3F46B19AD10C2170050B6B0C20BFF32FC2672A3A814CDB4FB8E74DAC669895D8",
+      "outputSha256": "28021FBF3F99D04591001E7317E84F2BD909BA707B72790C38184EABE70B8B6B"
+    },
+    {
+      "npcId": "lumiel",
+      "suffix": 2,
+      "source": "portraits/lumiel/lumiel_2.png",
+      "output": "portraits-optimized/lumiel/lumiel_2.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 108102,
+      "sourceSha256": "525C7A1EE59DEC5E39A24F10F1199FE515BD1B2A60865F64237D608A5B04EB4B",
+      "outputSha256": "F8A90E1818684C76338C64C33D4A8D196F7B6C32433185A5F828BA9CBADA4F64"
+    },
+    {
+      "npcId": "lumiel",
+      "suffix": 3,
+      "source": "portraits/lumiel/lumiel_3.png",
+      "output": "portraits-optimized/lumiel/lumiel_3.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 108344,
+      "sourceSha256": "FCB5F7D2F8BD4D32F001DE33F747DF4344B52B353EC0944B83C48E442928211C",
+      "outputSha256": "F4542C329C9CAF35D91E108E5D113675F1969EB8CE045751E5E44F5348E08F54"
+    },
+    {
+      "npcId": "lumiel",
+      "suffix": 4,
+      "source": "portraits/lumiel/lumiel_4.png",
+      "output": "portraits-optimized/lumiel/lumiel_4.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 108108,
+      "sourceSha256": "93378875FB9E96B8D5CFD9B9C1CAA43E682D22742F5C3C4E3ABB16361842AB9B",
+      "outputSha256": "6DAE381B33B722FFFD794E3876A8A16462EB7605A47DEF4B95A95872CC4FEB01"
+    },
+    {
+      "npcId": "lumiel",
+      "suffix": 5,
+      "source": "portraits/lumiel/lumiel_5.png",
+      "output": "portraits-optimized/lumiel/lumiel_5.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 108208,
+      "sourceSha256": "9B55DC7EDB1201F41B1B1A3BABA06C3783B025C84E02AF6F39A5043BEB6244A8",
+      "outputSha256": "BF5CB210DA43C534760C975476E81E21F96B06246D7A4D67ADE8FF96333832A2"
+    },
+    {
+      "npcId": "lumiel",
+      "suffix": 6,
+      "source": "portraits/lumiel/lumiel_6.png",
+      "output": "portraits-optimized/lumiel/lumiel_6.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 107614,
+      "sourceSha256": "588DF1CA09FC452F64131F06D1C87D5348EBE6B84CB4BB491D05CE95ECBE0185",
+      "outputSha256": "FD03E64BC082F5A7848CEED779FCCF4C1B923287169B75FC8A5E99CA9FB95F55"
+    },
+    {
+      "npcId": "peony",
+      "suffix": 0,
+      "source": "portraits/peony/peony_0.png",
+      "output": "portraits-optimized/peony/peony_0.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 120376,
+      "sourceSha256": "1A4654EEAB41E7C2956E3662D50D2A657D9B75D3A8A3FB1474F7098976971310",
+      "outputSha256": "081E63EC2FDBFABA247E58A0EBAA6431EF66798BB472C0F8912E05C3EF9A0F17"
+    },
+    {
+      "npcId": "peony",
+      "suffix": 1,
+      "source": "portraits/peony/peony_1.png",
+      "output": "portraits-optimized/peony/peony_1.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 120362,
+      "sourceSha256": "A22DADD035B04D4002FEC3BF96658179A2E18A9A64D7BA725594CDDE3DC7142F",
+      "outputSha256": "5A64B98502B74C0DEF8251CA971000A30C5683E43EB452EFD4192A1140EAECF9"
+    },
+    {
+      "npcId": "peony",
+      "suffix": 2,
+      "source": "portraits/peony/peony_2.png",
+      "output": "portraits-optimized/peony/peony_2.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 120522,
+      "sourceSha256": "E8F504302D64F25CE072B77A83CCF3D9C59D808870714BE78DA16CD6E86E82F8",
+      "outputSha256": "4E91C99B3402A613A4D43C369F1F5D3C4819E1D9128AD8C8210B85C5FF09B012"
+    },
+    {
+      "npcId": "peony",
+      "suffix": 3,
+      "source": "portraits/peony/peony_3.png",
+      "output": "portraits-optimized/peony/peony_3.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 120356,
+      "sourceSha256": "27EDD7FD8A5BD4C17D7757BEE12454B28A73B3D2430DEAFF00B26AC09F5CB349",
+      "outputSha256": "D674EFFDC88F325037E1D729BA42DDE3B688F25B9F679EBF3429AA7967B6F9CC"
+    },
+    {
+      "npcId": "peony",
+      "suffix": 4,
+      "source": "portraits/peony/peony_4.png",
+      "output": "portraits-optimized/peony/peony_4.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 120316,
+      "sourceSha256": "4C6893D96107EC57365743620334156DCD37D284A7156722CD33DBC969EFE2B8",
+      "outputSha256": "D293B47DEBA80DEA02124788FAD5587A846BA3182A0A3DE558850E297DC48C95"
+    },
+    {
+      "npcId": "peony",
+      "suffix": 5,
+      "source": "portraits/peony/peony_5.png",
+      "output": "portraits-optimized/peony/peony_5.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 120630,
+      "sourceSha256": "B79AC44BBA0A11C45822069806AD12DA02966DF72DFD103E2B8B4DEA73CB600F",
+      "outputSha256": "52272E759795009A28ED6258AA367983F044395DCB485F9D7860290CB835044C"
+    },
+    {
+      "npcId": "peony",
+      "suffix": 6,
+      "source": "portraits/peony/peony_6.png",
+      "output": "portraits-optimized/peony/peony_6.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 120376,
+      "sourceSha256": "1A4654EEAB41E7C2956E3662D50D2A657D9B75D3A8A3FB1474F7098976971310",
+      "outputSha256": "081E63EC2FDBFABA247E58A0EBAA6431EF66798BB472C0F8912E05C3EF9A0F17"
+    },
+    {
+      "npcId": "quinn_warwick",
+      "suffix": 0,
+      "source": "portraits/quinn_warwick/quinn_warwick_0.png",
+      "output": "portraits-optimized/quinn_warwick/quinn_warwick_0.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 106516,
+      "sourceSha256": "827475110CB0F625EC9478A953811D3AEFC89F059C26597EB5013D81D63C5BFF",
+      "outputSha256": "A8A86EB423D74E9149A9E601FFCE3D7D2EEB0C04DB8FBCEC186051B8BFF830A3"
+    },
+    {
+      "npcId": "quinn_warwick",
+      "suffix": 1,
+      "source": "portraits/quinn_warwick/quinn_warwick_1.png",
+      "output": "portraits-optimized/quinn_warwick/quinn_warwick_1.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 106824,
+      "sourceSha256": "79E857EB43777B64180424C92ED66DE2657D57605C461834A9023F09C5D0CE4F",
+      "outputSha256": "EAC795F689D0E48DB4D4DCCF1C427F6382DA25BDD01004B979CB1052DA109E6D"
+    },
+    {
+      "npcId": "quinn_warwick",
+      "suffix": 2,
+      "source": "portraits/quinn_warwick/quinn_warwick_2.png",
+      "output": "portraits-optimized/quinn_warwick/quinn_warwick_2.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 107026,
+      "sourceSha256": "4A8EEDDB59C22192D39BC90BF46D28D7D7ABFFA6C59A021F576D42369FE2C711",
+      "outputSha256": "A3ED7223E3D9E5058558233FAE39FB1FF23C27439B8858498DD97387503546A3"
+    },
+    {
+      "npcId": "quinn_warwick",
+      "suffix": 3,
+      "source": "portraits/quinn_warwick/quinn_warwick_3.png",
+      "output": "portraits-optimized/quinn_warwick/quinn_warwick_3.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 106836,
+      "sourceSha256": "246657C7AE1191A339DF06F97677AC91EC4AB92CB184D575F367899CF9E42747",
+      "outputSha256": "37D8EFCC3C075E9E3B8EC99123DD86C6658BD26446B004A109CF8506F7A186F2"
+    },
+    {
+      "npcId": "quinn_warwick",
+      "suffix": 4,
+      "source": "portraits/quinn_warwick/quinn_warwick_4.png",
+      "output": "portraits-optimized/quinn_warwick/quinn_warwick_4.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 106996,
+      "sourceSha256": "DB01514057CE75B73881092C50CBBBFF340F4EC3E56993E884B9B8E40BFBF295",
+      "outputSha256": "5B57D6E45AC9D7AB7A9D8B7BE3728248812227E6384EEDDB10D7EF7B98D1F664"
+    },
+    {
+      "npcId": "quinn_warwick",
+      "suffix": 5,
+      "source": "portraits/quinn_warwick/quinn_warwick_5.png",
+      "output": "portraits-optimized/quinn_warwick/quinn_warwick_5.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 106660,
+      "sourceSha256": "19AACEB6D9392F6C4589C7F59779364ABD1FC94D1193DBAFEDC00588AFCBA94B",
+      "outputSha256": "F1953EC2C4EF39899CAF863B0889A07E46F231171922E198043A4D848044A256"
+    },
+    {
+      "npcId": "quinn_warwick",
+      "suffix": 6,
+      "source": "portraits/quinn_warwick/quinn_warwick_6.png",
+      "output": "portraits-optimized/quinn_warwick/quinn_warwick_6.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 106424,
+      "sourceSha256": "9218A45C0AA1A2E0BB42BC85CE5286A44BE48E73807962932297F4454941F990",
+      "outputSha256": "40E7B5704D9EA9C9692DC1FD19993FCD2E963BDBC9EAB03DFAC42530A12BDD06"
+    },
+    {
+      "npcId": "sydney",
+      "suffix": 0,
+      "source": "portraits/sydney/sydney_0.png",
+      "output": "portraits-optimized/sydney/sydney_0.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 96290,
+      "sourceSha256": "1A470313817CE5DB91723CB7267D42AC7D3F7E812869CFDEDADA59C4FF528FFF",
+      "outputSha256": "89361647F16CF5F6F97B488B43DE4A9732B8E7EFE835E8DF31AE91FAE917E4B3"
+    },
+    {
+      "npcId": "sydney",
+      "suffix": 1,
+      "source": "portraits/sydney/sydney_1.png",
+      "output": "portraits-optimized/sydney/sydney_1.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 96194,
+      "sourceSha256": "814C36EA5B3B343B41446BDA957DC04563C7A8509C9E05BAC5F1FDB066C7C472",
+      "outputSha256": "1375FA4B95131030080078516628D96D3BA554B9AA45CD7275993480D45A46C1"
+    },
+    {
+      "npcId": "sydney",
+      "suffix": 2,
+      "source": "portraits/sydney/sydney_2.png",
+      "output": "portraits-optimized/sydney/sydney_2.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 96678,
+      "sourceSha256": "3B7C7E152FB8C3ED6A4BD8E9C8B441D4AF743689B251F7CADC87EB440C0C0C61",
+      "outputSha256": "04182D00BA12776E13071EAA935594E6179F2D66C20ACFDFCA6AEE7880E4F367"
+    },
+    {
+      "npcId": "sydney",
+      "suffix": 3,
+      "source": "portraits/sydney/sydney_3.png",
+      "output": "portraits-optimized/sydney/sydney_3.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 96026,
+      "sourceSha256": "614D279406AF8E93D1C98DA403A80595C76EA54610E5C12C4565B7FCA362AA51",
+      "outputSha256": "081D9444847D24CE195B310AC81BFC4721B100C5B1F3E531EF888346D58DEBD7"
+    },
+    {
+      "npcId": "sydney",
+      "suffix": 4,
+      "source": "portraits/sydney/sydney_4.png",
+      "output": "portraits-optimized/sydney/sydney_4.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 96288,
+      "sourceSha256": "7D93E4BB7A4D22104AB32204C80808848701712A49ECCDFE2FBEAED590795296",
+      "outputSha256": "4AF5563F4ADF5CC2B15E74DEE6E7984D33FFCB021039DE576F6F189147B4D30C"
+    },
+    {
+      "npcId": "sydney",
+      "suffix": 5,
+      "source": "portraits/sydney/sydney_5.png",
+      "output": "portraits-optimized/sydney/sydney_5.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 96078,
+      "sourceSha256": "E04378A9D8AB3914C6BB98D1F9318495845A6D841EC0F0F383D890071987050E",
+      "outputSha256": "B69E4C80B7DCC3BE7FF7805BB2EE10B9881CC262C3E19C5832A22946F4CAF322"
+    },
+    {
+      "npcId": "sydney",
+      "suffix": 6,
+      "source": "portraits/sydney/sydney_6.png",
+      "output": "portraits-optimized/sydney/sydney_6.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 96280,
+      "sourceSha256": "F7637E33FE4FB9019F93BD8D5A51C365BB302C52B2439ED450D4EAC259088502",
+      "outputSha256": "4E258E5A237CC81F6DD4E47EF858D3C78C7CF7296207CD7C342AD30FBC6A81E0"
+    },
+    {
+      "npcId": "woofy_chan",
+      "suffix": 0,
+      "source": "portraits/woofy_chan/woofy_chan_0.png",
+      "output": "portraits-optimized/woofy_chan/woofy_chan_0.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 106396,
+      "sourceSha256": "2CDC6B4CAB16E9BBD0BF1FBF0158CA34084D732D0C7F3FCB5B356C9D9BDBEBA4",
+      "outputSha256": "1C002623871A72508EE72020C7A78F4F92346EE28819586EF57E84F37A1DBDBB"
+    },
+    {
+      "npcId": "woofy_chan",
+      "suffix": 1,
+      "source": "portraits/woofy_chan/woofy_chan_1.png",
+      "output": "portraits-optimized/woofy_chan/woofy_chan_1.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 106506,
+      "sourceSha256": "A3173A65A9A6B7FE670B03D1702BFF412481A21DDF020E7BD30184F0F44EB474",
+      "outputSha256": "18AA2E26C881EEE9ACA0B0B4B4352DC7F378CB4B9D684715537F1BC5777F316F"
+    },
+    {
+      "npcId": "woofy_chan",
+      "suffix": 2,
+      "source": "portraits/woofy_chan/woofy_chan_2.png",
+      "output": "portraits-optimized/woofy_chan/woofy_chan_2.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 106676,
+      "sourceSha256": "3D92CD13450275E5B6804411650764577A1862AD331FA0F6E462DCDC978262D0",
+      "outputSha256": "E641EF5D323CE24E4772246642F27276E879DFBB5608AF1C5A3B8C71C282152C"
+    },
+    {
+      "npcId": "woofy_chan",
+      "suffix": 3,
+      "source": "portraits/woofy_chan/woofy_chan_3.png",
+      "output": "portraits-optimized/woofy_chan/woofy_chan_3.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 106362,
+      "sourceSha256": "3A2AB90001B3237519239536A2D3C39BD91C2241FABE86ABCDA9EA86D47FCA91",
+      "outputSha256": "281AC4BFA0EB2FCDC35A77F9105F0E07975FD32BC6D0A48DEE6C64568F943418"
+    },
+    {
+      "npcId": "woofy_chan",
+      "suffix": 4,
+      "source": "portraits/woofy_chan/woofy_chan_4.png",
+      "output": "portraits-optimized/woofy_chan/woofy_chan_4.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 106510,
+      "sourceSha256": "812BD4067ED47E5C50AEA769DEBE9A7F87E3B718CEBDA8ADE333820CA6424333",
+      "outputSha256": "D8E0B634E17C4AE4677C1C8B6377615A2E4C5D98B86430A61CE3E709E8F0B4E7"
+    },
+    {
+      "npcId": "woofy_chan",
+      "suffix": 5,
+      "source": "portraits/woofy_chan/woofy_chan_5.png",
+      "output": "portraits-optimized/woofy_chan/woofy_chan_5.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 107228,
+      "sourceSha256": "C4C6984BB1192E716B0F5F84C619383AB77940F65205A0FAA913A86AA21C7925",
+      "outputSha256": "41144DE1CFB17A37C5D0E956ABEDD4F410A5BE39C3591882B73E348EBFDF730E"
+    },
+    {
+      "npcId": "woofy_chan",
+      "suffix": 6,
+      "source": "portraits/woofy_chan/woofy_chan_6.png",
+      "output": "portraits-optimized/woofy_chan/woofy_chan_6.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 106340,
+      "sourceSha256": "7F3B3C58AE94BA97AF901D16777A6A826991AB092908C84147E39370305179C7",
+      "outputSha256": "EC1268F1E2F0414C3F0A8263E61F63B9AD79132C8551016802AE4E0671B6B9BD"
+    },
+    {
+      "npcId": "zeke",
+      "suffix": 0,
+      "source": "portraits/zeke/zeke_0.png",
+      "output": "portraits-optimized/zeke/zeke_0.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 108084,
+      "sourceSha256": "DBE37D50DD059011378E76C7A0E0857DA8FF201322EFFC62ABF14FFEDC2B7BF1",
+      "outputSha256": "0C9A8F7C09A2122C0DAB7902E828E1C61811647C801A9692D8615AEE0943C36D"
+    },
+    {
+      "npcId": "zeke",
+      "suffix": 1,
+      "source": "portraits/zeke/zeke_1.png",
+      "output": "portraits-optimized/zeke/zeke_1.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 108560,
+      "sourceSha256": "5C7784AC93359F0936A10124C0F11EADF50F8E454FE68FF3F51BA8F7D98AA037",
+      "outputSha256": "D0082F626F411F1BAAA64C76FD1E9D6981F640397510DBDF15B507D1D8B5D61E"
+    },
+    {
+      "npcId": "zeke",
+      "suffix": 2,
+      "source": "portraits/zeke/zeke_2.png",
+      "output": "portraits-optimized/zeke/zeke_2.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 108082,
+      "sourceSha256": "5BA88CA394D05594ED69218A8A39FA0D2B1DB269FCE758597A11A635B09D8481",
+      "outputSha256": "23DC21D841FE4A0029CDD24374307933C2559BE5EBF62CAA832047E9EA5C6388"
+    },
+    {
+      "npcId": "zeke",
+      "suffix": 3,
+      "source": "portraits/zeke/zeke_3.png",
+      "output": "portraits-optimized/zeke/zeke_3.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 108218,
+      "sourceSha256": "F544B9A7AC7224AE55E371145F12F61417FE286BA6F12C1BAD3E304992430C4C",
+      "outputSha256": "35013C6FD7E82EB5063BC50362DE4D3FD989891A21567465D80CE983ADFBB8D0"
+    },
+    {
+      "npcId": "zeke",
+      "suffix": 4,
+      "source": "portraits/zeke/zeke_4.png",
+      "output": "portraits-optimized/zeke/zeke_4.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 107972,
+      "sourceSha256": "D0E82FCAA1343A8A83FF0B857D1F10BF680F1EE8E7FD85ABA77E655634161CB0",
+      "outputSha256": "BADE447354246CB63CC6CBD8644816A802270BB957C3BCA6C9EF40CDC667498D"
+    },
+    {
+      "npcId": "zeke",
+      "suffix": 5,
+      "source": "portraits/zeke/zeke_5.png",
+      "output": "portraits-optimized/zeke/zeke_5.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 108820,
+      "sourceSha256": "C4E92F3B3044AFA180376B3992D865CDA0565A9557A0ED306DEDB7AAFC2F3F8A",
+      "outputSha256": "C9A586E61EA1510311C4F359A95C25DE54260C35C072445445726235BBE426EE"
+    },
+    {
+      "npcId": "zeke",
+      "suffix": 6,
+      "source": "portraits/zeke/zeke_6.png",
+      "output": "portraits-optimized/zeke/zeke_6.webp",
+      "width": 768,
+      "height": 1152,
+      "bytes": 108096,
+      "sourceSha256": "6A5342173DD73679D10B8B09AA7CB5B6215E61EFA53F3CA7A6747BD4B1126AFC",
+      "outputSha256": "8B89499B2544812A8DDEB9BBE377193DCD68B47D104F43C3D0C0309130F32744"
+    }
+  ]
+}

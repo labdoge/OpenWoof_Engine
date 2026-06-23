@@ -1,0 +1,34 @@
+{
+  "loreId": "bundled_lore_fantasy_dimension_portal_shrines",
+  "title": "傳送祠堂",
+  "type": "location",
+  "category": "幻想維度",
+  "keywords": [
+    "傳送祠堂",
+    "汪醬",
+    "多維裝置",
+    "古代遺跡"
+  ],
+  "alias": [
+    "傳送祠堂",
+    "門之祠"
+  ],
+  "content": "古代傳送祠堂是幻想維度少數能回應汪醬多維裝置的地點。祠堂多半半埋在森林、地城底層或王國禁地，石柱刻著不屬於本地語言的星圖。汪醬能把它們當成跨維錨點，但若沒有 紅角哈羅德 的符文補強與 凱菈 的警戒，開門就像在黑夜點燈。",
+  "priority": 62,
+  "tokenEstimate": 132,
+  "promoted": false,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_magic_and_runes",
+      "label": "需要符文穩定"
+    },
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_dungeons_lairs",
+      "label": "常藏於危險遺跡"
+    }
+  ],
+  "source": "bundled",
+  "linkedNpcId": "woofy_chan",
+  "createdAt": 0,
+  "lastModified": 0
+}

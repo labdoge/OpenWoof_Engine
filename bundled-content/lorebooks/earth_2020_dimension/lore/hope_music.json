@@ -1,0 +1,35 @@
+{
+  "loreId": "bundled_lore_earth_2020_dimension_hope_music",
+  "title": "希望之歌",
+  "type": "ability",
+  "category": "地球2020",
+  "keywords": [
+    "安妮塔",
+    "疾克",
+    "音樂",
+    "希望",
+    "歌聲"
+  ],
+  "alias": [
+    "希望之歌",
+    "夜間直播"
+  ],
+  "content": "安妮塔 的魯特琴與歌聲能讓驚醒的人重新呼吸，疾克 的搖滾則把壓抑情緒變成仍願意活下去的火。兩人常以線上直播、陽台演奏或秘密小型演出支援任務。暗隙生物討厭這種聲音，因為希望會讓牠們找不到可鑽的縫。",
+  "priority": 58,
+  "tokenEstimate": 120,
+  "promoted": false,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_unseen_civilians",
+      "label": "安定受壓平民"
+    },
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_dark_creatures",
+      "label": "削弱絕望寄生"
+    }
+  ],
+  "source": "bundled",
+  "linkedNpcId": "anneta",
+  "createdAt": 0,
+  "lastModified": 0
+}

@@ -1,0 +1,33 @@
+{
+  "loreId": "bundled_lore_earth_2020_dimension_quarantine_nights",
+  "title": "封城夜",
+  "type": "location",
+  "category": "地球2020",
+  "keywords": [
+    "封城夜",
+    "夜晚",
+    "公寓",
+    "孤獨"
+  ],
+  "alias": [
+    "隔離夜",
+    "靜默街道"
+  ],
+  "content": "封城夜的城市亮著過多螢幕與過少窗燈。街道空得能聽見遠方號誌切換，公寓牆後卻擠滿焦躁的呼吸。裂隙最喜歡這種時間：人們相隔很近，心卻被恐懼隔得很遠。守護者常在這些夜裡巡邏，不讓黑影學會敲門。",
+  "priority": 58,
+  "tokenEstimate": 120,
+  "promoted": false,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_earth_2020_rifts",
+      "label": "裂隙常在此時活躍"
+    },
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_unseen_civilians",
+      "label": "映照平民壓力"
+    }
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

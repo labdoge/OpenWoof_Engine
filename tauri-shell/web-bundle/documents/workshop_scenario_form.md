@@ -52,7 +52,7 @@
     "worldview": "...",
     "adoption_rule": "...",
     "initial_npcs": [
-      { "slotId": "kebab-id", "identity": "角色定位", "required": true }
+      { "slotId": "kebab-id", "identity": "角色定位", "required": true, "preselectedWorkshopNpcId": "" }
     ],
     "initial_affection": 0,
     "player_setup": {
@@ -92,7 +92,7 @@
 
 ## T-140 Storyteller Mode Addendum
 
-- Scenario schema version is now `$version: "0.6"`.
+- Scenario schema version is now `$version: "0.7"`.
 - Missing `playMode` on imported legacy scenarios means `"standard"`. Newly exported Workshop scenarios should write `"standard"` or `"storyteller"` explicitly.
 - Storyteller scenarios use:
 
@@ -109,6 +109,7 @@
 ```
 
 - `storyteller.protagonistSlotIds[]` must reference `initial_npcs[].slotId`. Scenario JSON must not store generated NPC IDs or `StoredPersona` IDs for protagonists.
+- `initial_npcs[].preselectedWorkshopNpcId` is optional and may reference an existing Workshop NPC `npcId` as a soft setup default. AI must preserve existing values and must not invent Workshop NPC IDs unless the user explicitly provides the ID.
 - Scenario Workshop exposes a top-level mode switch. In Storyteller mode, Initial NPC Slots become protagonist candidates.
 - AI edits must preserve `playMode` and `storyteller` unless the user explicitly asks to convert modes.
 - `StoredPersona -> ProfileRecord` conversion is a Workshop casting tool. It creates Workshop NPC profiles under `WORKSHOP_SCENARIO_ID`; runtime protagonist IDs are resolved later from adopted/generated NPC profiles.
@@ -154,6 +155,7 @@
   - `slotId`：kebab-case 插槽 ID（≤30 字）
   - `identity`：角色定位描述（繁體中文，≤30 字）
   - `required`：是否必要（布林值，第一個必須為 true）
+  - `preselectedWorkshopNpcId`：可選；既有 Workshop NPC `npcId`，作為開局 soft default。AI 不可自行捏造 ID。
 - `initial_affection`：初始好感度，-100 到 100
 
 #### 玩家設定

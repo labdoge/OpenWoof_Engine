@@ -1,0 +1,34 @@
+{
+  "loreId": "bundled_lore_master_dimension_shadow_contracts",
+  "title": "影子委託",
+  "type": "event",
+  "category": "主維度",
+  "keywords": [
+    "影子委託",
+    "諾克斯",
+    "卡洛威",
+    "昆恩．沃維克",
+    "席妮"
+  ],
+  "alias": [
+    "灰色契約",
+    "黑夜工作"
+  ],
+  "content": "當企業區域的問題不能出現在公文裡，影子委託就會流向能解決問題的人。諾克斯 能用黑幫與財閥網路拿到物資，卡洛威 接最危險的跨維任務，昆恩．沃維克 靠耐心調查拆線，席妮 則在必要時做無聲清理。這些委託常以保護汪醬的實驗成果為名展開。",
+  "priority": 58,
+  "tokenEstimate": 132,
+  "promoted": false,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_master_dimension_corporate_regions",
+      "label": "源自企業暗鬥"
+    },
+    {
+      "targetLoreId": "bundled_lore_master_dimension_goldfish_teahouse",
+      "label": "常在茶館談判"
+    }
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

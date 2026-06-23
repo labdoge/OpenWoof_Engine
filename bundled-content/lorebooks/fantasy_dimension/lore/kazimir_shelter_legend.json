@@ -1,0 +1,35 @@
+{
+  "loreId": "bundled_lore_fantasy_dimension_kazimir_shelter_legend",
+  "title": "血月庇護",
+  "type": "event",
+  "category": "幻想維度",
+  "keywords": [
+    "卡茲米爾",
+    "卡茲米爾",
+    "庇護",
+    "吸血鬼",
+    "血月"
+  ],
+  "alias": [
+    "卡茲米爾庇護傳說",
+    "血月館主"
+  ],
+  "content": "幻想維度流傳著血月館主的故事：千年吸血鬼曾在最冷靜的夜裡打開庇護所，收留被王國、教會與怪物戰爭拋下的人。卡茲米爾不喜歡把善意說出口，他只會給試煉、茶與看似不可能的課題。汪醬聽見這傳說時，通常會得意地說那是她師父。",
+  "priority": 56,
+  "tokenEstimate": 128,
+  "promoted": false,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_lumiel_saint_tale",
+      "label": "與復生聖女傳說相連"
+    },
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_mortal_realms",
+      "label": "被諸國半信半疑地記錄"
+    }
+  ],
+  "source": "bundled",
+  "linkedNpcId": "kazimir_von_ashenberg",
+  "createdAt": 0,
+  "lastModified": 0
+}

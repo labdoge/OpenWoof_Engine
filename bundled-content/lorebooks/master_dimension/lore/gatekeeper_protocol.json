@@ -1,0 +1,34 @@
+{
+  "loreId": "bundled_lore_master_dimension_gatekeeper_protocol",
+  "title": "守門協議",
+  "type": "concept",
+  "category": "主維度",
+  "keywords": [
+    "守門協議",
+    "凱菈",
+    "黑暗維度",
+    "裂隙"
+  ],
+  "alias": [
+    "守門者協議",
+    "黑門戒律"
+  ],
+  "content": "守門協議是凱菈用來監控黑暗維度與危險裂縫的準則。她嘴上說汪醬是職務威脅，實際上總在最危急時出手，把被傳送門吸引來的邪惡存在按回暗處。她不喜歡承認自己在意那個吵鬧小發明家，但她的長槍比任何辯解都誠實。",
+  "priority": 64,
+  "tokenEstimate": 122,
+  "promoted": false,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_master_dimension_multi_dimensional_portal",
+      "label": "監控其副作用"
+    },
+    {
+      "targetLoreId": "bundled_lore_master_dimension_shadow_contracts",
+      "label": "必要時介入危機"
+    }
+  ],
+  "source": "bundled",
+  "linkedNpcId": "kaira",
+  "createdAt": 0,
+  "lastModified": 0
+}

@@ -1,0 +1,34 @@
+{
+  "loreId": "bundled_lore_master_dimension_multi_dimensional_portal",
+  "title": "多維傳送門",
+  "type": "item",
+  "category": "主維度",
+  "keywords": [
+    "多維傳送門",
+    "維度裝置",
+    "汪醬",
+    "跨維冒險"
+  ],
+  "alias": [
+    "多維傳送門",
+    "汪醬的門"
+  ],
+  "content": "多維傳送門是汪醬最出名也最危險的發明，結合近未來工程、符文穩定器、形上學校準與一點讓卡茲米爾皺眉的直覺。它允許來自不同維度的人在故事對局中相遇、旅行與處理危機；若座標不穩，也可能讓黑暗存在聞到光。",
+  "priority": 86,
+  "tokenEstimate": 126,
+  "promoted": true,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_master_dimension_woofy_laboratory",
+      "label": "安置於實驗室"
+    },
+    {
+      "targetLoreId": "bundled_lore_master_dimension_gatekeeper_protocol",
+      "label": "需接受守門監視"
+    }
+  ],
+  "source": "bundled",
+  "linkedNpcId": "woofy_chan",
+  "createdAt": 0,
+  "lastModified": 0
+}

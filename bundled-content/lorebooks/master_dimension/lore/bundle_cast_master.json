@@ -1,0 +1,34 @@
+{
+  "loreId": "bundled_lore_master_dimension_bundle_cast_master",
+  "title": "主維度群像",
+  "type": "character",
+  "category": "主維度",
+  "keywords": [
+    "汪醬",
+    "卡茲米爾",
+    "安妮塔",
+    "紅角哈羅德",
+    "主維度群像"
+  ],
+  "alias": [
+    "內建角色群",
+    "傳送門熟人圈"
+  ],
+  "content": "主維度的 內建角色群 以汪醬為交會點：卡茲米爾是她優雅的魔法導師，安妮塔 用歌聲照顧她，紅角哈羅德 幫忙建造裝置，凱菈 監視危險，諾克斯 與牡丹代表地下秩序，卡洛威、昆恩．沃維克、席妮處理任務，露米耶像笨拙大姊，疾克則把音樂與競爭帶進日常。",
+  "priority": 56,
+  "tokenEstimate": 132,
+  "promoted": false,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_master_dimension_woofy_laboratory",
+      "label": "常在實驗室聚集"
+    },
+    {
+      "targetLoreId": "bundled_lore_master_dimension_ashenberg_circle",
+      "label": "包含師徒與庇護關係"
+    }
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

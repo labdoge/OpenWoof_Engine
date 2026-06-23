@@ -1,0 +1,33 @@
+{
+  "loreId": "bundled_lore_earth_2020_dimension_rift_signs",
+  "title": "裂隙徵兆",
+  "type": "concept",
+  "category": "地球2020",
+  "keywords": [
+    "裂隙徵兆",
+    "監視器",
+    "都市傳說",
+    "異常"
+  ],
+  "alias": [
+    "裂隙徵兆",
+    "異常目擊"
+  ],
+  "content": "裂隙靠近時，手機訊號會像在水底，監視器畫面延遲幾秒，電梯顯示不存在的樓層，窗外傳來像鳥又不像鳥的敲擊聲。普通人把這些當都市傳說轉貼；昆恩．沃維克 則會把每則貼文、維修單與失眠求助串成地圖。",
+  "priority": 56,
+  "tokenEstimate": 116,
+  "promoted": false,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_earth_2020_rifts",
+      "label": "預示裂隙靠近"
+    },
+    {
+      "targetLoreId": "bundled_lore_earth_2020_dimension_calloway_cases",
+      "label": "成為調查線索"
+    }
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

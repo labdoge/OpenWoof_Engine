@@ -34,20 +34,25 @@ Status: [CURRENT]
 ## Update Workflow
 
 1. Finish and verify development changes in the parent repo.
-2. Run `npx vitest run`.
-3. Run `npm run build`.
-4. Run `npm run tauri:build`.
-5. Replace `release-source/tauri-shell/web-bundle/` with the new `dist/`.
-6. Replace installer archives from `src-tauri/target/release/bundle/`.
-7. Replace `app/portable/windows/WoofyChatty-0.1.0-portable/WoofyChatty.exe` from `src-tauri/target/release/woofychatty.exe`.
-8. Recreate `app/portable/windows/WoofyChatty_0.1.0_x64_portable.zip`.
-9. Update `release-manifest.json` with current size and SHA-256 values.
-10. In `release-source/`, run `git status`, stage the release-source changes, commit, and push to its GitHub remote.
+2. Run `npm run optimize:portraits`.
+3. Run `npm run optimize:portraits -- --check`.
+4. Run `npx vitest run`.
+5. Run `npm run build`.
+6. Confirm `dist/assets` does not contain bundled portrait `.png` files.
+7. Run `npm run tauri:build`.
+8. Replace `release-source/tauri-shell/web-bundle/` with the new `dist/`.
+9. Replace `release-source/bundled-content/portraits/` with `portraits-optimized/**/*.webp`.
+10. Replace installer archives from `src-tauri/target/release/bundle/`.
+11. Replace `app/portable/windows/WoofyChatty-0.1.0-portable/WoofyChatty.exe` from `src-tauri/target/release/woofychatty.exe`.
+12. Recreate `app/portable/windows/WoofyChatty_0.1.0_x64_portable.zip`.
+13. Update `release-manifest.json` with current size and SHA-256 values.
+14. In `release-source/`, run `git status`, stage the release-source changes, commit, and push to its GitHub remote.
 
 ## Release Policy
 
 - Public GitHub Release asset: `app/portable/windows/WoofyChatty_0.1.0_x64_portable.zip`.
 - Installers may remain in the repository for archive/comparison, but the portable zip is the recommended public download.
+- Bundled release portraits are optimized offline WebP files generated from source PNG artwork. Keep `portraits/` as source artwork in the parent repo and ship `portraits-optimized/` output in release artifacts.
 - User data, API keys, vault files, logs, and local settings must never be copied into `release-source/`.
 - `release-source/app/portable/windows/WoofyChatty-0.1.0-portable/data/` should contain only placeholder documentation.
 

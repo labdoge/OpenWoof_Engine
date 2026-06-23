@@ -1,0 +1,34 @@
+{
+  "loreId": "bundled_lore_master_dimension_species_citizenship",
+  "title": "共生公民權",
+  "type": "concept",
+  "category": "主維度",
+  "keywords": [
+    "獸人",
+    "神祕種族",
+    "仿生人",
+    "公民權",
+    "共存"
+  ],
+  "alias": [
+    "多種族社會",
+    "共生憲章"
+  ],
+  "content": "人類、獸人、神祕種族與仿生人在主維度共享公民權，但實際待遇依企業區域、血統登記、機體權利與魔法風險評級而不同。法律宣稱人人能繁榮生活，街頭也確實充滿跨種族商店與混合社群；只是當事故發生時，偏見與合約條款仍會先一步露出牙齒。",
+  "priority": 78,
+  "tokenEstimate": 126,
+  "promoted": true,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_master_dimension_united_government",
+      "label": "由其法規保障"
+    },
+    {
+      "targetLoreId": "bundled_lore_master_dimension_corporate_regions",
+      "label": "在各區有不同實踐"
+    }
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

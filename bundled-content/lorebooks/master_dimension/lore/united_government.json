@@ -1,0 +1,33 @@
+{
+  "loreId": "bundled_lore_master_dimension_united_government",
+  "title": "統合政府",
+  "type": "faction",
+  "category": "主維度",
+  "keywords": [
+    "統合政府",
+    "統合政府",
+    "契約治理",
+    "主維度"
+  ],
+  "alias": [
+    "世界政府",
+    "統府"
+  ],
+  "content": "統合政府是主維度最大的公共權力，名義上統一法律、貨幣、跨種族公民權與維度災害標準。它不直接管理每座城市，而是把區域營運合約交給巨型企業。對普通市民而言，統合政府代表穩定；對熟悉內幕的人而言，它更像把衝突包進文件與授權章裡的巨大機器。",
+  "priority": 82,
+  "tokenEstimate": 128,
+  "promoted": true,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_master_dimension_corporate_regions",
+      "label": "授權管理區域"
+    },
+    {
+      "targetLoreId": "bundled_lore_master_dimension_species_citizenship",
+      "label": "制定公民規範"
+    }
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

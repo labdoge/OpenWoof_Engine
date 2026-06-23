@@ -1,0 +1,33 @@
+{
+  "loreId": "bundled_lore_master_dimension_corporate_regions",
+  "title": "企業區域",
+  "type": "faction",
+  "category": "主維度",
+  "keywords": [
+    "企業區域",
+    "巨型企業",
+    "管理合約",
+    "企業暗鬥"
+  ],
+  "alias": [
+    "企業城",
+    "合約區"
+  ],
+  "content": "主維度的城市與資源帶多由巨型企業承包治理。企業負責治安、交通、醫療、能源與資料網路，也用慈善、偶像、學術基金包裝權力。它們明面遵守統合政府法規，暗地卻以專利戰、僱傭特勤、黑幫代理與維度資源走私彼此試探。",
+  "priority": 80,
+  "tokenEstimate": 124,
+  "promoted": true,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_master_dimension_united_government",
+      "label": "受其合約授權"
+    },
+    {
+      "targetLoreId": "bundled_lore_master_dimension_shadow_contracts",
+      "label": "催生秘密委託"
+    }
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

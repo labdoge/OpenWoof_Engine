@@ -1,0 +1,34 @@
+{
+  "loreId": "bundled_lore_fantasy_dimension_dungeons_lairs",
+  "title": "地城巢穴",
+  "type": "location",
+  "category": "幻想維度",
+  "keywords": [
+    "地城",
+    "巢穴",
+    "寶藏",
+    "怪物",
+    "遺跡"
+  ],
+  "alias": [
+    "地城",
+    "怪物巢穴"
+  ],
+  "content": "地城與巢穴散布在山脈、古戰場、沉沒神殿與被魔王軍污染的森林。它們藏有寶物、詛咒、古代機關與被遺忘的名字，也養出比傳聞更聰明的怪物。冒險者若只為金幣而來，常會成為下一張委託單上的警告。",
+  "priority": 60,
+  "tokenEstimate": 116,
+  "promoted": false,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_adventurer_guilds",
+      "label": "由公會發布任務"
+    },
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_dark_horde",
+      "label": "可能受黑暗污染"
+    }
+  ],
+  "source": "bundled",
+  "createdAt": 0,
+  "lastModified": 0
+}

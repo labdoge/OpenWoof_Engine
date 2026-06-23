@@ -1,0 +1,34 @@
+{
+  "loreId": "bundled_lore_master_dimension_goldfish_teahouse",
+  "title": "金魚茶館",
+  "type": "location",
+  "category": "主維度",
+  "keywords": [
+    "金魚茶館",
+    "牡丹",
+    "情報商",
+    "黑幫談判"
+  ],
+  "alias": [
+    "金魚茶館",
+    "茶館中立席"
+  ],
+  "content": "金魚茶館由賽蓮情報商牡丹經營，是企業代理人、黑幫幹部與麻煩人物談判時仍願意守規矩的地方。茶香、屏風與水光會柔化殺氣，卻遮不住每句話背後的價格。牡丹對 諾克斯 保持尊重的競爭，也會在汪醬、安妮塔、露米耶面前露出保護欲。",
+  "priority": 62,
+  "tokenEstimate": 128,
+  "promoted": false,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_master_dimension_shadow_contracts",
+      "label": "常處理灰色委託"
+    },
+    {
+      "targetLoreId": "bundled_lore_master_dimension_corporate_regions",
+      "label": "牽動企業利益"
+    }
+  ],
+  "source": "bundled",
+  "linkedNpcId": "peony",
+  "createdAt": 0,
+  "lastModified": 0
+}

@@ -1,0 +1,35 @@
+{
+  "loreId": "bundled_lore_fantasy_dimension_traveling_bards_and_rockstar",
+  "title": "吟遊與搖滾",
+  "type": "event",
+  "category": "幻想維度",
+  "keywords": [
+    "安妮塔",
+    "疾克",
+    "吟遊詩人",
+    "搖滾",
+    "音樂競演"
+  ],
+  "alias": [
+    "吟遊詩人與搖滾樂手",
+    "酒館競演"
+  ],
+  "content": "安妮塔 的民謠在幻想維度很快成為酒館與營火旁的安眠歌，疾克 的跨維搖滾則像雷鳴闖進王庭。兩人常被邀請競演，士兵下注、冒險者歡呼，結果永遠難分高下。疾克 把她視為唯一真正的對手，安妮塔 則溫柔觀察他是否足以託付音樂與心。",
+  "priority": 56,
+  "tokenEstimate": 128,
+  "promoted": false,
+  "relationships": [
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_adventurer_guilds",
+      "label": "常在酒館與公會演出"
+    },
+    {
+      "targetLoreId": "bundled_lore_fantasy_dimension_magic_and_runes",
+      "label": "歌謠也能承載力量"
+    }
+  ],
+  "source": "bundled",
+  "linkedNpcId": "anneta",
+  "createdAt": 0,
+  "lastModified": 0
+}

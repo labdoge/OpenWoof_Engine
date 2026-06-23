@@ -23,7 +23,7 @@
    - scenarios: `bundled-content/scenarios/*.json` -> app root `scenarios/*.json`
    - characters: `bundled-content/characters/*.json` -> app root `characters/*.json`
    - lorebooks: `bundled-content/lorebooks/{id}/arcanum.json` + `lore/*.json` -> app root `arcana/{id}/...`
-   - portraits: `bundled-content/portraits/{npcId}/{npcId}_0.png` etc. -> app root `portraits/{npcId}/...`
+   - portraits: `bundled-content/portraits/{npcId}/{npcId}_0.webp` etc. -> app root `portraits-optimized/{npcId}/...`
 5. 若 UI 或 app runtime 更新，請在開發專案重新 build，再替換 `tauri-shell/web-bundle`、portable package 與 installer archive。
 
 ### 依賴與重建指令
@@ -70,7 +70,7 @@ This repo is the GitHub release source for OpenWoof Engine / WoofyChatty. It is 
    - scenarios: `bundled-content/scenarios/*.json` -> app root `scenarios/*.json`
    - characters: `bundled-content/characters/*.json` -> app root `characters/*.json`
    - lorebooks: `bundled-content/lorebooks/{id}/arcanum.json` + `lore/*.json` -> app root `arcana/{id}/...`
-   - portraits: `bundled-content/portraits/{npcId}/{npcId}_0.png` etc. -> app root `portraits/{npcId}/...`
+   - portraits: `bundled-content/portraits/{npcId}/{npcId}_0.webp` etc. -> app root `portraits-optimized/{npcId}/...`
 5. When the UI or runtime changes, rebuild in the development project, then replace `tauri-shell/web-bundle`, the portable package, and the installer archive.
 
 ### Dependencies And Rebuild Commands

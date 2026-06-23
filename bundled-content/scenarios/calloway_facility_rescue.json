@@ -1,0 +1,269 @@
+{
+  "$schema": "Scenario Overview Template for DogeChat Engine",
+  "$version": "0.7",
+  "title": "暗研救援",
+  "genre": "潛入行動",
+  "tone": ["緊張", "戰術", "祕密", "救援"],
+  "overall_goal": "與現場同伴潛入異常研究設施，找到並救出被困的卡洛威。",
+  "playMode": "standard",
+  "mission_profile": "hybrid",
+  "missions": {
+    "ambient_affection": {
+      "enabled": true,
+      "majorNpcPolicy": "initial_npcs",
+      "optionCount": 3,
+      "nextPromptWithinTurns": 3
+    },
+    "bottleneck_quests": {
+      "enabled": true,
+      "mode": "scenario_linked",
+      "optionCount": 3,
+      "directions": [
+        {
+          "npcSlotId": "field-companion",
+          "affectionGate": 30,
+          "storyAxis": "第一次潛入開始，玩家要證明自己能聽指令也能補位。",
+          "relationshipAxis": "同伴需要確認玩家不是只會逞強的新人。",
+          "suggestedAction": "DO",
+          "suggestedHooks": ["DEPENDENCE"]
+        },
+        {
+          "npcSlotId": "field-companion",
+          "affectionGate": 50,
+          "storyAxis": "設施警報改變路線，玩家必須共同承擔風險。",
+          "relationshipAxis": "同伴想知道玩家會不會在壓力下隱瞞錯誤。",
+          "suggestedAction": "TELL",
+          "suggestedHooks": ["VULNERABILITY"]
+        },
+        {
+          "npcSlotId": "field-companion",
+          "affectionGate": 70,
+          "storyAxis": "卡洛威留下的線索要求兩人分工解碼與掩護。",
+          "relationshipAxis": "同伴需要玩家相信她的專長與判斷。",
+          "suggestedAction": "DO",
+          "suggestedHooks": ["EXCLUSIVITY"]
+        },
+        {
+          "npcSlotId": "field-companion",
+          "affectionGate": 90,
+          "storyAxis": "撤離時必須在救卡洛威與銷毀危險資料間抉擇。",
+          "relationshipAxis": "同伴要玩家把她當共同承擔者，而非可犧牲助手。",
+          "suggestedAction": "GIVE",
+          "suggestedHooks": ["DEPENDENCE", "CONTINUITY"]
+        }
+      ]
+    },
+    "story": {
+      "enabled": true,
+      "limit": 5,
+      "sequence": [
+        {
+          "id": "S1",
+          "goal": "越過外圍門禁，不觸發全面警報。",
+          "fixed": "卡洛威在失聯前留下半組門禁頻率。",
+          "signal": "玩家與同伴進入設施內部。"
+        },
+        {
+          "id": "S2",
+          "goal": "找到卡洛威被關押的位置。",
+          "fixed": "卡洛威被轉移到拘束實驗室，生命徵象仍存在。",
+          "signal": "玩家取得拘束實驗室位置。"
+        },
+        {
+          "id": "S3",
+          "goal": "救出卡洛威並選擇如何處理裂隙資料。",
+          "fixed": "核心資料若外流會引來更多暗隙生物。",
+          "signal": "卡洛威離開拘束區或資料被安全處置。"
+        }
+      ]
+    }
+  },
+  "adoption_rule": "角色須改編為地球2020影子行動同伴，具備潛入、偵查、醫療或技術支援能力。",
+  "worldview": "平行地球2020的異常研究設施以醫療外包名義運作，實際追蹤裂隙樣本。卡洛威失聯後，只剩臨時助手與現場同伴能在封鎖前突入。",
+  "initial_npcs": [
+    {
+      "slotId": "field-companion",
+      "identity": "共同潛入的現場同伴",
+      "required": true
+    },
+    {
+      "slotId": "calloway-target",
+      "identity": "等待救援的卡洛威",
+      "required": false,
+      "preselectedWorkshopNpcId": "calloway"
+    }
+  ],
+  "npc_generation_pool": [
+    {
+      "slotId": "field-companion",
+      "role": "現場行動員",
+      "personality": ["冷靜", "警覺", "可靠"],
+      "appearance_guide": ["耳機通訊", "輕便裝備"],
+      "outfit_guide": ["深色外套", "戰術背心"],
+      "wardrobe_rules": "以低調便裝掩飾戰術裝備，隨警報升級加防護。",
+      "stance_toward_player": "把玩家視為臨時搭檔，會測試服從與即興判斷。",
+      "personal_goal": "救出卡洛威"
+    },
+    {
+      "slotId": "calloway-target",
+      "role": "失聯雇主",
+      "personality": ["決斷", "冷幽默", "頑強"],
+      "appearance_guide": ["戰術傷痕", "銳利眼神"],
+      "outfit_guide": ["破損外套", "束縛帶痕"],
+      "wardrobe_rules": "救出前衣著受拘束環境影響，撤離後恢復戰術感。",
+      "stance_toward_player": "即使被困仍嘗試指揮救援節奏。",
+      "personal_goal": "阻止資料外流"
+    }
+  ],
+  "player_setup": {
+    "identity": "卡洛威雇用的助理行動員",
+    "initial_traits": [
+      { "name": "潛行", "traitType": "utility", "description": "能避開巡邏視線" },
+      { "name": "駭入", "traitType": "utility", "description": "能處理簡易門禁" },
+      { "name": "急救", "traitType": "aid", "description": "能穩定傷者狀態" },
+      { "name": "射擊", "traitType": "harm", "description": "受過短程火力訓練" },
+      { "name": "紀律", "traitType": "narrative", "description": "不擅自破壞任務" }
+    ],
+    "backstory": "卡洛威原本只雇你做外圍支援，卻在任務前線失聯。你被臨時推上第一線，與另一名行動同伴突入設施。",
+    "outfit": ["深色外套", "手套", "急救包"]
+  },
+  "allowSuccession": true,
+  "initial_affection": 10,
+  "initial_scene": {
+    "location": "外圍排水口",
+    "description": "雨水沖刷鐵柵，遠處研究設施燈光忽明忽暗。你的同伴正在檢查卡洛威留下的頻率。",
+    "stalled": [
+      {
+        "slotId": "calloway-target",
+        "location": "拘束實驗室",
+        "reason": "卡洛威被設施方困住，只能透過斷續訊號留下線索。"
+      }
+    ],
+    "opening_context": "卡洛威失聯已超過二十分鐘。你與現場同伴蹲在外圍排水口旁，手上只有半組門禁頻率與一句斷訊前的警告：別讓核心醒來。",
+    "starting_time": {
+      "year": 2020,
+      "month": 12,
+      "day": 2,
+      "period": 3
+    }
+  },
+  "locations": [
+    {
+      "name": "外圍排水口",
+      "description": "通往設施地下層的老舊排水口，監視器覆蓋不完整。",
+      "threat_level": "medium",
+      "connections": ["地下走廊"]
+    },
+    {
+      "name": "地下走廊",
+      "description": "白燈閃爍，牆上貼著醫療廢棄物標誌。",
+      "threat_level": "medium",
+      "connections": ["外圍排水口", "資料控制室", "拘束實驗室"]
+    },
+    {
+      "name": "資料控制室",
+      "description": "伺服器架低鳴，螢幕顯示被加密的裂隙曲線。",
+      "threat_level": "medium",
+      "connections": ["地下走廊"]
+    },
+    {
+      "name": "拘束實驗室",
+      "description": "透明隔間內有壓制符號與緊急醫療設備。",
+      "threat_level": "high",
+      "connections": ["地下走廊"]
+    }
+  ],
+  "playSetting": {
+    "socialDynamics": ["任務關係先於浪漫，但信任會在壓力下升溫。", "卡洛威是救援目標，不是主要關係推進對象。"],
+    "mechanicalRules": ["潛入失敗會升級為戰鬥或追逐。", "證據與人命常需要取捨。"],
+    "restrictions": ["不要讓卡洛威替玩家完成救援。", "研究設施真相需逐步揭露。"]
+  },
+  "combat": {
+    "partyKnockout": "rescue_twist"
+  },
+  "pacing_drivers": [
+    {
+      "triggerType": "environmental",
+      "affectionGate": null,
+      "direction": "警報燈改變顏色，巡邏路線也跟著重排。"
+    },
+    {
+      "triggerType": "opportunity",
+      "affectionGate": 50,
+      "direction": "卡洛威留下的訊號短暫露出下一段座標。"
+    }
+  ],
+  "bottleneck_quest_directions": [
+    {
+      "affectionGate": 30,
+      "direction": "玩家以穩定行動證明自己能在前線補位。"
+    },
+    {
+      "affectionGate": 50,
+      "direction": "玩家坦白一次判斷失誤，避免搭檔被拖累。"
+    },
+    {
+      "affectionGate": 70,
+      "direction": "玩家信任搭檔專長，完成一次分工救援。"
+    },
+    {
+      "affectionGate": 90,
+      "direction": "玩家在救人與銷毀資料間與搭檔共同承擔。"
+    }
+  ],
+  "background_npcs": [
+    {
+      "name": "卡洛威",
+      "role": "失聯雇主",
+      "description": "被困在設施深處，仍留下冷靜線索。"
+    },
+    {
+      "name": "守衛",
+      "role": "設施保全",
+      "description": "受雇看守門禁，不一定知道真正研究內容。"
+    }
+  ],
+  "notableObjects": [
+    {
+      "name": "半組頻率",
+      "location": "外圍排水口",
+      "description": "卡洛威留下的通訊片段，缺少最後校驗碼。",
+      "portable": true
+    }
+  ],
+  "mysteries": [
+    {
+      "title": "核心訊號",
+      "rumorText": "卡洛威斷訊前只說別讓核心醒來。",
+      "puzzleText": "核心訊號其實是裂隙樣本的心跳式反應。",
+      "steps": [
+        {
+          "location": "外圍排水口",
+          "objectName": "半組頻率",
+          "objectDescription": "錄音裡夾著雨聲與三段重複脈衝。",
+          "hint": "把脈衝間隔當成門禁節奏。",
+          "portable": true,
+          "hidden": false
+        },
+        {
+          "location": "資料控制室",
+          "objectName": "裂隙曲線",
+          "objectDescription": "曲線在警報時像心電圖般跳動。",
+          "hint": "比對頻率脈衝與曲線尖峰。",
+          "portable": false,
+          "hidden": true
+        }
+      ],
+      "puzzleStartsAtStep": 1,
+      "relatedNpcs": ["field-companion", "calloway-target"],
+      "traitHints": { "player": "utility", "npc": "aid" }
+    }
+  ],
+  "ui_hints": {
+    "background_image": "",
+    "card_image": "",
+    "ambient_color": "#26313d"
+  },
+  "recommendedArcana": ["bundled_arcanum_earth_2020_dimension"],
+  "recommendedModules": ["exploration", "combat"]
+}
