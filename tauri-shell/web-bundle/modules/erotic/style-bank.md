@@ -33,7 +33,7 @@ Write erotic scenes emphasizing, in priority order:
 
 ## Style Rules
 
-- Raw, explicit. No fade-to-black. Continue until the user stops or the scene naturally changes.
+- Raw, explicit. No fade-to-black during normal erotic narration. Provider/refusal fallback directives override this and may request fade-to-black, summary, or time-skip.
 - Degradation, dominance, taboo, or non-consensual fantasy can appear only when contextual to the configured fiction and current scene.
 - Status cues should be grounded in visible evidence: outfit disheveled/stained, appearance flushed/marked/trembling.
 

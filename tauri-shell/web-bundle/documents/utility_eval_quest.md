@@ -33,3 +33,17 @@ Bottleneck quests are **Bottleneck Breakthrough Missions**: major affection-gate
 - Set `questCompletion.completed` to `false`
 - Set `questCompletion.reason` to a brief Traditional Chinese reason naming the missing objective/condition
 - Keep `causation`, `questText`, and `keywords` when helpful, but the boolean and reason are mandatory for active quests
+
+### Storyteller Plot Quest Completion
+
+If the input includes an **Active Storyteller Plot Quest**, do not attach completion to any NPC evaluation. Output a top-level:
+
+```json
+"storytellerPlotQuestCompletion": {
+  "completed": false,
+  "reason": "Traditional Chinese reason tied to the plot objective",
+  "signalMatched": "matched plot signal or concise paraphrase"
+}
+```
+
+Storyteller plot quests are whole-plot/tension gates. Complete them only when the latest scene clearly fulfills the listed dramatic beat, twist, consequence, or hard-choice objective. Do not complete them for NPC affection gain, romance progress, generic warmth, or unrelated ambience.

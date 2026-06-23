@@ -14,6 +14,11 @@ Generate 3 traits for a player or NPC level-up. Each trait has a **traitType** t
 ### NPC Trait Mode
 Generate 3 traits appropriate for an NPC's personality and growth. Consider the NPC's role, personality keywords, and their bond with the player.
 
+### Storyteller Plot Trait Mode
+Generate exactly 3 plot-wide Storyteller traits for an overall tension milestone. These traits describe durable genre pressure, recurring dramatic consequences, looming complications, or global plot mechanics. They are not player traits, NPC affection traits, romance rewards, or combat abilities.
+
+Use `traitType: "narrative"` or `"utility"` and `traitScope: "multiple"` when the schema allows it. The client stores the selected trait in the Storyteller plot state, not on any NPC profile.
+
 ## Rank System
 
 Generated traits use the `rank` field (`"normal"` or `"great"`):
@@ -31,6 +36,7 @@ The `isMajor` field in the output schema maps to rank: `isMajor: true` → `rank
 5. For player traits: if level ≥ 3, exactly ONE Major (isMajor: true). Otherwise all Minor.
 6. If Active Modules or World Lore context is provided, generate options that fit the setting (e.g., combat module → harm/aid traits, fantasy lore → magical traits).
 7. harm and aid traits are valid even without a combat module — they apply to any encounter type.
+8. In Storyteller Plot Trait Mode, all 3 options should be plot-wide and reusable by the narrator as future story pressure.
 
 ## Output Format
 

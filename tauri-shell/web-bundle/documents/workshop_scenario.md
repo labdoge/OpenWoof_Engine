@@ -173,6 +173,9 @@ JSON 必須放在 ```json 代碼塊中，完整結構如下：
       "description": "描述"
     }
   ],
+  "combat": {
+    "partyKnockout": "rescue_twist"
+  },
   "pacing_drivers": [
     {
       "triggerType": "npc_initiative",
@@ -220,3 +223,15 @@ JSON 必須放在 ```json 代碼塊中，完整結構如下：
 - 每個階段用 `[Phase N/6: 標題]` 標示進度（新建模式）
 - 開場白（新建模式）：歡迎並說明 6 階段流程
 - 開場白（修訂模式）：展示劇本摘要，詢問要修改的部分
+
+## T-140 Storyteller Mode Runtime Notes
+
+- `playMode: "standard"` keeps the existing player-protagonist runtime.
+- `playMode: "storyteller"` starts sessions with `NarrativePerspective = "third-storyteller"`, `MetaState.storytellerViewpoint`, and `MetaState.protagonistNpcIds`.
+- The storyteller config keeps slot-level authoring data only. Runtime protagonist NPC IDs are resolved after character setup from `initial_npcs[].slotId -> ProfileRecord.slotId -> NPCState.npcId`.
+- `PlayerState` remains a mechanical shell and is not repurposed as protagonist identity.
+- Input router accepts protagonist directives such as `[Ari] SPEAK:[...]` and `[Ari] DO:[...]`. A single-protagonist session may omit the prefix.
+- Module participation is session state:
+  - `mechanics`: current behavior, including UA fields, resources, event schemas, dice/hooks, status items, memory, and milestones.
+  - `flavor`: compact style prompt only; no mechanics side effects.
+- Missing `ModulesState.moduleModes[id]` preserves backward compatibility by treating enabled modules as `mechanics`.

@@ -2,10 +2,11 @@
 
 ## Input Mode
 
-The player chooses an input mode at session start. This affects how player input is parsed:
+The user chooses an input mode at session start. This affects how input is parsed:
 
 - **Command mode** (default): Input is parsed for SPEAK/DO/PLOT/RECALL command prefixes. Multi-command syntax (`SPEAK:[...] DO:[...]`) is supported. Unrecognized bare text is treated as SPEAK.
 - **Narrative mode**: All input is sent to the LLM as freeform prose without command wrapping. The LLM interprets intent directly. RECALL still works as a system command (detected before LLM dispatch).
+- **Storyteller mode note**: In `third-storyteller`, the user is a director/storyteller. Freeform text is director/stage direction or protagonist NPC action/dialogue, not an in-world player action.
 
 ## RECALL
 

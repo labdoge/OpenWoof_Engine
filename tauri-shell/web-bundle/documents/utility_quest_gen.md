@@ -23,7 +23,7 @@ Top-level shape: `{ "quests": [ ...3 quest card objects... ] }`.
   {
     "title": "交出真心",
     "request": "別再繞開我，我要聽你真正的理由。",
-    "objective": "玩家必須正面回應她對事件真相與兩人關係的疑問。",
+    "objective": "玩家正面回應她對事件真相與兩人關係的疑問。",
     "theme": "信任考驗",
     "conditions": [
       "玩家說出一個明確理由",
@@ -51,6 +51,10 @@ Top-level shape: `{ "quests": [ ...3 quest card objects... ] }`.
 - **storyAxis**: Optional. Echo or lightly adapt the scenario/story axis if one was provided.
 - **relationshipAxis**: Optional. Echo or lightly adapt the NPC relationship axis if one was provided.
 
+Storyteller Mode: the user is shaping the scene from god-lens Storyteller mode, not acting as an in-world player. If this is not Storyteller Plot Quest Mode, still avoid hidden-player phrasing and second-person player framing.
+
+Storyteller Plot Quest Mode: when the user message says this is a Storyteller plot/tension gate, generate exactly 3 whole-plot beat missions. These are global tension bottlenecks, not NPC affection bottlenecks. Use neutral god-lens subjects: scene pressure, factions, secrets, consequences, witnesses, locations, threats, or hard choices. Do not require one named actor to act, do not use mandatory player-action wording, do not use second-person player framing, and do not write NPC romance/affection breakthrough requirements.
+
 ## Quest Design Rules
 
 1. All player-facing text must be Traditional Chinese.
@@ -59,6 +63,7 @@ Top-level shape: `{ "quests": [ ...3 quest card objects... ] }`.
 3. Bottleneck quests are major breakthrough missions. They should feel like the next required relationship/story step, not casual ambience.
 4. Every card must connect the scenario premise to the NPC relationship gate.
 4a. `player_agenda` and `dynamic_module` cards may follow the player's current intent, combat pressure, erotic momentum, exploration, danger, or scene complication, but they must still create concrete evidence for crossing this NPC's bottleneck gate.
+4b. In Storyteller Plot Quest Mode, replace "NPC relationship gate" with "whole-plot tension gate." The card's request, objective, and conditions should describe neutral scene context and plot consequences, not a player/protagonist task list.
 5. The mission should be personal to this NPC: reference personality, backstory, current situation, or emotional state.
 6. The mission must be achievable in 3-5 turns through dialogue and actions.
 7. Difficulty scales with bottleneck tier:

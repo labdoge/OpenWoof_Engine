@@ -1,7 +1,7 @@
 {
   "name": "OpenWoof Engine Release Source",
   "version": "0.1.0",
-  "preparedAt": "2026-06-11",
+  "preparedAt": "2026-06-23",
   "releaseTarget": "Tauri v2 desktop",
   "releasePolicy": "Publish only the portable zip as the public release asset. Keep installers in the repository for archival and comparison only.",
   "purpose": "Product release source and feature presentation staging folder.",
@@ -9,22 +9,22 @@
     {
       "path": "app/portable/windows/WoofyChatty_0.1.0_x64_portable.zip",
       "type": "Windows portable zip",
-      "sizeBytes": 38896657,
-      "sha256": "2277C0A21ABDEDC0E4073B16562BB920335772B43DA44DC71851024DA160AA1D",
+      "sizeBytes": 39156282,
+      "sha256": "AF5F4D8CE63F5423C35ED6DF105F0970D6C6CB43A113BEEC1B3C9A2D276DB371",
       "primaryReleaseArtifact": true
     },
     {
       "path": "app/installers/windows/WoofyChatty_0.1.0_x64-setup.exe",
       "type": "Windows NSIS installer",
-      "sizeBytes": 37302096,
-      "sha256": "D5D40C6007B4E99EDFAD9B31C30D612055AA810C4A8A24B14BB8B15D8B9C33DB",
+      "sizeBytes": 37567128,
+      "sha256": "9676056FE48F189854C720DE52F8DCB61AED4471EE74430DE9589FF57ED7945E",
       "primaryReleaseArtifact": false
     },
     {
       "path": "app/installers/windows/WoofyChatty_0.1.0_x64_en-US.msi",
       "type": "Windows MSI installer",
-      "sizeBytes": 39202816,
-      "sha256": "81947348596552335F646A35B7792DEEA48F5E4BC3B25083F42516995D91D8ED",
+      "sizeBytes": 39460864,
+      "sha256": "982DAA0FBC779623C8DA9B45BB91EE7657E46CE69C3CB5A58DFF4A38863933D5",
       "primaryReleaseArtifact": false
     }
   ],
@@ -33,7 +33,7 @@
     "executable": "app/portable/windows/WoofyChatty-0.1.0-portable/WoofyChatty.exe",
     "portableMarker": "app/portable/windows/WoofyChatty-0.1.0-portable/portable.marker",
     "dataFolder": "app/portable/windows/WoofyChatty-0.1.0-portable/data",
-    "executableSha256": "2B8186C5B6547206A53EC08509E42987129E1E5741BB938FB2B84EBE9FF51D04"
+    "executableSha256": "65033EC11EB2601C18FF44F7516061C48E791CE8F5938DB4A75A594255962037"
   },
   "releaseShell": {
     "path": "tauri-shell",

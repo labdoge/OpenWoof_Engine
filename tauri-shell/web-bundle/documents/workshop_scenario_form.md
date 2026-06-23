@@ -76,6 +76,9 @@
       "mechanicalRules": ["..."],
       "restrictions": ["..."]
     },
+    "combat": {
+      "partyKnockout": "rescue_twist"
+    },
     "pacing_drivers": [...],
     "bottleneck_quest_directions": [...],
     "background_npcs": [...]
@@ -86,6 +89,30 @@
   "addBottleneckQuests": [...]
 }
 ```
+
+## T-140 Storyteller Mode Addendum
+
+- Scenario schema version is now `$version: "0.6"`.
+- Missing `playMode` on imported legacy scenarios means `"standard"`. Newly exported Workshop scenarios should write `"standard"` or `"storyteller"` explicitly.
+- Storyteller scenarios use:
+
+```json
+{
+  "playMode": "storyteller",
+  "storyteller": {
+    "defaultViewpoint": "npc-lens",
+    "protagonistSlotIds": ["slot-0"],
+    "allowGodLens": true,
+    "directorCanControlProtagonistDialogue": true
+  }
+}
+```
+
+- `storyteller.protagonistSlotIds[]` must reference `initial_npcs[].slotId`. Scenario JSON must not store generated NPC IDs or `StoredPersona` IDs for protagonists.
+- Scenario Workshop exposes a top-level mode switch. In Storyteller mode, Initial NPC Slots become protagonist candidates.
+- AI edits must preserve `playMode` and `storyteller` unless the user explicitly asks to convert modes.
+- `StoredPersona -> ProfileRecord` conversion is a Workshop casting tool. It creates Workshop NPC profiles under `WORKSHOP_SCENARIO_ID`; runtime protagonist IDs are resolved later from adopted/generated NPC profiles.
+- Flavor-only module mode belongs to session/module setup state, not to the scenario template.
 
 ## 規則
 
@@ -168,6 +195,13 @@
 - `playSetting.mechanicalRules`：機制規則列表
 - `playSetting.restrictions`：限制規則列表
 
+#### 戰鬥 / 結局
+- `combat.partyKnockout`：玩家與所有在場 essential NPC 都被 KO 時的結果。
+- 可用值：`rescue_twist` 或 `game_over`。
+- 缺省或舊劇本一律視為 `rescue_twist`。
+- `rescue_twist` 會清除戰鬥，並讓敘事轉入安全救援場景。
+- `game_over` 會把戰鬥失敗視為終局狀態。
+
 #### Ambient Mission 種子 / pacing_drivers（最多 6 條）
 每條：
 - `triggerType`：觸發類型（`environmental` 環境事件 | `opportunity` 機會事件 | `npc_initiative` NPC 主動）
@@ -223,7 +257,7 @@
 
 ### 多波次模式
 - `[WAVE: core-only]`：只生成 title, genre, tone, overall_goal, mission_profile, missions 的預設骨架, worldview, adoption_rule, player_setup, initial_npcs, initial_scene
-- `[WAVE: details-only]`：只生成 npc_generation_pool（含 slotId 對應）, locations, pacing_drivers（legacy ambient seeds，可含 affectionGate）, bottleneck_quest_directions, missions.bottleneck_quests.directions, background_npcs, playSetting
+- `[WAVE: details-only]`：只生成 npc_generation_pool（含 slotId 對應）, locations, pacing_drivers（legacy ambient seeds，可含 affectionGate）, bottleneck_quest_directions, missions.bottleneck_quests.directions, background_npcs, playSetting, combat
 
 ### 世界觀參考
 如果提供了 `[ARCANUM CONTEXT]`，劇本設計必須符合該世界觀的設定。

@@ -48,6 +48,11 @@ Rules:
 
 {AFFECTION_DELTA_RANGES}
 
+Sign is mandatory when preset ranges are provided:
+- Negative Hype tiers are negative-only. If a model would output positive affectionDelta, clamp it to zero or the negative range.
+- 平淡 is zero-only.
+- Positive Hype tiers are positive-only. Do not let a positive reaction subtract Affection.
+
 **Bottleneck cap**: Affection cannot numerically exceed a locked bottleneck threshold (30/50/70/90%). Apply a ceiling to affectionDelta if it would push the NPC past a locked bottleneck.
 
 ### Critical Events

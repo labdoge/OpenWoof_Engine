@@ -20,3 +20,5 @@ For every NPC with `[Active Ambient Mission]`, include:
 ```
 
 This field reports completion evidence only. Do not grant affection rewards here; the client applies the separate mission reward after Utility Agent evaluation.
+
+In Storyteller Mode, this same completion evidence is used for overall plot tension instead of Affection. Do not describe or imply an NPC affection reward for Storyteller Ambient Missions.
