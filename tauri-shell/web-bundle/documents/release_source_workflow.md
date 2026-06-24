@@ -43,18 +43,18 @@ Status: [CURRENT]
 8. Replace `release-source/tauri-shell/web-bundle/` with the new `dist/`.
 9. Replace `release-source/bundled-content/portraits/` with `portraits-optimized/**/*.webp`.
 10. Replace installer archives from `src-tauri/target/release/bundle/`.
-11. Replace `app/portable/windows/WoofyChatty-0.1.0-portable/WoofyChatty.exe` from `src-tauri/target/release/woofychatty.exe`.
-12. Recreate `app/portable/windows/WoofyChatty_0.1.0_x64_portable.zip`.
+11. Replace `app/portable/windows/WoofyChatty-0.1.1-portable/WoofyChatty.exe` from `src-tauri/target/release/woofychatty.exe`.
+12. Recreate `app/portable/windows/WoofyChatty_0.1.1_x64_portable.zip`.
 13. Update `release-manifest.json` with current size and SHA-256 values.
 14. In `release-source/`, run `git status`, stage the release-source changes, commit, and push to its GitHub remote.
 
 ## Release Policy
 
-- Public GitHub Release asset: `app/portable/windows/WoofyChatty_0.1.0_x64_portable.zip`.
+- Public GitHub Release asset: `app/portable/windows/WoofyChatty_0.1.1_x64_portable.zip`.
 - Installers may remain in the repository for archive/comparison, but the portable zip is the recommended public download.
 - Bundled release portraits are optimized offline WebP files generated from source PNG artwork. Keep `portraits/` as source artwork in the parent repo and ship `portraits-optimized/` output in release artifacts.
 - User data, API keys, vault files, logs, and local settings must never be copied into `release-source/`.
-- `release-source/app/portable/windows/WoofyChatty-0.1.0-portable/data/` should contain only placeholder documentation.
+- `release-source/app/portable/windows/WoofyChatty-0.1.1-portable/data/` should contain only placeholder documentation.
 
 ## Future Update Notes
 

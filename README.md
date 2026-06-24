@@ -17,7 +17,7 @@
 ### 使用方式
 
 1. 將 `release-source` 複製為新的 GitHub repo 根目錄，或把它的內容移到你的 release repo。
-2. 對外 GitHub Release asset 只發布 `app/portable/windows/WoofyChatty_0.1.0_x64_portable.zip`。
+2. 對外 GitHub Release asset 只發布 `app/portable/windows/WoofyChatty_0.1.1_x64_portable.zip`。
 3. 將你要隨 app 內建的內容放進 `bundled-content/`。
 4. 若要把內容接回目前 app loader，請依照對應路徑整理：
    - scenarios: `bundled-content/scenarios/*.json` -> app root `scenarios/*.json`
@@ -64,7 +64,7 @@ This repo is the GitHub release source for OpenWoof Engine / WoofyChatty. It is 
 ### How To Use
 
 1. Copy `release-source` as the root of the new GitHub repo, or move its contents into your release repo.
-2. Publish only `app/portable/windows/WoofyChatty_0.1.0_x64_portable.zip` as the public GitHub Release asset.
+2. Publish only `app/portable/windows/WoofyChatty_0.1.1_x64_portable.zip` as the public GitHub Release asset.
 3. Put the bundled content for the new product repo under `bundled-content/`.
 4. To wire content back into the current app loader, map the folders like this:
    - scenarios: `bundled-content/scenarios/*.json` -> app root `scenarios/*.json`

@@ -1,8 +1,22 @@
 # Tickets
 
-> Next ID: T-163
+> Next ID: T-168
 
 ## Open
+
+### T-165: Player/protagonist trait descriptions are stored but Status Window lacks tooltip parity
+- **Type**: bug
+- **Reported**: 2026-06-24
+- **Details**: User reports protagonist traits have no tooltip like NPC traits, and asks whether protagonist trait descriptions are never truly stored.
+- **Initial triage**: `GameTrait.description` is required, and the tested portable session contains non-empty `gameState.player.traits[].description` plus message `statusData.player.traits[].description`; current protagonist traits are not generally missing descriptions in storage. Generated/custom/identity/persona-carried player traits preserve descriptions, while legacy string scenario traits converted through `convertStringTrait()` still produce `description: ''`. Bottom strip and Player HUD render player trait tooltips, but `ChatPanel.formatPlayerStatusRich()` renders player Status Window traits as plain or bold names without `title` / `data-tooltip`, while `formatNPCStatusRich()` gives NPC traits a tooltip title. Bottom strip currently emits blank `data-tooltip` for empty legacy descriptions, while Player HUD has a Major/Minor fallback.
+- **Verification target**: Add ChatPanel render tests for player Status Window trait tooltip/fallback parity with NPC rows; add or adjust scenario trait migration tests documenting legacy string trait behavior or filling a safe fallback; verify existing sessions with described player traits show tooltips after the render fix.
+
+### T-166: True provider length stops still need visible continuation UI
+- **Type**: bug
+- **Reported**: 2026-06-24
+- **Details**: After T-164 token-budget fix, genuine provider `length` / `max_tokens` stops can still leave an unfinished narrative if the selected preset/tier maxTokens is actually reached.
+- **Initial triage**: Orchestrator already detects max-token stop reasons and has `continueTurn()`, but Auto-Continue is still marked TODO/not wired to UI. T-164 reduces accidental low caps, but it does not expose continuation when a real high-budget turn reaches the provider limit.
+- **Verification target**: Add UI/integration coverage proving a length stop exposes a continuation action or auto-continues within the configured limit, appends continuation text to the same turn, and preserves status/state safety.
 
 ### T-134: Ambient Missions toggle can still leave background generation/prompt loop active
 - **Type**: bug
@@ -28,6 +42,24 @@
 - **Verification target**: Add tests for conversion wizard/defaults, third-person opening context, session-flow storyteller preflight, protagonist slot resolution after imported/generated profiles, actor-prefix input UX, and combat/event pipeline behavior without unintended player-protagonist control.
 
 ## Done
+
+### T-167: Add user-adjustable Trivia capture sensitivity for Scene Ops memory
+- **Type**: improvement
+- **Reported**: 2026-06-24
+- **Completed**: 2026-06-24
+- **Resolution**: Added a global Trivia Sensitivity setting with four levels (`essential`, `balanced`, `detailed`, `notebook`). Scene Ops status extraction now uses the selected level to adjust Trivia prompt guidance, JSON schema `maxItems`, output token budget, parser cap, and telemetry while preserving confidence, dedupe, unknown-NPC, sentence-quality, and session-local acceptance guards. Notebook mode allows up to 12 proposed Trivia updates and adds 320 Scene Ops output tokens; Detailed allows 10 with 160 extra tokens; Balanced remains the default and preserves the prior 0-1-per-NPC guidance. NPC Trivia storage/profile validation now supports 12 notes per NPC and a new `background` category for occupation tenure, origin, past experience, and long-term identity facts. Settings UI, Tauri settings migration, prompt injection limits, locale strings, overlay category selection, and regression tests were updated. Verified targeted Trivia/settings tests, full Vitest, and `npm run build`.
+
+### T-164: Narrative length settings can be silently overridden/capped, causing true length stops without UI continuation
+- **Type**: bug
+- **Reported**: 2026-06-24
+- **Completed**: 2026-06-24
+- **Resolution**: Replaced fixed scene-importance token caps with percentage-based budget resolution using the selected preset/tier as the source of truth: routine 50%, notable 75%, climactic 100%, clamped between the selected scene length floor and selected maxTokens. Dynamic model presets now keep their chosen tier sceneLength/maxTokens and use sceneImportance only as a budget adjustment; static presets likewise keep the user-selected sceneLength instead of being overwritten by routine/notable/climactic mappings. Runtime telemetry now records sceneImportance plus token budget ratio/floor/max/target, and impossible maxTokens values are raised to the scene length floor with a warning. Settings now clamp dynamic and custom preset token inputs to the selected sceneLength floor so short-chapter cannot be saved below 6144 tokens. Added unit, settings, and integration regression coverage for short-chapter floor preservation, dynamic/static token resolution, and telemetry.
+
+### T-163: Claude workshop requests fail after latest model/provider switching update
+- **Type**: bug
+- **Reported**: 2026-06-24
+- **Completed**: 2026-06-24
+- **Resolution**: Made Claude request construction capability-aware so Claude Sonnet 4.6, Opus 4.6+, Fable, Mythos, and active thinking requests omit deprecated/unsupported `temperature`, while Haiku 4.5 non-thinking requests still keep clamped temperature. Adaptive thinking now keeps `thinking: { type: "adaptive" }` plus `output_config.effort` without sending temperature. Added a shared provider-switch settings helper used by both input-area and Workshop model switchers so provider changes save the previous snapshot, restore target snapshots/defaults, sync all model slots including Scene Ops, preserve dynamic preset state, and dispatch provider changes only after settings are consistent. Added regression coverage for Claude temperature behavior and Workshop DeepSeek-to-Claude snapshot restoration. Verified targeted adapter/switch/model-sync tests, adjacent model-discovery/settings tests, and no-emit TypeScript.
 
 ### T-162: Cog menu session navigation can hang while leaving an active session
 - **Type**: bug
