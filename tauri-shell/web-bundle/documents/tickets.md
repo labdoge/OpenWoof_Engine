@@ -1,6 +1,6 @@
 # Tickets
 
-> Next ID: T-168
+> Next ID: T-169
 
 ## Open
 
@@ -42,6 +42,12 @@
 - **Verification target**: Add tests for conversion wizard/defaults, third-person opening context, session-flow storyteller preflight, protagonist slot resolution after imported/generated profiles, actor-prefix input UX, and combat/event pipeline behavior without unintended player-protagonist control.
 
 ## Done
+
+### T-168: Game setup character generation fails with certain providers
+- **Type**: bug
+- **Reported**: 2026-06-25
+- **Completed**: 2026-06-25
+- **Resolution**: Reworked shared `generateCharacterCards()` to use a provider-compatible full strict `json_schema` first, with every `additionalProperties: false` object requiring all declared fields and allowing empty strings/arrays for unknown rich identity data. The Phase 1 schema/prompt now keeps `dialogueExamples` out while requiring rich fields, nested `traitType`, and all milestone directive keys. Strict schema rejection, empty output, or malformed/invalid cards now retry once with loose `json_object` mode and the compact JSON retry prompt, while auth, rate-limit, context overflow, and timeout-style errors do not fallback. Final failures return stable concise reasons and debug metadata records strict/loose attempt formats plus fallback reason without leaking prompts, headers, API keys, or secrets. Setup UI coverage confirms final failure returns to retry/import choices. Verified targeted character/provider tests, `npm run build`, and full `npx vitest run`.
 
 ### T-167: Add user-adjustable Trivia capture sensitivity for Scene Ops memory
 - **Type**: improvement
